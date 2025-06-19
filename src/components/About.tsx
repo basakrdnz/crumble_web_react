@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart, Leaf, ChefHat, Award } from 'lucide-react';
 
 const About = () => {
@@ -26,7 +25,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-amber-50 to-white">
+    <section id="about" className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-amber-900 mb-6">
