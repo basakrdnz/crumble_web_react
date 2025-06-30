@@ -29,8 +29,12 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
             <Coffee className="h-8 w-8 text-amber-800" />
-            <span className="text-2xl font-bold text-amber-900">Crumble</span>
-          </div>
+            <img
+              src="/images/crumble_logo.png"
+              alt="Crumble Logo"
+              className="w-28 h-auto md:w-32 lg:w-36 mt-1"
+            />
+                      </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
