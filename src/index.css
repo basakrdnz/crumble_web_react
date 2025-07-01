@@ -2,10 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Özel font aileleri */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Temel font ayarları */
 body {
-  font-family: 'Quicksand', sans-serif;
+  @apply font-sans;
 }
 
-h1, h2, h3 {
+/* Başlıklar için aynı font ailesi, daha ince ağırlık */
+h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
+
+/* Menü ve butonlar için */
+.menu, .btn, nav {
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  font-weight: 600;
+}
+
+/* Navigasyon bağlantıları için stil ayarları */
+.nav-link {
+  color: #975004; /* Örneğin brand-400 veya istediğiniz kahve tonu */
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e7b467; /* Hover veya aktif için daha koyu bir ton */
+}
+p {
+  font-weight: 400;
+}
+
+/* Alternatif olarak Tailwind config ile de font ayarları yapılabilir */
+

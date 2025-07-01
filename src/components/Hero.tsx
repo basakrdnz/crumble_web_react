@@ -16,16 +16,18 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop"
+          src="/images/Kahve_yatay_hd.png"
           alt="Sıcak kafe iç mekanı"
-          className="w-full h-full object-cover"
+          loading="lazy"
+          className="w-full h-[70vh] md:h-full object-cover object-center"
+          style={{}}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/60 via-amber-800/40 to-amber-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 tracking-tight font-[300] !important">
           <span className="block text-amber-200 mt-2">Crumble'a</span>
           Hoş Geldiniz
         </h1>

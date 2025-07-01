@@ -1,4 +1,3 @@
-import React from 'react';
 import { Gift, Clock, Users, Instagram, Heart, Star } from 'lucide-react';
 
 const Campaigns = () => {
