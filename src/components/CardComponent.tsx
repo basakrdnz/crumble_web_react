@@ -34,7 +34,7 @@ const CardComponent: React.FC<CardProps> = ({ item }) => {
       <div className="p-6">
         <div className="flex justify-between items-start mb-2">
           <h4 className="text-xl font-semibold text-amber-900">{item.name}</h4>
-          <span className="text-2xl font-bold text-amber-600">{item.price}</span>
+            {/* <span className="text-2xl font-bold text-amber-600">{item.price}</span> */}
         </div>
         <p className="text-amber-700 leading-relaxed">{item.description}</p>
       </div>
