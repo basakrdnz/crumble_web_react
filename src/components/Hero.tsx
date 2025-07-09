@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/Kahve_yatay_hd.png"
+          src="/images/crumble_bg.jpg"
           alt="Hero bg"
           loading="lazy"
           className="md:w-full h-[100vh] md:h-full object-cover object-center"
@@ -26,12 +26,22 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 md:max-w-4xl max-w-xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 tracking-tight font-[300] !important">
-          <span className="block text-amber-200 mt-2">Crumble'a</span>
+      <div
+        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 md:max-w-4xl max-w-xl mx-auto"
+        style={{
+          textShadow: "5px 4px 3px #242322",
+        }}
+      >
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 tracking-tight font-[300] !important" 
+>
+          <span
+            className="block text-amber-200 mt-2"
+          >
+            Crumble'a
+          </span>
           Hoş Geldiniz
         </h1>
-        <p className="text-lg sm:text-2xl text-amber-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-md sm:text-xl text-amber-100 mb-16 w-max-3xl mx-auto leading-relaxed">
           Sağlıklı ile lezzetli buluşuyor. Sevgiyle hazırlanmış bowllar, taze
           makarnalar ve en kaliteli malzemelerle yapılan el yapımı tatlıları
           deneyimleyin.
