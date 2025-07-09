@@ -27,41 +27,34 @@ const Hero = () => {
 
       {/* Content */}
       <div
-        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 md:max-w-4xl max-w-xl mx-auto"
-        style={{
-          textShadow: "5px 4px 3px #242322",
-        }}
+        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 md:max-w-4xl max-w-xl mx-auto
+        before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-black/50 before:blur-2xl before:-z-10 before:w-full before:h-full"
       >
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 tracking-tight font-[300] !important" 
->
-          <span
-            className="block text-amber-200 mt-2"
-          >
-            Crumble'a
-          </span>
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 tracking-tight font-[300] !important">
+          <span className="block text-amber-200 mt-2">Crumble'a</span>
           Hoş Geldiniz
         </h1>
-        <p className="text-md sm:text-xl text-amber-100 mb-16 w-max-3xl mx-auto leading-relaxed">
-          Sağlıklı ile lezzetli buluşuyor. Sevgiyle hazırlanmış bowllar, taze
+        <p className="text-md sm:text-xl text-amber-100 mb-16 mx-auto leading-relaxed font-normal">
+          Sağlık ve lezzet buluşuyor. Sevgiyle hazırlanmış bowllar, taze
           makarnalar ve en kaliteli malzemelerle yapılan el yapımı tatlıları
           deneyimleyin.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
-            onClick={scrollToAbout}
-            className="bg-amber-600 hover:bg-amber-700 text-white md:px-8 md:py-4 p-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+        onClick={scrollToAbout}
+        className="bg-amber-600 hover:bg-amber-700 text-white md:px-8 md:py-4 p-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            Hikayemizi Keşfedin
+        Hikayemizi Keşfedin
           </button>
           <button
-            onClick={() =>
-              document
-                .getElementById("menu")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="border-2 border-white text-white hover:bg-white hover:text-amber-800 md:px-8 md:py-4 p-3 px-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+        onClick={() =>
+          document
+            .getElementById("menu")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
+        className="border-2 border-white text-white hover:bg-white hover:text-amber-800 md:px-8 md:py-4 p-3 px-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
           >
-            Menüyü İnceleyin
+        Menüyü İnceleyin
           </button>
         </div>
       </div>
