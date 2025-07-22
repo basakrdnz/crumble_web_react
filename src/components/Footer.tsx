@@ -97,7 +97,7 @@ const Footer = () => {
               <p>Güneypark Küme Evleri, No:78</p>
               <p>Çankaya / Ankara</p>
               <p className="mt-3">0533 326 66 19</p>
-              <p>merhaba@crumblecafe.com</p>
+              <p>info@crumbleofficial.com</p>
             </div>
           </div>
         </div>
