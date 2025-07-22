@@ -1,11 +1,11 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Menu from './components/Menu';
-import Campaigns from './components/Campaigns';
-import Story from './components/Story';
-import Location from './components/Location';
-import Footer from './components/Footer';
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Menu from "./components/Menu";
+import Campaigns from "./components/Campaigns";
+import Story from "./components/Story";
+import Location from "./components/Location";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Hero />
       <About />
       <Menu />
-      <Campaigns />
+      {/* <Campaigns /> */}
       <Story />
       <Location />
       <Footer />

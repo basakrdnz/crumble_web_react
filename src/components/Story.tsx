@@ -4,22 +4,22 @@ import { Clock, Users, Coffee } from 'lucide-react';
 const Story = () => {
   const milestones = [
     {
-      year: "2019",
+      year: "2022",
       title: "Başlangıç",
       description: "Topluluğumuza sağlıklı, lezzetli yemek getirme hayaliyle küçük bir aile rüyası olarak başladı"
     },
     {
-      year: "2020",
+      year: "2023",
       title: "Köklerin Büyümesi",
       description: "Menümüzü genişlettik ve özel el yapımı tatlı tariflerimizi geliştirdik"
     },
     {
-      year: "2022",
+      year: "2024",
       title: "Mahalle Favorisi",
       description: "Taze, sağlıklı rahatlık yemekleri için mahallenin vazgeçilmez mekanı olduk"
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Bugün",
       description: "Topluluğumuza tutku, kalite ve sevgiyle hizmet vermeye devam ediyoruz"
     }
@@ -38,20 +38,20 @@ const Story = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+        <div className="grid gap-12 items-center mb-16">
+          {/* <div>            ***  grid-cols-1 lg:grid-cols-2 ***
             <img
               src="https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
               alt="Kafe mutfağında yemek yapan şefler"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
             />
-          </div>
+          </div> */}
           <div>
             <h3 className="text-3xl font-bold text-amber-900 mb-6">
               Her Şeyin Başladığı Yer
             </h3>
             <p className="text-amber-700 mb-4 leading-relaxed">
-              Crumble 2019'da basit bir vizyonla başladı: sağlıklı beslenmenin inanılmaz lezzetle buluştuğu 
+              Crumble 2022'de basit bir vizyonla başladı: sağlıklı beslenmenin inanılmaz lezzetle buluştuğu 
               bir yer yaratmak. Hem mutfak sanatları hem de beslenme konusunda tutkulu kurucularımız, 
               sağlık için lezzetten ödün vermek zorunda olmadığınızı kanıtlamak istiyordu.
             </p>
@@ -63,12 +63,12 @@ const Story = () => {
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
                 <Clock className="h-8 w-8 text-amber-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-amber-900">5+</div>
+                <div className="text-2xl font-bold text-amber-900">3+</div>
                 <div className="text-amber-700 text-sm">Yıl Hizmet</div>
               </div>
               <div className="text-center">
                 <Users className="h-8 w-8 text-amber-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-amber-900">10K+</div>
+                <div className="text-2xl font-bold text-amber-900">1K+</div>
                 <div className="text-amber-700 text-sm">Mutlu Müşteri</div>
               </div>
               <div className="text-center">
@@ -80,7 +80,7 @@ const Story = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-lg shadow-xl p-8">
           <h3 className="text-3xl font-bold text-amber-900 mb-8 text-center">Yolculuğumuz</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {milestones.map((milestone, index) => (

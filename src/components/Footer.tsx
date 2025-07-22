@@ -20,12 +20,17 @@ const Footer = () => {
               <a href="#" className="text-amber-300 hover:text-white transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="https://instagram.com/crumblecafe" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-white transition-colors">
+              <a
+                href="https://www.instagram.com/crumble.official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-300 hover:text-white transition-colors"
+              >
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-amber-300 hover:text-white transition-colors">
+              {/* <a href="#" className="text-amber-300 hover:text-white transition-colors">
                 <Twitter className="h-6 w-6" />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -88,10 +93,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">İletişim</h3>
             <div className="space-y-2 text-amber-100">
-              <p>Bağdat Caddesi No: 123</p>
-              <p>Kadıköy/İstanbul</p>
-              <p>34710</p>
-              <p className="mt-3">(0216) 123-4567</p>
+              <p>İlkbahar Caddesi, Sinpaş Marina Yolu</p>
+              <p>Güneypark Küme Evleri, No:78</p>
+              <p>Çankaya / Ankara</p>
+              <p className="mt-3">0533 326 66 19</p>
               <p>merhaba@crumblecafe.com</p>
             </div>
           </div>
