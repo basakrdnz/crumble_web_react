@@ -72,9 +72,9 @@ const About = () => {
           </div>
           <div className="order-1 lg:order-2">
             <img
-              src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+              src="/images/Tezza-2322.JPG"
               alt="Taze malzemeler ve yemek pişirme"
-              className="w-full h-96 object-cover rounded-lg shadow-lg"
+              className="w-full h-96 overflow-hidden object-cover rounded-lg shadow-lg"
             />
           </div>
         </div>
