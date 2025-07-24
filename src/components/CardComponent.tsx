@@ -16,7 +16,7 @@ interface CardProps {
 const CardComponent: React.FC<CardProps> = ({ item }) => {
   return (
     <div 
-  className="bg-white rounded-lg shadow-lg overflow-hidden border border-amber-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-amber-50/95"
+  className="bg-white rounded-lg shadow-lg overflow-hidden border border-crumble-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-crumble-100/30"
     >
       <div className="relative">
         {/* <img
@@ -25,7 +25,7 @@ const CardComponent: React.FC<CardProps> = ({ item }) => {
           className="w-full h-48 object-cover"
         /> */}
         {item.popular && (
-          <div className="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
+          <div className="absolute top-4 left-4 bg-crumble-600 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
             <Star className="h-4 w-4 mr-1 fill-current" />
             Popüler
           </div>
@@ -33,10 +33,10 @@ const CardComponent: React.FC<CardProps> = ({ item }) => {
       </div>
       <div className="p-6 m-6">
         <div className="flex justify-between items-start mb-2">
-          <h4 className="text-xl font-semibold text-amber-900">{item.name}</h4>
-            {/* <span className="text-2xl font-bold text-amber-600">{item.price}</span> */}
+          <h4 className="text-xl font-semibold text-crumble-900">{item.name}</h4>
+            {/* <span className="text-2xl font-bold text-crumble-600">{item.price}</span> */}
         </div>
-        <p className="text-amber-700 leading-relaxed">{item.description}</p>
+        <p className="text-crumble-700 leading-relaxed">{item.description}</p>
       </div>
     </div>
   );

@@ -28,10 +28,10 @@ const About = () => {
     <section id="about" className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-amber-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-6">
             Crumble Hakkında
           </h2>
-          <p className="text-xl text-amber-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-crumble-700 max-w-3xl mx-auto leading-relaxed">
             Crumble'da harika yemeğin harika malzemelerle başladığına inanıyoruz. Misyonumuz, kapımızdan geçen her misafire 
             rahatlık ve neşe getiren sağlıklı, lezzetli yemekler sunmaktır.
           </p>
@@ -40,31 +40,31 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-100 rounded-full mb-4 group-hover:bg-amber-200 transition-colors duration-300">
-                <feature.icon className="h-8 w-8 text-amber-800" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-crumble-100 rounded-full mb-4 group-hover:bg-crumble-200 transition-colors duration-300">
+                <feature.icon className="h-8 w-8 text-crumble-800" />
               </div>
-              <h3 className="text-xl font-semibold text-amber-900 mb-2">{feature.title}</h3>
-              <p className="text-amber-700 leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-crumble-900 mb-2">{feature.title}</h3>
+              <p className="text-crumble-700 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <h3 className="text-3xl font-bold text-amber-900 mb-6">
+            <h3 className="text-3xl font-bold text-crumble-900 mb-6">
               Sağlığa Olan Bağlılığımız
             </h3>
-            <p className="text-amber-700 mb-4 leading-relaxed">
+            <p className="text-crumble-700 mb-4 leading-relaxed">
               Sadece inanılmaz lezzetli değil, aynı zamanda vücudunuzu besleyen yemekler yaratma konusunda tutkuluyuz. 
               Menümüzde protein açısından zengin bowllar, taze makarna yemekleri ve sağlıklı beslenmenin lezzetten 
               ödün vermek anlamına gelmediğini kanıtlayan suçluluk hissi yaratmayan tatlılar bulunuyor.
             </p>
-            <p className="text-amber-700 mb-6 leading-relaxed">
+            <p className="text-crumble-700 mb-6 leading-relaxed">
               Her sos, her tatlı, her bileşen mutfağımızda sıfırdan yapılır. Yemeğinizin içine tam olarak neyin 
               girdiğini bilmekten gurur duyuyoruz, sadece yapay koruyucular veya kısayollar olmadan doğal malzemeler kullanıyoruz.
             </p>
-            <div className="bg-amber-100 p-6 rounded-lg">
-              <p className="text-amber-800 font-medium italic">
+            <div className="bg-crumble-100 p-6 rounded-lg">
+              <p className="text-crumble-800 font-medium italic">
                 "Sadece yemek servis etmiyoruz; aileleri ve arkadaşları sağlıklı, lezzetli yemekler etrafında 
                 bir araya getiren deneyimler yaratıyoruz."
               </p>

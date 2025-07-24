@@ -25,14 +25,14 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-orange-200/20 backdrop-blur-sm"
-          : "bg-amber-50/95 backdrop-blur-sm shadow-lg"
+          ? "bg-crumble-200/20 backdrop-blur-sm"
+          : "bg-crumble-100/70 backdrop-blur-sm shadow-lg"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <Coffee className="h-8 w-8 text-amber-800" />
+            <Coffee className="h-8 w-8 text-crumble-800" />
             <img
               src="/images/crumble_logo.png"
               alt="Crumble Logo"
@@ -83,7 +83,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-amber-800 hover:text-amber-600 transition-colors"
+            className="md:hidden text-crumble-600 hover:text-crumble-800 transition-colors"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6" />
@@ -95,41 +95,41 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-4 border-t border-amber-200 pt-4">
+          <nav className="md:hidden pb-4 border-t border-crumble-200 pt-4">
             <div className="flex flex-col space-y-3">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-amber-800 hover:text-amber-600 transition-colors font-medium text-left"
+                className="text-crumble-800 hover:text-crumble-600 transition-colors font-medium text-left"
               >
                 Ana Sayfa
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-amber-800 hover:text-amber-600 transition-colors font-medium text-left"
+                className="text-crumble-800 hover:text-crumble-600 transition-colors font-medium text-left"
               >
                 Hakkımızda
               </button>
               <button
                 onClick={() => scrollToSection("menu")}
-                className="text-amber-800 hover:text-amber-600 transition-colors font-medium text-left"
+                className="text-crumble-800 hover:text-crumble-600 transition-colors font-medium text-left"
               >
                 Menü
               </button>
               <button
                 onClick={() => scrollToSection("campaigns")}
-                className="text-amber-800 hover:text-amber-600 transition-colors font-medium text-left"
+                className="text-crumble-800 hover:text-crumble-600 transition-colors font-medium text-left"
               >
                 Kampanyalar
               </button>
               <button
                 onClick={() => scrollToSection("story")}
-                className="text-amber-800 hover:text-amber-600 transition-colors font-medium text-left"
+                className="text-crumble-800 hover:text-crumble-600 transition-colors font-medium text-left"
               >
                 Hikayemiz
               </button>
               <button
                 onClick={() => scrollToSection("location")}
-                className="text-amber-800 hover:text-amber-600 transition-colors font-medium text-left"
+                className="text-crumble-800 hover:text-crumble-600 transition-colors font-medium text-left"
               >
                 Konum
               </button>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Star, X } from 'lucide-react';
-import CardComponent from './CardComponent';
-import { menuCategories } from '../data/menuData';
+import React, { useState } from "react";
+import { Star, X } from "lucide-react";
+import CardComponent from "./CardComponent";
+import { menuCategories } from "../data/menuData";
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
@@ -13,10 +13,10 @@ const Menu = () => {
     <section id="menu" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-amber-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-6">
             Menümüz
           </h2>
-          <p className="text-xl text-amber-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-crumble-700 max-w-3xl mx-auto leading-relaxed">
             Kategorilerimize göz atın ve en sevdiğiniz lezzetleri keşfedin!
           </p>
         </div>
@@ -25,8 +25,10 @@ const Menu = () => {
           <div key={index} className="mb-16">
             {/* 🧡 Kategori başlığı */}
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-amber-900 mb-2">{category.title}</h3>
-              <p className="text-amber-700 text-lg">{category.description}</p>
+              <h3 className="text-3xl font-bold text-crumble-900 mb-2">
+                {category.title}
+              </h3>
+              <p className="text-crumble-700 text-lg">{category.description}</p>
             </div>
 
             {/* 🧁 3 ürün göster */}
@@ -41,7 +43,7 @@ const Menu = () => {
               <div className="text-center mt-6">
                 <button
                   onClick={() => openModal(index)}
-                  className="bg-amber-600 text-white px-4 py-2 rounded-full hover:bg-amber-700 transition"
+                  className="bg-crumble-600 text-white px-4 py-2 rounded-full hover:bg-crumble-700 transition"
                 >
                   Daha Fazla Göster
                 </button>
@@ -50,16 +52,15 @@ const Menu = () => {
 
             {/* ✨ Modal */}
             {activeCategory === index && (
-              <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50"
-              >
-                <div className="bg-white rounded-lg p-6 max-w-5xl w-full relative max-h-[90vh] overflow-y-auto">
+              <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
+                <div className="bg-white rounded-lg p-6 max-w-5xl w-full relative max-h-[90vh] overflow-y-auto shadow-lg">
                   <button
                     onClick={closeModal}
-                    className="absolute top-4 right-4 text-amber-700 hover:text-amber-900"
+                    className="absolute top-4 right-4 text-crumble-700 hover:text-crumble-900 transition"
                   >
                     <X className="w-6 h-6" />
                   </button>
-                  <h3 className="text-2xl font-bold mb-4 text-amber-900 text-center">
+                  <h3 className="text-2xl font-bold mb-4 text-crumble-900 text-center">
                     {category.title}
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

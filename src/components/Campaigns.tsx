@@ -8,7 +8,7 @@ const Campaigns = () => {
       discount: "%15",
       validUntil: "31 Aralık 2024",
       icon: Gift,
-      color: "bg-gradient-to-r from-amber-500 to-amber-600"
+      color: "bg-gradient-to-r from-crumble-500 to-crumble-600"
     },
     {
       title: "Öğrenci İndirimi",
@@ -38,13 +38,13 @@ const Campaigns = () => {
   ];
 
   return (
-    <section id="campaigns" className="py-20 bg-gradient-to-b from-white to-amber-50">
+    <section id="campaigns" className="py-20 bg-gradient-to-b from-white to-crumble-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-amber-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-6">
             Güncel Kampanyalar
           </h2>
-          <p className="text-xl text-amber-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-crumble-700 max-w-3xl mx-auto leading-relaxed">
             Crumble'da her zaman size özel fırsatlar var! Güncel kampanyalarımızı kaçırmayın.
           </p>
         </div>
@@ -60,10 +60,10 @@ const Campaigns = () => {
                 )}
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-amber-900 mb-3">{campaign.title}</h3>
-                <p className="text-amber-700 mb-4 leading-relaxed">{campaign.description}</p>
+                <h3 className="text-xl font-bold text-crumble-900 mb-3">{campaign.title}</h3>
+                <p className="text-crumble-700 mb-4 leading-relaxed">{campaign.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-amber-600 font-medium">
+                  <span className="text-sm text-crumble-600 font-medium">
                     Geçerlilik: {campaign.validUntil}
                   </span>
                 </div>
@@ -104,14 +104,14 @@ const Campaigns = () => {
         </div>
 
         {/* Special Announcement */}
-        <div className="mt-12 bg-amber-100 border-l-4 border-amber-500 p-6 rounded-lg">
+        <div className="mt-12 bg-crumble-100 border-l-4 border-crumble-500 p-6 rounded-lg">
           <div className="flex items-start">
-            <Gift className="h-6 w-6 text-amber-600 mt-1 mr-3" />
+            <Gift className="h-6 w-6 text-crumble-600 mt-1 mr-3" />
             <div>
-              <h4 className="text-lg font-semibold text-amber-900 mb-2">
+              <h4 className="text-lg font-semibold text-crumble-900 mb-2">
                 Özel Duyuru!
               </h4>
-              <p className="text-amber-800">
+              <p className="text-crumble-800">
                 Yeni yıl özel menümüz yakında! Instagram'dan duyurularımızı takip edin ve 
                 ilk deneyenler arasında olun. Özel açılış indirimi için bizi takipte kalın! 🎉
               </p>
