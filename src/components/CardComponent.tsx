@@ -19,11 +19,11 @@ const CardComponent: React.FC<CardProps> = ({ item }) => {
   className="bg-white rounded-lg shadow-lg overflow-hidden border border-crumble-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-crumble-100/30"
     >
       <div className="relative">
-        {/* <img
+        <img
           src={item.image}
           alt={item.name}
           className="w-full h-48 object-cover"
-        /> */}
+        /> 
         {item.popular && (
           <div className="absolute top-4 left-4 bg-crumble-600 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
             <Star className="h-4 w-4 mr-1 fill-current" />
