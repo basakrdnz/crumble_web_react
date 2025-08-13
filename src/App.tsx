@@ -14,7 +14,7 @@ function App() {
       <Hero />
       <About />
       <Menu />
-      {/* <Campaigns /> */}
+      <Campaigns />
       <Story />
       <Location />
       <Footer />
