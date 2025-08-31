@@ -1,47 +1,39 @@
-import { Gift, Clock, Users, Instagram, Heart, Star } from 'lucide-react';
+import { Gift, Clock, Users, Instagram, Heart, Star, ArrowRight, Calendar, Tag } from 'lucide-react';
 
 const Campaigns = () => {
   const campaigns = [
     {
       title: "Hafta Sonu Özel",
-      description: "Cumartesi ve Pazar günleri tüm bowllarda %15 indirim!",
+      description: "Cumartesi ve Pazar günleri tüm bowllarda %15 indirim! Taze malzemelerle hazırlanan özel tariflerimizi kaçırmayın.",
       discount: "%15",
       validUntil: "31 Aralık 2024",
       icon: Gift,
-      color: "bg-gradient-to-r from-crumble-500 to-crumble-600"
+      badge: "YENİ",
+      color: "from-crumble-500 to-crumble-600",
+      image: "/images/menu/karışık_tost.png"
     },
     {
       title: "Öğrenci İndirimi",
-      description: "Öğrenci kartınızı gösterin, tüm menüden %10 indirim kazanın!",
+      description: "Öğrenci kartınızı gösterin, tüm menüden %10 indirim kazanın! Arkadaşlarınızla birlikte gelin, keyifli anlar yaşayın.",
       discount: "%10",
       validUntil: "Sürekli",
       icon: Star,
-      color: "bg-gradient-to-r from-blue-500 to-blue-600"
-    },
-    {
-      title: "Grup Menüsü",
-      description: "4 kişilik grup menüsünde özel fiyat! Bowllar + tatlılar dahil.",
-      discount: "₺299",
-      originalPrice: "₺360",
-      validUntil: "15 Ocak 2025",
-      icon: Users,
-      color: "bg-gradient-to-r from-green-500 to-green-600"
-    },
-    {
-      title: "Mutlu Saatler",
-      description: "14:00-17:00 arası tüm tatlılarda %20 indirim!",
-      discount: "%20",
-      validUntil: "Her gün",
-      icon: Clock,
-      color: "bg-gradient-to-r from-purple-500 to-purple-600"
+      badge: "POPÜLER",
+      color: "from-amber-500 to-orange-500",
+      image: "/images/menu/arabiat_makarna.png"
     }
   ];
 
   return (
-    <section id="campaigns" className="py-20 bg-gradient-to-b from-white to-crumble-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-6">
+    <section id="campaigns" className="py-24 bg-gradient-to-br from-amber-50 via-white to-crumble-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 bg-crumble-100 text-crumble-700 rounded-full text-sm font-medium mb-6">
+            <Tag className="h-4 w-4 mr-2" />
+            Özel Fırsatlar
+          </div>
+          <h2 className="text-5xl sm:text-6xl font-bold text-crumble-900 mb-6">
             Güncel Kampanyalar
           </h2>
           <p className="text-xl text-crumble-700 max-w-3xl mx-auto leading-relaxed">
@@ -49,72 +41,97 @@ const Campaigns = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {/* Campaign Cards - 2 Wide */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {campaigns.map((campaign, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className={`${campaign.color} p-6 text-white text-center`}>
-                <campaign.icon className="h-12 w-12 mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">{campaign.discount}</div>
-                {campaign.originalPrice && (
-                  <div className="text-sm opacity-80 line-through">{campaign.originalPrice}</div>
-                )}
+            <div key={index} className="group relative">
+              {/* Badge */}
+              <div className="absolute -top-3 -right-3 z-20">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-red-500 to-pink-500 shadow-lg">
+                  {campaign.badge}
+                </span>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-crumble-900 mb-3">{campaign.title}</h3>
-                <p className="text-crumble-700 mb-4 leading-relaxed">{campaign.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-crumble-600 font-medium">
-                    Geçerlilik: {campaign.validUntil}
-                  </span>
+              
+              {/* Card */}
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden">
+                {/* Image and Header */}
+                <div className="relative">
+                  <img 
+                    src={campaign.image} 
+                    alt={campaign.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-r ${campaign.color} opacity-80`}></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <campaign.icon className="h-16 w-16 mx-auto mb-4 opacity-90" />
+                      <div className="text-6xl font-bold mb-2">{campaign.discount}</div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="p-8">
+                  <h3 className="text-3xl font-bold text-crumble-900 mb-4 group-hover:text-crumble-600 transition-colors">
+                    {campaign.title}
+                  </h3>
+                  <p className="text-crumble-700 mb-6 leading-relaxed text-lg">
+                    {campaign.description}
+                  </p>
+                  
+                  {/* Validity */}
+                  <div className="flex items-center justify-between pt-6 border-t border-gray-100">
+                    <div className="flex items-center text-sm text-crumble-600">
+                      <Calendar className="h-5 w-5 mr-2" />
+                      <span className="font-medium text-base">Geçerlilik: {campaign.validUntil}</span>
+                    </div>
+                    <button className="text-crumble-600 hover:text-crumble-700 transition-colors bg-crumble-100 hover:bg-crumble-200 p-3 rounded-full">
+                      <ArrowRight className="h-5 w-5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Instagram Section */}
-        <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-2xl p-8 text-white text-center">
-          <div className="max-w-3xl mx-auto">
-            <Instagram className="h-16 w-16 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold mb-4">
-              Bizi Instagram'da Takip Edin!
-            </h3>
-            <p className="text-xl mb-6 opacity-90">
-              En yeni kampanyalarımız, özel menülerimiz ve lezzetli anlarımız için Instagram hesabımızı takip etmeyi unutmayın!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* Instagram Banner - Thick and Full Width with Animated Circles */}
+        <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-2xl p-8 text-white text-center relative overflow-hidden mb-16 w-full">
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 animate-pulse" style={{animationDelay: '0s'}}></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12 animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/5 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-1/4 right-1/3 w-20 h-20 bg-white/8 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+          
+          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between">
+            <div className="flex items-center mb-4 sm:mb-0">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mr-6">
+                <Instagram className="h-8 w-8" />
+              </div>
+              <div className="text-left">
+                <h3 className="text-2xl font-bold mb-2">
+                  Bizi Instagram'da Takip Edin!
+                </h3>
+                <p className="text-base opacity-90">
+                  En yeni kampanyalarımız ve özel menülerimiz
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-2 text-white/80">
+                <Heart className="h-5 w-5 fill-current" />
+                <span className="text-base font-medium">5.2K takipçi</span>
+              </div>
               <a
                 href="https://instagram.com/crumblecafe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center"
+                className="bg-white text-purple-600 hover:bg-gray-50 px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center"
               >
-                <Instagram className="h-6 w-6 mr-2" />
+                <Instagram className="h-5 w-5 mr-3" />
                 @crumblecafe
               </a>
-              <div className="flex items-center space-x-2 text-white/80">
-                <Heart className="h-5 w-5 fill-current" />
-                <span>5.2K takipçi</span>
-              </div>
-            </div>
-            <div className="mt-6 text-sm opacity-75">
-              #CrumbleCafe #SağlıklıLezzetler #ElYapımıTatlılar #İstanbulKafe
-            </div>
-          </div>
-        </div>
-
-        {/* Special Announcement */}
-        <div className="mt-12 bg-crumble-100 border-l-4 border-crumble-500 p-6 rounded-lg">
-          <div className="flex items-start">
-            <Gift className="h-6 w-6 text-crumble-600 mt-1 mr-3" />
-            <div>
-              <h4 className="text-lg font-semibold text-crumble-900 mb-2">
-                Özel Duyuru!
-              </h4>
-              <p className="text-crumble-800">
-                Yeni yıl özel menümüz yakında! Instagram'dan duyurularımızı takip edin ve 
-                ilk deneyenler arasında olun. Özel açılış indirimi için bizi takipte kalın! 🎉
-              </p>
             </div>
           </div>
         </div>

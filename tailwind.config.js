@@ -17,6 +17,15 @@ export default {
           900: "#1a220e",   // pakistan-green'den koyu (en koyu)
         },
       },
+      animation: {
+        'scroll-up': 'scroll-up 20s linear infinite',
+      },
+      keyframes: {
+        'scroll-up': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
+      },
     },
   },
   plugins: [],
