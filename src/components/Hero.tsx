@@ -13,13 +13,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen bg-gradient-to-br from-amber-100 via-orange-100 to-green-100 overflow-hidden"
     >
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-crumble-300 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-amber-300 rounded-full blur-3xl"></div>
-        </div>
-      </div>
+
 
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex items-center">
@@ -89,6 +83,7 @@ const Hero = () => {
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -100,6 +95,7 @@ const Hero = () => {
                       src="/images/bg2.png"
                       alt="Lezzetli Yemekler"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:-rotate-2"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -111,6 +107,7 @@ const Hero = () => {
                       src="/images/bg10.jpg"
                       alt="Taze Kahve"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-1"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -122,6 +119,7 @@ const Hero = () => {
                       src="/images/bg11.JPG"
                       alt="Sıcak Atmosfer"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:-rotate-1"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -134,6 +132,7 @@ const Hero = () => {
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -145,6 +144,7 @@ const Hero = () => {
                       src="/images/bg2.png"
                       alt="Lezzetli Yemekler"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:-rotate-2"
+                      loading="lazy"
                     />
                   </div>
                 </div>

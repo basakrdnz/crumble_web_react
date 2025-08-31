@@ -18,7 +18,7 @@ export default {
         },
       },
       animation: {
-        'scroll-up': 'scroll-up 20s linear infinite',
+        'scroll-up': 'scroll-up 15s linear infinite',
       },
       keyframes: {
         'scroll-up': {
