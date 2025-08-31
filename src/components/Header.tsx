@@ -82,6 +82,12 @@ const Header = () => {
               >
                 KONUM
               </button>
+              <button
+                className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
+                onClick={() => scrollToSection("faq")}
+              >
+                SSS
+              </button>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -136,6 +142,12 @@ const Header = () => {
                   className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
                 >
                   KONUM
+                </button>
+                <button
+                  onClick={() => scrollToSection("faq")}
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
+                >
+                  SSS
                 </button>
               </div>
             </nav>

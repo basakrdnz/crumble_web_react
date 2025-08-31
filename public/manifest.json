@@ -1,0 +1,25 @@
+{
+  "name": "Crumble Cafe",
+  "short_name": "Crumble",
+  "description": "Sağlıklı bowllar, taze makarnalar ve el yapımı tatlılar sunan cafe",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#16a34a",
+  "theme_color": "#16a34a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/crumble_logo_green.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/crumble_logo_green.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["food", "restaurant", "lifestyle"],
+  "lang": "tr",
+  "dir": "ltr"
+}

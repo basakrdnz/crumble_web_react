@@ -22,7 +22,9 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/crumble.official"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-crumble-200 hover:text-white transition-colors"
               >
                 <Facebook className="h-6 w-6" />

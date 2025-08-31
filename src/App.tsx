@@ -5,6 +5,7 @@ import Menu from "./components/Menu";
 // import Campaigns from "./components/Campaigns";
 import Story from "./components/Story";
 import Location from "./components/Location";
+import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       {/* <Campaigns /> */}
       <Story />
       <Location />
+      <FAQ />
       <Footer />
     </div>
   );

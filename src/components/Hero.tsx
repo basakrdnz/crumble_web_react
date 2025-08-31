@@ -41,7 +41,7 @@ const Hero = () => {
 
               {/* Description */}
               <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                Sevgiyle hazırlanmış bowllar, taze makarnalar ve en kaliteli malzemelerle yapılan el yapımı tatlıları deneyimleyin.
+                Crumble Kafe'de sevgiyle hazırlanmış sağlıklı bowllar, taze makarnalar ve en kaliteli malzemelerle yapılan el yapımı tatlıları deneyimleyin. Ankara'nın en iyi Crumble Cafe deneyimi için bizi ziyaret edin.
               </p>
 
 
