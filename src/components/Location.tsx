@@ -137,7 +137,7 @@ const Location = () => {
             </div>
 
             <img
-              src="/images/Tezza-8338 (1).JPG"
+              src="/images/bg11.JPG"
               alt="Crumble kafe dış görünüm"
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
