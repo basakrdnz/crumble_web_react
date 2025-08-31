@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Instagram, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,20 +23,6 @@ const Header = () => {
 
   return (
     <>
-      {/* Social Media Sidebar */}
-      <div className="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
-        <div className="flex flex-col items-center space-y-6">
-          <div className="w-px h-16 bg-crumble-600"></div>
-          <a href="#" className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300">
-            <Instagram className="h-5 w-5" />
-          </a>
-          <a href="tel:+905555555555" className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300">
-            <Phone className="h-5 w-5" />
-          </a>
-          <div className="w-px h-16 bg-crumble-600"></div>
-        </div>
-      </div>
-
       {/* Main Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
