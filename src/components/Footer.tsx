@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Hızlı Bağlantılar</h3>
+            <h3 className="text-lg font-semibold text-crumble-700 mb-4 ">Hızlı Bağlantılar</h3>
             <ul className="space-y-2">
               <li>
                 <button
@@ -124,7 +124,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">İletişim</h3>
+            <h3 className="text-lg font-semibold text-crumble-700 mb-4">İletişim</h3>
             <div className="space-y-2 text-crumble-100">
               <p>İlkbahar Caddesi, Sinpaş Marina Yolu</p>
               <p>Güneypark Küme Evleri, No:78</p>

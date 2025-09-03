@@ -21,10 +21,6 @@ const FAQ = () => {
       question: "Crumble Cafe'de rezervasyon yapabilir miyim?",
       answer: "Crumble Kafe'de şu an rezervasyon hizmeti bulunmamaktadır. Crumble Cafe'de geniş alanımız olduğu için bekleme olmadan direkt yer bulabilirsiniz."
     },
-    {
-      question: "Crumble Kafe'nin özel yemekleri nelerdir?",
-      answer: "Crumble Cafe'nin özel yemekleri arasında sağlıklı bowl çeşitleri, taze makarnalar ve el yapımı tatlılar bulunmaktadır. Crumble Kafe'nin her yemeği özenle hazırlanmaktadır."
-    }
   ];
 
   const toggleFAQ = (index: number) => {
@@ -72,26 +68,6 @@ const FAQ = () => {
               )}
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-lg text-gray-600 mb-6">
-            Crumble Kafe'de daha fazla bilgi için bizi arayabilir veya ziyaret edebilirsiniz.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                         <a
-               href="tel:+905333266619"
-               className="inline-flex items-center px-6 py-3 bg-crumble-600 text-white font-semibold rounded-lg hover:bg-crumble-700 transition-colors duration-200"
-             >
-               Crumble Cafe'yi Ara
-             </a>
-            <a
-              href="#location"
-              className="inline-flex items-center px-6 py-3 border-2 border-crumble-600 text-crumble-600 font-semibold rounded-lg hover:bg-crumble-50 transition-colors duration-200"
-            >
-              Crumble Kafe Konumu
-            </a>
-          </div>
         </div>
       </div>
     </section>
