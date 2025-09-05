@@ -1,13 +1,11 @@
-# ✅ TAMAMLANAN İYİLEŞTİRMELER
+# EKSİKLER
 
-- ✅ Font uyumsuzlukları düzeltildi
-- ✅ Hamburger menü arka planı eklendi
-- ✅ Menü ürünleri tamamlandı
-- ✅ Menü popup'larında dışarı tıklama özelliği eklendi
-- ✅ Erişilebilirlik iyileştirmeleri (aria-label'lar)
-- ✅ Resim optimizasyonu (OptimizedImage bileşeni)
-- ✅ Performans iyileştirmeleri (lazy loading, font preconnect)
-- ✅ Linter hataları düzeltildi
+- Font uyumsuzlukları
+- hamburger menüde bg ayarlama
+- menü ürünlerini ekleme
+- menülerde pop-up içinden mouse ile dışarı çıkabilme
+- renkler???
+- 
 
 
 # Crumble Kafe Web Sitesi

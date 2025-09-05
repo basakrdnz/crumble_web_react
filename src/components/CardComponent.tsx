@@ -1,6 +1,5 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import OptimizedImage from './OptimizedImage';
 
 interface MenuItem {
   name: string;
@@ -20,7 +19,7 @@ const CardComponent: React.FC<CardProps> = ({ item }) => {
   className="bg-white rounded-lg shadow-lg overflow-hidden border border-crumble-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-crumble-100/30"
     >
       <div className="relative">
-        <OptimizedImage
+        <img
           src={item.image}
           alt={item.name}
           className="w-full h-48 object-cover"

@@ -1,5 +1,4 @@
-import { ArrowDown } from "lucide-react";
-import OptimizedImage from "./OptimizedImage";
+import { ArrowDown, Coffee } from "lucide-react";
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -80,10 +79,11 @@ const Hero = () => {
                 {/* Image 1 */}
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                    <OptimizedImage
+                    <img
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -91,10 +91,11 @@ const Hero = () => {
                 {/* Image 2 */}
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                    <OptimizedImage
+                    <img
                       src="/images/bg2.png"
                       alt="Lezzetli Yemekler"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:-rotate-2"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -102,10 +103,11 @@ const Hero = () => {
                 {/* Image 3 */}
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                    <OptimizedImage
+                    <img
                       src="/images/bg10.jpg"
                       alt="Taze Kahve"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-1"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -113,10 +115,11 @@ const Hero = () => {
                 {/* Image 4 */}
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                    <OptimizedImage
+                    <img
                       src="/images/bg11.JPG"
                       alt="Sıcak Atmosfer"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:-rotate-1"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -125,10 +128,11 @@ const Hero = () => {
                 {/* Image 1 (Duplicate) */}
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                    <OptimizedImage
+                    <img
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -136,10 +140,11 @@ const Hero = () => {
                 {/* Image 2 (Duplicate) */}
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                    <OptimizedImage
+                    <img
                       src="/images/bg2.png"
                       alt="Lezzetli Yemekler"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:-rotate-2"
+                      loading="lazy"
                     />
                   </div>
                 </div>
