@@ -77,15 +77,13 @@ const Hero = () => {
             {/* Right Side - Moving Billboard Gallery */}
             <div className="relative h-96 overflow-hidden">
               <div className="animate-scroll-up">
-                {/* Image 1 - LCP Optimized */}
+                {/* Image 1 */}
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                     <OptimizedImage
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
-                      className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-2 aspect-[4/3]"
-                      priority={true}
-                      loading="eager"
+                      className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
                     />
                   </div>
                 </div>
@@ -130,7 +128,7 @@ const Hero = () => {
                     <OptimizedImage
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
-                      className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-2 aspect-[4/3]"
+                      className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
                     />
                   </div>
                 </div>
