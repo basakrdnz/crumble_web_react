@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -17,15 +17,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [webpSupported, setWebpSupported] = useState(false);
-
-  useEffect(() => {
-    // Check WebP support
-    const canvas = document.createElement('canvas');
-    canvas.width = 1;
-    canvas.height = 1;
-    setWebpSupported(canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0);
-  }, []);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -35,48 +26,24 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     setHasError(true);
   };
 
-  // Generate optimized image paths
-  const getOptimizedSrc = (originalSrc: string) => {
-    return originalSrc.replace('/images/', '/images/optimized/');
-  };
-
-  const getWebPSrc = (originalSrc: string) => {
-    const lastDotIndex = originalSrc.lastIndexOf('.');
-    if (lastDotIndex === -1) return originalSrc;
-    return originalSrc.substring(0, lastDotIndex) + '.webp';
-  };
-
-  const optimizedSrc = getOptimizedSrc(src);
-  const webpSrc = getOptimizedSrc(getWebPSrc(src));
-
   return (
     <div className="relative">
-      <picture>
-        {/* WebP source for modern browsers */}
-        {webpSupported && (
-          <source
-            srcSet={webpSrc}
-            type="image/webp"
-          />
-        )}
-        {/* Fallback for older browsers */}
-        <img
-          src={webpSupported ? webpSrc : optimizedSrc}
-          alt={alt}
-          className={`${className} transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          loading={priority ? 'eager' : loading}
-          decoding={priority ? 'sync' : 'async'}
-          fetchPriority={priority ? 'high' : 'auto'}
-          onLoad={handleLoad}
-          onError={handleError}
-          style={{
-            width: '100%',
-            height: 'auto'
-          }}
-        />
-      </picture>
+      <img
+        src={src}
+        alt={alt}
+        className={`${className} transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        loading={priority ? 'eager' : loading}
+        decoding={priority ? 'sync' : 'async'}
+        fetchPriority={priority ? 'high' : 'auto'}
+        onLoad={handleLoad}
+        onError={handleError}
+        style={{
+          width: '100%',
+          height: 'auto'
+        }}
+      />
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
       )}
