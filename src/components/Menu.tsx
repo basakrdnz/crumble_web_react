@@ -52,8 +52,14 @@ const Menu = () => {
 
             {/* ✨ Modal */}
             {activeCategory === index && (
-              <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
-                <div className="bg-white rounded-lg p-6 max-w-5xl w-full relative max-h-[90vh] overflow-y-auto shadow-lg">
+              <div 
+                className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50"
+                onClick={closeModal}
+              >
+                <div 
+                  className="bg-white rounded-lg p-6 max-w-5xl w-full relative max-h-[90vh] overflow-y-auto shadow-lg"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   <button
                     onClick={closeModal}
                     className="absolute top-4 right-4 text-crumble-700 hover:text-crumble-900 transition"

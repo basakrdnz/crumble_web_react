@@ -1,9 +1,9 @@
+/* Özel font aileleri */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Özel font aileleri */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap");
 
 /* Temel font ayarları */
 body {

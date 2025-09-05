@@ -94,6 +94,7 @@ const Header = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-crumble-600 hover:text-crumble-700 transition-colors"
+              aria-label={isMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
             >
               {isMenuOpen ? (
                 <X className="h-5 w-5" />
@@ -105,7 +106,7 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <nav className="md:hidden pb-3 border-t border-crumble-600 pt-3">
+            <nav className="md:hidden pb-3 border-t border-crumble-600 pt-3 bg-white/95 backdrop-blur-sm">
               <div className="flex flex-col space-y-2">
                 <button
                   onClick={() => scrollToSection("home")}

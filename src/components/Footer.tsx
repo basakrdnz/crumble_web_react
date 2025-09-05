@@ -1,5 +1,5 @@
-import React from "react";
-import { Coffee, Facebook, Instagram, Twitter, Heart } from "lucide-react";
+import { Coffee, Facebook, Instagram, Heart } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Coffee className="h-8 w-8 text-crumble-600" />
-              <img
+              <OptimizedImage
                 src="/images/crumble_logo_green.png"
                 alt="Crumble Logo"
                 className="w-28 h-auto md:w-32 lg:w-36 mt-1"
@@ -26,6 +26,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-crumble-200 hover:text-white transition-colors"
+                aria-label="Crumble Kafe Facebook sayfasını ziyaret edin"
               >
                 <Facebook className="h-6 w-6" />
               </a>
@@ -34,6 +35,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-crumble-200 hover:text-white transition-colors"
+                aria-label="Crumble Kafe Instagram sayfasını ziyaret edin"
               >
                 <Instagram className="h-6 w-6" />
               </a>
