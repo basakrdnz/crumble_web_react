@@ -1,4 +1,5 @@
 import { Heart, Leaf, ChefHat, Award } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 
 const About = () => {
   const features = [
@@ -71,10 +72,11 @@ const About = () => {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <img
+            <OptimizedImage
               src="/images/Tezza-2322.jpg"
               alt="Taze malzemeler ve yemek pişirme"
-              className="w-full h-96 overflow-hidden object-cover rounded-lg shadow-lg"
+              className="w-full h-96 rounded-lg shadow-lg"
+              placeholder="Taze malzemeler yükleniyor..."
             />
           </div>
         </div>

@@ -9,6 +9,12 @@ const Menu = () => {
   const openModal = (index: number) => setActiveCategory(index);
   const closeModal = () => setActiveCategory(null);
 
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
   return (
     <section id="menu" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -31,15 +37,15 @@ const Menu = () => {
               <p className="text-crumble-700 text-lg">{category.description}</p>
             </div>
 
-            {/* 🧁 3 ürün göster */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.items.slice(0, 3).map((item, i) => (
+            {/* 🧁 Mobilde 2, büyük ekranlarda 3 ürün göster */}
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+              {category.items.slice(0, 2).map((item, i) => (
                 <CardComponent item={item} key={i} />
               ))}
             </div>
 
             {/* 🍰 Daha Fazla Göster butonu */}
-            {category.items.length > 3 && (
+            {category.items.length > 2 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => openModal(index)}
@@ -52,7 +58,10 @@ const Menu = () => {
 
             {/* ✨ Modal */}
             {activeCategory === index && (
-              <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
+              <div 
+                className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50"
+                onClick={handleBackdropClick}
+              >
                 <div className="bg-white rounded-lg p-6 max-w-5xl w-full relative max-h-[90vh] overflow-y-auto shadow-lg">
                   <button
                     onClick={closeModal}

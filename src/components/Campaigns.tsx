@@ -1,4 +1,5 @@
-import { Gift, Clock, Users, Instagram, Heart, Star, ArrowRight, Calendar, Tag } from 'lucide-react';
+import { Gift, Instagram, Heart, Star, ArrowRight, Calendar, Tag } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 
 const Campaigns = () => {
   const campaigns = [
@@ -56,10 +57,11 @@ const Campaigns = () => {
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden">
                 {/* Image and Header */}
                 <div className="relative">
-                  <img 
+                  <OptimizedImage 
                     src={campaign.image} 
                     alt={campaign.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48"
+                    placeholder={`${campaign.title} yükleniyor...`}
                   />
                   <div className={`absolute inset-0 bg-gradient-to-r ${campaign.color} opacity-80`}></div>
                   <div className="absolute inset-0 flex items-center justify-center">

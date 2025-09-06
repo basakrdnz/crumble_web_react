@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import OptimizedImage from './OptimizedImage';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +22,7 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+
   return (
     <>
       {/* Main Header */}
@@ -39,7 +41,8 @@ const Header = () => {
                 <img 
                   src="/images/crumble_logo_green.png" 
                   alt="Crumble Logo" 
-                  className="h-10 w-24 object-contain"
+                  className="h-auto w-24"
+                  loading="eager"
                 />
               </div>
             </div>
@@ -104,54 +107,56 @@ const Header = () => {
           </div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <nav className="md:hidden pb-3 border-t border-crumble-600 pt-3">
-              <div className="flex flex-col space-y-2">
+          <nav className={`md:hidden -mb-2 border-t border-crumble-600 pt-3 transition-all duration-300 ease-in-out overflow-hidden ${
+            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}>
+            <div className={`flex flex-col mb-4 space-y-1 transition-all duration-300 ease-in-out transform ${
+              isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
+            }`}>
                 <button
                   onClick={() => scrollToSection("home")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
                 >
                   ANA SAYFA
                 </button>
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
                 >
                   HAKKIMIZDA
                 </button>
                 <button
                   onClick={() => scrollToSection("menu")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
                 >
                   MENÜ
                 </button>
                 <button
                   onClick={() => scrollToSection("campaigns")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
                 >
                   KAMPANYALAR
                 </button>
                 <button
                   onClick={() => scrollToSection("story")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
                 >
                   HİKAYEMİZ
                 </button>
                 <button
                   onClick={() => scrollToSection("location")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
                 >
                   KONUM
                 </button>
                 <button
                   onClick={() => scrollToSection("faq")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-1 text-sm"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
                 >
                   SSS
                 </button>
-              </div>
-            </nav>
-          )}
+            </div>
+          </nav>
         </div>
       </header>
     </>

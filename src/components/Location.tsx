@@ -1,5 +1,5 @@
-import React from "react";
-import { MapPin, Clock, Phone, Mail, Car, Bus } from "lucide-react";
+import { MapPin, Phone, Mail, Car, Bus } from "lucide-react";
+import OptimizedImage from './OptimizedImage';
 
 const Location = () => {
   const hours = [
@@ -136,10 +136,11 @@ const Location = () => {
               </div>
             </div>
 
-            <img
+            <OptimizedImage
               src="/images/bg11.jpg"
               alt="Crumble kafe dış görünüm"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
+              className="w-full h-64 rounded-lg shadow-lg"
+              placeholder="Kafe dış görünümü yükleniyor..."
             />
 
             <div className="bg-gradient-to-r from-crumble-600 to-crumble-700 rounded-lg p-8 text-white text-center">
