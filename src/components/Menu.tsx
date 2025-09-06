@@ -39,13 +39,20 @@ const Menu = () => {
 
             {/* 🧁 Mobilde 2, büyük ekranlarda 3 ürün göster */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-              {category.items.slice(0, 2).map((item, i) => (
-                <CardComponent item={item} key={i} />
-              ))}
+              {/* Mobilde 2, PC'de 3 item göster */}
+              <div className="contents">
+                {category.items.slice(0, 2).map((item, i) => (
+                  <CardComponent item={item} key={i} />
+                ))}
+                {/* PC'de 3. item */}
+                <div className="hidden lg:block">
+                  {category.items[2] && <CardComponent item={category.items[2]} key={2} />}
+                </div>
+              </div>
             </div>
 
             {/* 🍰 Daha Fazla Göster butonu */}
-            {category.items.length > 2 && (
+            {category.items.length > 3 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => openModal(index)}
