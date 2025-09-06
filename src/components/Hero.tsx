@@ -116,7 +116,7 @@ const Hero = () => {
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                     <img
-                      src="/images/bg11.JPG"
+                      src="/images/bg11.jpg"
                       alt="Sıcak Atmosfer"
                       className="w-full h-56 object-cover transition-all duration-500 group-hover:scale-125 group-hover:-rotate-1"
                       loading="lazy"
