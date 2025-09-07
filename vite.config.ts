@@ -16,6 +16,8 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           icons: ['lucide-react'],
         },
+        // Keep original asset structure
+        assetFileNames: `assets/[name]-[hash][extname]`,
       },
     },
     // Enable compression
@@ -26,9 +28,26 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
+    // Image optimization settings
+    assetsInlineLimit: 2048, // 2kb altındaki resimler inline edilir
+    chunkSizeWarningLimit: 1000,
   },
   // Enable CSS optimization
   css: {
     devSourcemap: false,
+  },
+  // Image optimization
+  assetsInclude: ['**/*.webp', '**/*.avif'],
+  // Server configuration for development
+  server: {
+    headers: {
+      'Cache-Control': 'public, max-age=31536000',
+    },
+  },
+  // Preview configuration
+  preview: {
+    headers: {
+      'Cache-Control': 'public, max-age=31536000',
+    },
   },
 });

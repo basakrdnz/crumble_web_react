@@ -106,23 +106,20 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
       {/* Actual Image */}
       {isInView && (
-        <picture>
-          {/* WebP source for better compression */}
-          <source srcSet={src.replace(/\.(jpg|jpeg|png)$/i, '.webp')} type="image/webp" />
-          <img
-            src={src}
-            alt={alt}
-            loading={loading}
-            fetchPriority={fetchpriority}
-            width={width}
-            height={height}
-            onLoad={handleLoad}
-            onError={handleError}
-            className={`w-full h-full object-cover image-transition ${
-              isLoading ? 'opacity-0' : 'opacity-100'
-            }`}
-          />
-        </picture>
+        <img
+          src={src}
+          alt={alt}
+          loading={loading}
+          fetchPriority={fetchpriority}
+          width={width}
+          height={height}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`w-full h-full object-cover image-transition ${
+            isLoading ? 'opacity-0' : 'opacity-100'
+          }`}
+          decoding="async"
+        />
       )}
 
       {/* Placeholder for lazy loading */}

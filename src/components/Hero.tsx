@@ -79,11 +79,11 @@ const Hero = () => {
               <div className="animate-scroll-up">
                 {/* Image 1 */}
                 <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
                     <OptimizedImage
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
-                      className="w-full h-56 lg:h-72 xl:h-80 image-transition group-hover-scale group-hover-rotate"
+                      className="w-full h-full image-transition group-hover-scale group-hover-rotate"
                       placeholder="Cafe iç mekanı yükleniyor..."
                       loading="eager"
                       fetchpriority="high"
@@ -96,11 +96,11 @@ const Hero = () => {
 
                 {/* Image 2 */}
                 <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
                     <OptimizedImage
                       src="/images/bg2.png"
                       alt="Lezzetli Yemekler"
-                      className="w-full h-56 image-transition group-hover-scale group-hover-rotate-negative"
+                      className="w-full h-full image-transition group-hover-scale group-hover-rotate-negative"
                       placeholder="Lezzetli yemekler yükleniyor..."
                     />
                   </div>
@@ -108,11 +108,11 @@ const Hero = () => {
 
                 {/* Image 3 */}
                 <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
                     <OptimizedImage
                       src="/images/bg10.jpg"
                       alt="Taze Kahve"
-                      className="w-full h-56 image-transition group-hover-scale group-hover-rotate"
+                      className="w-full h-full image-transition group-hover-scale group-hover-rotate"
                       placeholder="Taze kahve yükleniyor..."
                     />
                   </div>
@@ -120,11 +120,11 @@ const Hero = () => {
 
                 {/* Image 4 */}
                 <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
                     <OptimizedImage
                       src="/images/bg11.jpg"
                       alt="Sıcak Atmosfer"
-                      className="w-full h-56 image-transition group-hover-scale group-hover-rotate-negative"
+                      className="w-full h-full image-transition group-hover-scale group-hover-rotate-negative"
                       placeholder="Sıcak atmosfer yükleniyor..."
                     />
                   </div>
@@ -133,11 +133,11 @@ const Hero = () => {
                 {/* Duplicate images for seamless loop */}
                 {/* Image 1 (Duplicate) */}
                 <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
                     <OptimizedImage
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
-                      className="w-full h-56 lg:h-72 xl:h-80 image-transition group-hover-scale group-hover-rotate"
+                      className="w-full h-full image-transition group-hover-scale group-hover-rotate"
                       placeholder="Cafe iç mekanı yükleniyor..."
                     />
                   </div>
@@ -145,11 +145,11 @@ const Hero = () => {
 
                 {/* Image 2 (Duplicate) */}
                 <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
                     <OptimizedImage
                       src="/images/bg2.png"
                       alt="Lezzetli Yemekler"
-                      className="w-full h-56 image-transition group-hover-scale group-hover-rotate-negative"
+                      className="w-full h-full image-transition group-hover-scale group-hover-rotate-negative"
                       placeholder="Lezzetli yemekler yükleniyor..."
                     />
                   </div>
