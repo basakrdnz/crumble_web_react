@@ -1,12 +1,14 @@
+import { lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Menu from "./components/Menu";
-// import Campaigns from "./components/Campaigns";
-import Story from "./components/Story";
-import Location from "./components/Location";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
+
+// Lazy load non-critical components
+const Story = lazy(() => import("./components/Story"));
+const Location = lazy(() => import("./components/Location"));
+const FAQ = lazy(() => import("./components/FAQ"));
+const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
   return (
@@ -15,11 +17,23 @@ function App() {
       <Hero />
       <About />
       <Menu />
-      {/* <Campaigns /> */}
-      <Story />
-      <Location />
-      <FAQ />
-      <Footer />
+      
+      {/* Lazy loaded components with Suspense */}
+      <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg mx-4 my-8"></div>}>
+        <Story />
+      </Suspense>
+      
+      <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg mx-4 my-8"></div>}>
+        <Location />
+      </Suspense>
+      
+      <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg mx-4 my-8"></div>}>
+        <FAQ />
+      </Suspense>
+      
+      <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

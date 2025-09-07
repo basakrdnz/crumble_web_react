@@ -15,6 +15,13 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           icons: ['lucide-react'],
+          // Separate chunks for better caching
+          components: [
+            './src/components/Story',
+            './src/components/Location', 
+            './src/components/FAQ',
+            './src/components/Footer'
+          ],
         },
         // Keep original asset structure
         assetFileNames: `assets/[name]-[hash][extname]`,
