@@ -19,10 +19,10 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex items-center">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             
-            {/* Left Side - Simplified */}
-            <div className="space-y-8 text-center pt-16 sm:pt-20 lg:pt-0">
+            {/* Left Side - Text Content */}
+            <div className="space-y-6 lg:space-y-8 text-center pt-16 sm:pt-20 lg:pt-0 order-1 lg:order-1">
 
               {/* Main Title */}
               <div className="space-y-6">
@@ -48,7 +48,7 @@ const Hero = () => {
 
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 pt-6 lg:pt-8 justify-center">
                 <button
                   onClick={scrollToAbout}
                   className="group px-6 py-3 bg-crumble-600 text-white font-semibold text-base rounded-lg transition-all duration-300 hover:bg-crumble-700 hover:shadow-lg shadow-md"
@@ -75,7 +75,7 @@ const Hero = () => {
             </div>
 
             {/* Right Side - Moving Billboard Gallery */}
-            <div className="relative h-96 lg:h-[500px] xl:h-[600px] overflow-hidden performance-optimized">
+            <div className="relative h-80 sm:h-96 lg:h-[500px] xl:h-[600px] overflow-hidden performance-optimized order-2 lg:order-2">
               <div className="animate-scroll-up">
                 {/* Image 1 */}
                 <div className="group cursor-pointer mb-2">
