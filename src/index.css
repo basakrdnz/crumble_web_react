@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Özel font aileleri */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap");
+/* Font imports moved to HTML head for better performance */
 
 /* Temel font ayarları */
 body {
@@ -38,4 +37,67 @@ nav {
 .nav-link:hover,
 .nav-link.active {
   color: var(--crumble-100);
+}
+
+/* Performance optimized animations */
+.animate-scroll-up {
+  animation: scroll-up 15s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scroll-up {
+  0% { 
+    transform: translateY(0);
+  }
+  100% { 
+    transform: translateY(-50%);
+  }
+}
+
+/* Optimized hover animations using transform and opacity */
+.group-hover-scale {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.group:hover .group-hover-scale {
+  transform: scale(1.05);
+}
+
+.group-hover-rotate {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.group:hover .group-hover-rotate {
+  transform: rotate(2deg);
+}
+
+.group:hover .group-hover-rotate-negative {
+  transform: rotate(-2deg);
+}
+
+/* Optimized image transitions */
+.image-transition {
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+/* Batch DOM measurements for better performance */
+.performance-optimized {
+  contain: layout style paint;
+  will-change: transform, opacity;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-up {
+    animation: none;
+  }
+  
+  .group-hover-scale,
+  .group-hover-rotate,
+  .image-transition {
+    transition: none;
+  }
 }

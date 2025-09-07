@@ -75,7 +75,7 @@ const Hero = () => {
             </div>
 
             {/* Right Side - Moving Billboard Gallery */}
-            <div className="relative h-96 lg:h-[500px] xl:h-[600px] overflow-hidden">
+            <div className="relative h-96 lg:h-[500px] xl:h-[600px] overflow-hidden performance-optimized">
               <div className="animate-scroll-up">
                 {/* Image 1 */}
                 <div className="group cursor-pointer mb-2">
@@ -83,8 +83,13 @@ const Hero = () => {
                     <OptimizedImage
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
-                      className="w-full h-56 lg:h-72 xl:h-80 transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
+                      className="w-full h-56 lg:h-72 xl:h-80 image-transition group-hover-scale group-hover-rotate"
                       placeholder="Cafe iç mekanı yükleniyor..."
+                      loading="eager"
+                      fetchpriority="high"
+                      width={800}
+                      height={600}
+                      isHero={true}
                     />
                   </div>
                 </div>
@@ -95,7 +100,7 @@ const Hero = () => {
                     <OptimizedImage
                       src="/images/bg2.png"
                       alt="Lezzetli Yemekler"
-                      className="w-full h-56 transition-all duration-500 group-hover:scale-125 group-hover:-rotate-2"
+                      className="w-full h-56 image-transition group-hover-scale group-hover-rotate-negative"
                       placeholder="Lezzetli yemekler yükleniyor..."
                     />
                   </div>
@@ -107,7 +112,7 @@ const Hero = () => {
                     <OptimizedImage
                       src="/images/bg10.jpg"
                       alt="Taze Kahve"
-                      className="w-full h-56 transition-all duration-500 group-hover:scale-125 group-hover:rotate-1"
+                      className="w-full h-56 image-transition group-hover-scale group-hover-rotate"
                       placeholder="Taze kahve yükleniyor..."
                     />
                   </div>
@@ -119,7 +124,7 @@ const Hero = () => {
                     <OptimizedImage
                       src="/images/bg11.jpg"
                       alt="Sıcak Atmosfer"
-                      className="w-full h-56 transition-all duration-500 group-hover:scale-125 group-hover:-rotate-1"
+                      className="w-full h-56 image-transition group-hover-scale group-hover-rotate-negative"
                       placeholder="Sıcak atmosfer yükleniyor..."
                     />
                   </div>
@@ -132,7 +137,7 @@ const Hero = () => {
                     <OptimizedImage
                       src="/images/crumble_bg.jpg"
                       alt="Crumble Cafe İç Mekan"
-                      className="w-full h-56 lg:h-72 xl:h-80 transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
+                      className="w-full h-56 lg:h-72 xl:h-80 image-transition group-hover-scale group-hover-rotate"
                       placeholder="Cafe iç mekanı yükleniyor..."
                     />
                   </div>
@@ -144,7 +149,7 @@ const Hero = () => {
                     <OptimizedImage
                       src="/images/bg2.png"
                       alt="Lezzetli Yemekler"
-                      className="w-full h-56 transition-all duration-500 group-hover:scale-125 group-hover:-rotate-2"
+                      className="w-full h-56 image-transition group-hover-scale group-hover-rotate-negative"
                       placeholder="Lezzetli yemekler yükleniyor..."
                     />
                   </div>

@@ -8,6 +8,10 @@ interface OptimizedImageProps {
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
+  fetchpriority?: 'high' | 'low' | 'auto';
+  width?: number;
+  height?: number;
+  isHero?: boolean;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -18,6 +22,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   placeholder = 'Yükleniyor...',
   onLoad,
   onError,
+  fetchpriority = 'auto',
+  width,
+  height,
+  isHero = false,
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -25,6 +33,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+    // For hero images, load immediately
+    if (isHero) {
+      setIsInView(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -43,7 +57,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isHero]);
 
   const handleLoad = () => {
     setIsLoading(false);
@@ -92,16 +106,23 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
       {/* Actual Image */}
       {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          loading={loading}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoading ? 'opacity-0' : 'opacity-100'
-          }`}
-        />
+        <picture>
+          {/* WebP source for better compression */}
+          <source srcSet={src.replace(/\.(jpg|jpeg|png)$/i, '.webp')} type="image/webp" />
+          <img
+            src={src}
+            alt={alt}
+            loading={loading}
+            fetchPriority={fetchpriority}
+            width={width}
+            height={height}
+            onLoad={handleLoad}
+            onError={handleError}
+            className={`w-full h-full object-cover image-transition ${
+              isLoading ? 'opacity-0' : 'opacity-100'
+            }`}
+          />
+        </picture>
       )}
 
       {/* Placeholder for lazy loading */}
