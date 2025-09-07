@@ -36,8 +36,8 @@ export default defineConfig({
   css: {
     devSourcemap: false,
   },
-  // Image optimization
-  assetsInclude: ['**/*.webp', '**/*.avif'],
+  // Image optimization - include all image formats
+  assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.png', '**/*.webp', '**/*.avif', '**/*.gif', '**/*.svg'],
   // Server configuration for development
   server: {
     headers: {
