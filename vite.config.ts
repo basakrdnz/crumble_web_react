@@ -49,6 +49,9 @@ export default defineConfig({
   server: {
     headers: {
       'Cache-Control': 'public, max-age=31536000',
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1; mode=block',
     },
   },
   // Preview configuration

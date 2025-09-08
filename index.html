@@ -177,11 +177,44 @@
       .hero-image-container {
         height: 14rem; /* h-56 equivalent */
       }
+      
+      /* Mobile performance optimizations */
+      @media (max-width: 768px) {
+        .animate-scroll-up {
+          animation-duration: 20s; /* Slower on mobile for better performance */
+        }
+        
+        .group-hover-scale,
+        .group-hover-rotate,
+        .image-transition {
+          transition-duration: 0.2s; /* Faster transitions on mobile */
+        }
+        
+        /* Reduce motion on mobile for better performance */
+        .performance-optimized {
+          will-change: auto;
+        }
+      }
+      
+      /* Font loading optimization */
+      @font-face {
+        font-family: 'Playfair Display';
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'Quicksand';
+        font-display: swap;
+      }
     </style>
     
     <!-- Preload critical CSS -->
     <link rel="preload" href="/assets/index-BpFc06mc.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/assets/index-BpFc06mc.css"></noscript>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXDTzYhQ.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v30/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvtk.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Preload hero image for LCP optimization -->
     <link rel="preload" href="/images/crumble_bg.jpg" as="image" fetchpriority="high" type="image/jpeg">
@@ -189,11 +222,19 @@
     <!-- Hidden LCP image for immediate discovery -->
     <img src="/images/crumble_bg.jpg" alt="Crumble Cafe İç Mekan" style="display: none;" fetchpriority="high" loading="eager" width="800" height="600">
     
-    <!-- Fonts -->
+    <!-- Fonts with optimized loading -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
