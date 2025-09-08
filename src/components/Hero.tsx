@@ -75,7 +75,7 @@ const Hero = () => {
             </div>
 
             {/* Right Side - Moving Billboard Gallery */}
-            <div className="relative h-80 sm:h-96 lg:h-[500px] xl:h-[600px] overflow-hidden performance-optimized order-2 lg:order-2" style={{contain: 'layout style paint'}}>
+            <div className="relative h-80 sm:h-96 lg:h-[500px] xl:h-[600px] overflow-hidden performance-optimized order-2 lg:order-2">
               <div className="animate-scroll-up">
                 {/* Image 1 */}
                 <div className="group cursor-pointer mb-2">
