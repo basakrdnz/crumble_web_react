@@ -130,20 +130,7 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Duplicate images for seamless loop */}
-                {/* Image 1 (Duplicate) */}
-                <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
-                    <OptimizedImage
-                      src="/images/crumble_bg.jpg"
-                      alt="Crumble Cafe İç Mekan"
-                      className="w-full h-full image-transition group-hover-scale group-hover-rotate"
-                      placeholder="Cafe iç mekanı yükleniyor..."
-                    />
-                  </div>
-                </div>
 
-                {/* Image 2 (Duplicate) */}
                 <div className="group cursor-pointer mb-2">
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
                     <OptimizedImage

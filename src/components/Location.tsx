@@ -137,8 +137,8 @@ const Location = () => {
             </div>
 
             <OptimizedImage
-              src="/images/bg11.jpg"
-              alt="Crumble kafe dış görünüm"
+                      src="/images/crumble_atmosfer.JPG"
+                      alt="Crumble kafe dış görünüm"
               className="w-full h-64 rounded-lg shadow-lg"
               placeholder="Kafe dış görünümü yükleniyor..."
             />
