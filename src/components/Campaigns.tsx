@@ -21,7 +21,7 @@ const Campaigns = () => {
       icon: Star,
       badge: "POPÜLER",
       color: "from-amber-500 to-orange-500",
-      image: "/images/menu/arabiat_makarna.png"
+      image: "/images/menu/arabiata_makarna.png"
     }
   ];
 
@@ -126,13 +126,13 @@ const Campaigns = () => {
                 <span className="text-base font-medium">5.2K takipçi</span>
               </div>
               <a
-                href="https://instagram.com/crumblecafe"
+                href="https://www.instagram.com/crumble.official/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-purple-600 hover:bg-gray-50 px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center"
               >
                 <Instagram className="h-5 w-5 mr-3" />
-                @crumblecafe
+                @crumble.official
               </a>
             </div>
           </div>

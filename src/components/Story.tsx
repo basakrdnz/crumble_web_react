@@ -1,5 +1,5 @@
-import React from 'react';
 import { Clock, Users, Coffee } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 
 const Story = () => {
   const milestones = [
@@ -38,14 +38,15 @@ const Story = () => {
           </p>
         </div>
 
-        <div className="grid gap-12 items-center mb-16">
-          {/* <div>            ***  grid-cols-1 lg:grid-cols-2 ***
-            <img
-              src="https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <OptimizedImage
+              src="/images/crumble_atmosfer.JPG"
               alt="Kafe mutfağında yemek yapan şefler"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
+              placeholder="Kafe mutfağı yükleniyor..."
             />
-          </div> */}
+          </div>
           <div>
             <h3 className="text-3xl font-bold text-crumble-900 mb-6">
               Her Şeyin Başladığı Yer

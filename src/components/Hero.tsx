@@ -129,18 +129,6 @@ const Hero = () => {
                     />
                   </div>
                 </div>
-
-
-                <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
-                    <OptimizedImage
-                      src="/images/bg2.png"
-                      alt="Lezzetli Yemekler"
-                      className="w-full h-full image-transition group-hover-scale group-hover-rotate-negative"
-                      placeholder="Lezzetli yemekler yükleniyor..."
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </div>

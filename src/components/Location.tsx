@@ -9,7 +9,7 @@ const Location = () => {
   ];
 
   return (
-    <section id="location" className="py-20 bg-white">
+    <section id="location" className="py-20 bg-gradient-to-b from-white to-crumble-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-6">
@@ -104,9 +104,8 @@ const Location = () => {
                       Toplu Taşıma
                     </h4>
                     <p className="text-crumble-700">
-                      Çevredeki otobüs durakları ve minibüslerle kolay ulaşım.
+                      Çevredeki otobüs durakları ve minibüslerle kolay ulaşım sağlanabilir. Güneypark ve Çankaya merkez hattına yakın konumumuzla toplu taşıma ile rahatlıkla ulaşabilirsiniz.
                     </p>
-                    {/* BURAYA OTOBÜS NUMARASI GİRMEK LAZIM */}
                   </div>
                 </div>
               </div>
@@ -137,8 +136,8 @@ const Location = () => {
             </div>
 
             <OptimizedImage
-                      src="/images/crumble_atmosfer.JPG"
-                      alt="Crumble kafe dış görünüm"
+              src="/images/crumble_atmosfer.JPG"
+              alt="Crumble kafe dış görünüm"
               className="w-full h-64 rounded-lg shadow-lg"
               placeholder="Kafe dış görünümü yükleniyor..."
             />
@@ -152,7 +151,17 @@ const Location = () => {
                 sabırsızlanıyoruz. Unutulmaz bir yemek deneyimi için bize
                 katılın!
               </p>
-              <button className="bg-white text-crumble-700 hover:bg-crumble-50 px-6 py-3 rounded-full font-semibold transition-colors">
+              <button 
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  } else {
+                    window.location.href = "tel:+905333266619";
+                  }
+                }}
+                className="bg-white text-crumble-700 hover:bg-crumble-50 px-6 py-3 rounded-full font-semibold transition-colors"
+              >
                 Bize Ulaşın
               </button>
             </div>

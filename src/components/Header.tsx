@@ -68,12 +68,6 @@ const Header = () => {
               </button>
               <button
                 className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
-                onClick={() => scrollToSection("campaigns")}
-              >
-                KAMPANYALAR
-              </button>
-              <button
-                className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
                 onClick={() => scrollToSection("story")}
               >
                 HİKAYE
@@ -109,48 +103,42 @@ const Header = () => {
           <nav className={`md:hidden -mb-2 border-t border-crumble-600 pt-3 transition-all duration-300 ease-in-out overflow-hidden ${
             isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}>
-            <div className={`flex flex-col mb-4 space-y-1 transition-all duration-300 ease-in-out transform ${
+            <div className={`flex flex-col mb-4 space-y-2 transition-all duration-300 ease-in-out transform ${
               isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
             }`}>
                 <button
                   onClick={() => scrollToSection("home")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
                 >
                   ANA SAYFA
                 </button>
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
                 >
                   HAKKIMIZDA
                 </button>
                 <button
                   onClick={() => scrollToSection("menu")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
                 >
                   MENÜ
                 </button>
                 <button
-                  onClick={() => scrollToSection("campaigns")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
-                >
-                  KAMPANYALAR
-                </button>
-                <button
                   onClick={() => scrollToSection("story")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
                 >
                   HİKAYEMİZ
                 </button>
                 <button
                   onClick={() => scrollToSection("location")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
                 >
                   KONUM
                 </button>
                 <button
                   onClick={() => scrollToSection("faq")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-0.5 text-[10px]"
+                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
                 >
                   SSS
                 </button>
