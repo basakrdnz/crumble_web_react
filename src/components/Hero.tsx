@@ -74,60 +74,56 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right Side - Moving Billboard Gallery */}
-            <div className="relative h-80 sm:h-96 lg:h-[500px] xl:h-[600px] overflow-hidden performance-optimized order-2 lg:order-2">
-              <div className="animate-scroll-up">
+            {/* Right Side - Compact Image Grid */}
+            <div className="relative pt-8 lg:pt-0 order-2 lg:order-2">
+              <div className="grid grid-cols-2 gap-3">
                 {/* Image 1 */}
-                <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
-                    <OptimizedImage
-                      src="/images/crumble_bg.jpg"
-                      alt="Crumble Cafe İç Mekan"
-                      className="w-full h-full image-transition group-hover-scale group-hover-rotate"
-                      placeholder="Cafe iç mekanı yükleniyor..."
-                      loading="eager"
-                      fetchpriority="high"
-                      width={800}
-                      height={600}
-                      isHero={true}
-                    />
-                  </div>
+                <div className="group col-span-1 relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-48 sm:h-56 lg:h-64">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10"></div>
+                  <OptimizedImage
+                    src="/images/C0837T01.JPG"
+                    alt="Crumble Cafe İç Mekan"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    placeholder="Cafe yükleniyor..."
+                    loading="eager"
+                    fetchpriority="high"
+                    width={400}
+                    height={300}
+                    isHero={true}
+                  />
                 </div>
 
                 {/* Image 2 */}
-                <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
-                    <OptimizedImage
-                      src="/images/bg2.png"
-                      alt="Lezzetli Yemekler"
-                      className="w-full h-full image-transition group-hover-scale group-hover-rotate-negative"
-                      placeholder="Lezzetli yemekler yükleniyor..."
-                    />
-                  </div>
+                <div className="group col-span-1 relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-48 sm:h-56 lg:h-64">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10"></div>
+                  <OptimizedImage
+                    src="/images/DSC00211.JPG"
+                    alt="Lezzetli Yemekler"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    placeholder="Yemekler yükleniyor..."
+                  />
                 </div>
 
                 {/* Image 3 */}
-                <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
-                    <OptimizedImage
-                      src="/images/bg10.jpg"
-                      alt="Taze Kahve"
-                      className="w-full h-full image-transition group-hover-scale group-hover-rotate"
-                      placeholder="Taze kahve yükleniyor..."
-                    />
-                  </div>
+                <div className="group col-span-1 relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-48 sm:h-56 lg:h-64">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10"></div>
+                  <OptimizedImage
+                    src="/images/DSC00263.JPG"
+                    alt="Sıcak Atmosfer"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    placeholder="Atmosfer yükleniyor..."
+                  />
                 </div>
 
                 {/* Image 4 */}
-                <div className="group cursor-pointer mb-2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl h-56">
-                    <OptimizedImage
-                      src="/images/bg11.jpg"
-                      alt="Sıcak Atmosfer"
-                      className="w-full h-full image-transition group-hover-scale group-hover-rotate-negative"
-                      placeholder="Sıcak atmosfer yükleniyor..."
-                    />
-                  </div>
+                <div className="group col-span-1 relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-48 sm:h-56 lg:h-64">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10"></div>
+                  <OptimizedImage
+                    src="/images/Tezza-2322.jpg"
+                    alt="Taze Kahve"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    placeholder="Kahve yükleniyor..."
+                  />
                 </div>
               </div>
             </div>
