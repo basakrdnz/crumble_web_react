@@ -7,15 +7,15 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Crumble Kafe nerede bulunuyor?",
-      answer: "Crumble Kafe Ankara Çankaya'da, İlkbahar Caddesi, Sinpaş Marina Yolu, Güneypark Küme Evleri No:78 adresinde hizmet vermektedir. Sağlıklı yemekler ve lezzetli tatlılar için bizi ziyaret edebilirsiniz."
+      answer: "Crumble Kafe Ankara Çankaya'da, İlkbahar Caddesi, Sinpaş Marina Yolu, Güneypark Küme Evleri No:78 adresinde hizmet vermektedir. Lezzetli tatlılar, özel sandviçler ve taze içecekler için bizi ziyaret edebilirsiniz."
     },
     {
-      question: "Crumble Cafe'de hangi yemekler var?",
-      answer: "Menümüzde sağlıklı bowllar (ızgara tavuk, köfte, barbekü tavuk vb.), taze makarnalar (Fettuccine Alfredo, Arabbiata, Pesto) ve el yapımı tatlılar bulunmaktadır. Her damak zevkine uygun seçenekler mevcuttur."
+      question: "Crumble Cafe'de hangi lezzetler var?",
+      answer: "Menümüzde el yapımı tatlılar, özel sandviçler, lezzetli tostlar ve çeşitli içecekler bulunmaktadır. Her damak zevkine uygun seçenekler mevcuttur."
     },
     {
       question: "Crumble Kafe'nin çalışma saatleri nedir?",
-      answer: "Crumble Cafe Pazartesi-Cuma 09:00-23:00, Cumartesi-Pazar 10:00-23:00 saatleri arasında hizmet vermektedir. Kahvaltıdan akşam yemeğine kadar lezzetli seçenekler bulabilirsiniz."
+      answer: "Crumble Cafe Pazartesi-Cuma 09:00-23:00, Cumartesi-Pazar 10:00-23:00 saatleri arasında hizmet vermektedir. Kahvaltıdan akşam geç saatlere kadar lezzetli seçenekler bulabilirsiniz."
     },
     {
       question: "Crumble Cafe'de rezervasyon yapabilir miyim?",

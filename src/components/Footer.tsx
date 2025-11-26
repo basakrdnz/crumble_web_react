@@ -77,18 +77,6 @@ const Footer = () => {
                 <button
                   onClick={() =>
                     document
-                      .getElementById("menu")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="text-crumble-100 hover:text-white transition-colors"
-                >
-                  Menü
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() =>
-                    document
                       .getElementById("story")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }

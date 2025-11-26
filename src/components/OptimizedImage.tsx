@@ -12,6 +12,7 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   isHero?: boolean;
+  style?: React.CSSProperties;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -26,6 +27,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   isHero = false,
+  style,
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -118,6 +120,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           className={`w-full h-full object-cover image-transition ${
             isLoading ? 'opacity-0' : 'opacity-100'
           }`}
+          style={style}
           decoding="async"
         />
       )}

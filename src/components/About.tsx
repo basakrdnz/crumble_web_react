@@ -6,12 +6,12 @@ const About = () => {
     {
       icon: Heart,
       title: "Sevgiyle Yapılmış",
-      description: "Her yemek tutkuyla ve özenle hazırlanır, her lokmada mükemmel lezzet garantisi verilir."
+      description: "Her tatlı, her sandviç tutkuyla ve özenle hazırlanır, her lokmada mükemmel lezzet garantisi verilir."
     },
     {
       icon: Leaf,
-      title: "Taze ve Sağlıklı",
-      description: "Vücudunuzu ve ruhunuzu besleyen besleyici yemekler yaratmak için en kaliteli yerel malzemeleri kullanıyoruz."
+      title: "Taze ve Özel",
+      description: "En kaliteli yerel malzemeleri kullanarak, tatlılarımızdan sandviçlerimize kadar her şeyi özenle hazırlıyoruz."
     },
     {
       icon: ChefHat,
@@ -20,8 +20,8 @@ const About = () => {
     },
     {
       icon: Award,
-      title: "Premium Kalite",
-      description: "Çiftlikten sofraya, malzeme seçimi ve hazırlığında en yüksek standartları koruyoruz."
+      title: "Kaliteli Malzemeler",
+      description: "Malzeme seçimi ve hazırlığında en yüksek standartları koruyoruz."
     }
   ];
 
@@ -33,12 +33,12 @@ const About = () => {
             Crumble Hakkında
           </h2>
           <p className="text-xl text-crumble-700 max-w-3xl mx-auto leading-relaxed">
-            Crumble'da harika yemeğin harika malzemelerle başladığına inanıyoruz. Misyonumuz, kapımızdan geçen her misafire 
-            rahatlık ve neşe getiren sağlıklı, lezzetli yemekler sunmaktır.
+            Crumble'da harika lezzetlerin harika malzemelerle başladığına inanıyoruz. Misyonumuz, kapımızdan geçen her misafire 
+            rahatlık ve neşe getiren lezzetli tatlılar, özel sandviçler ve taze içecekler sunmaktır.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {features.map((feature, index) => (
             <div key={index} className="text-center group">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-crumble-100 rounded-full mb-4 group-hover:bg-crumble-200 transition-colors duration-300">
@@ -50,35 +50,14 @@ const About = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <h3 className="text-3xl font-bold text-crumble-900 mb-6">
-              Sağlığa Olan Bağlılığımız
-            </h3>
-            <p className="text-crumble-700 mb-4 leading-relaxed">
-              Sadece inanılmaz lezzetli değil, aynı zamanda vücudunuzu besleyen yemekler yaratma konusunda tutkuluyuz. 
-              Menümüzde protein açısından zengin bowllar, taze makarna yemekleri ve sağlıklı beslenmenin lezzetten 
-              ödün vermek anlamına gelmediğini kanıtlayan suçluluk hissi yaratmayan tatlılar bulunuyor.
-            </p>
-            <p className="text-crumble-700 mb-6 leading-relaxed">
-              Her sos, her tatlı, her bileşen mutfağımızda sıfırdan yapılır. Yemeğinizin içine tam olarak neyin 
-              girdiğini bilmekten gurur duyuyoruz, sadece yapay koruyucular veya kısayollar olmadan doğal malzemeler kullanıyoruz.
-            </p>
-            <div className="bg-crumble-100 p-6 rounded-lg">
-              <p className="text-crumble-800 font-medium italic">
-                "Sadece yemek servis etmiyoruz; aileleri ve arkadaşları sağlıklı, lezzetli yemekler etrafında 
-                bir araya getiren deneyimler yaratıyoruz."
-              </p>
-            </div>
-          </div>
-          <div className="order-1 lg:order-2">
-            <OptimizedImage
-              src="/images/Tezza-2322.jpg"
-              alt="Taze malzemeler ve yemek pişirme"
-              className="w-full h-96 rounded-lg shadow-lg"
-              placeholder="Taze malzemeler yükleniyor..."
-            />
-          </div>
+        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+          <OptimizedImage
+            src="/images/DSC00263.JPG"
+            alt="Crumble Cafe"
+            className="w-full h-[400px] md:h-[500px] object-cover"
+            style={{ objectPosition: 'center bottom' }}
+            placeholder="Crumble Cafe yükleniyor..."
+          />
         </div>
       </div>
     </section>

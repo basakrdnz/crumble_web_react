@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Menu from "./components/Menu";
 
 // Lazy load non-critical components
 const Story = lazy(() => import("./components/Story"));
@@ -16,7 +15,6 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <Menu />
       
       {/* Lazy loaded components with Suspense */}
       <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg mx-4 my-8"></div>}>

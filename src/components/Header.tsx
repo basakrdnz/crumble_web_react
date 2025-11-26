@@ -62,12 +62,6 @@ const Header = () => {
               </button>
               <button
                 className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
-                onClick={() => scrollToSection("menu")}
-              >
-                MENÜ
-              </button>
-              <button
-                className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
                 onClick={() => scrollToSection("story")}
               >
                 HİKAYE
@@ -117,12 +111,6 @@ const Header = () => {
                   className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
                 >
                   HAKKIMIZDA
-                </button>
-                <button
-                  onClick={() => scrollToSection("menu")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
-                >
-                  MENÜ
                 </button>
                 <button
                   onClick={() => scrollToSection("story")}
