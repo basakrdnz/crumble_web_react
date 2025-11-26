@@ -9,7 +9,7 @@ const Location = () => {
   ];
 
   return (
-    <section id="location" className="py-20 bg-gradient-to-b from-white to-crumble-50">
+    <section id="location" className="py-20 bg-crumble-100/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-6">
@@ -135,11 +135,10 @@ const Location = () => {
               </div>
             </div>
 
-            <OptimizedImage
+            <img
               src="/images/crumble_atmosfer.JPG"
               alt="Crumble kafe dış görünüm"
               className="w-full h-64 rounded-lg shadow-lg"
-              placeholder="Kafe dış görünümü yükleniyor..."
             />
 
             <div className="bg-gradient-to-r from-crumble-600 to-crumble-700 rounded-lg p-8 text-white text-center">
@@ -153,12 +152,7 @@ const Location = () => {
               </p>
               <button 
                 onClick={() => {
-                  const contactSection = document.getElementById("contact");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" });
-                  } else {
-                    window.location.href = "tel:+905333266619";
-                  }
+                  window.location.href = "tel:+905333266619";
                 }}
                 className="bg-white text-crumble-700 hover:bg-crumble-50 px-6 py-3 rounded-full font-semibold transition-colors"
               >

@@ -44,7 +44,6 @@ Bu proje, Crumble Kafe için hazırlanmış modern, duyarlı ve şık bir React 
 
 ## Yapılandırma
 
-- Menü ve içerik verileri için: [`src/data/menuData.ts`](src/data/menuData.ts)
 - Görseller için: [`public/images/`](public/images/)
 - Stil ve tema için: [`tailwind.config.js`](tailwind.config.js), [`src/index.css`](src/index.css)
 

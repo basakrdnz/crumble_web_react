@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, CSSProperties } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -6,27 +6,21 @@ interface OptimizedImageProps {
   className?: string;
   loading?: 'lazy' | 'eager';
   placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
   fetchpriority?: 'high' | 'low' | 'auto';
   width?: number;
   height?: number;
-  isHero?: boolean;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage = ({
   src,
   alt,
   className = '',
   loading = 'lazy',
   placeholder = 'Yükleniyor...',
-  onLoad,
-  onError,
   fetchpriority = 'auto',
   width,
   height,
-  isHero = false,
   style,
 }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,12 +29,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    // For hero images, load immediately
-    if (isHero) {
-      setIsInView(true);
-      return;
-    }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -59,18 +47,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, [isHero]);
+  }, []);
 
   const handleLoad = () => {
     setIsLoading(false);
     setHasError(false);
-    onLoad?.();
   };
 
   const handleError = () => {
     setIsLoading(false);
     setHasError(true);
-    onError?.();
   };
 
   return (
