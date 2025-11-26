@@ -1,5 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+
+const navItems = [
+  { label: "Anasayfa", target: "home" },
+  { label: "Hakkımızda", target: "about" },
+  { label: "Hikaye", target: "story" },
+  { label: "Konum", target: "location" },
+  { label: "SSS", target: "faq" },
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,120 +29,72 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-
   return (
-    <>
-      {/* Main Header */}
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className="fixed top-4 left-0 right-0 z-50 flex justify-center pointer-events-none px-4">
+      <div
+        className={`pointer-events-auto w-full max-w-3xl rounded-2xl transition-all duration-300 border ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-crumble-600"
-            : "bg-transparent backdrop-blur-sm"
+            ? "bg-white/90 border-crumble-200 shadow-lg backdrop-blur"
+            : "bg-white/60 border-white/50 shadow-sm backdrop-blur"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-2">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <img 
-                  src="/images/crumble_logo_green.png" 
-                  alt="Crumble Logo" 
-                  className="h-auto w-24"
-                  loading="eager"
-                />
-              </div>
-            </div>
+        <div className="flex items-center justify-between px-3 sm:px-5 py-1.5">
+          {/* Logo only */}
+          <button
+            onClick={() => scrollToSection("home")}
+            className="p-0 hover:opacity-80 transition-opacity"
+            aria-label="Crumble ana sayfa"
+          >
+            <img
+              src="/images/crumble_logo_green.png"
+              alt="Crumble Logo"
+              className="h-4 w-auto"
+              loading="eager"
+            />
+          </button>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+          {/* Desktop navigation */}
+          <nav className="hidden md:flex items-center gap-1.5">
+            {navItems.map((item) => (
               <button
-                className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
-                onClick={() => scrollToSection("home")}
+                key={item.target}
+                onClick={() => scrollToSection(item.target)}
+                className="text-[11px] font-semibold tracking-[0.2em] uppercase text-crumble-700 hover:text-crumble-900 px-3 py-1 rounded-full hover:bg-crumble-100/40 transition-colors"
               >
-                ANA SAYFA
+                {item.label}
               </button>
-              <button
-                className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
-                onClick={() => scrollToSection("about")}
-              >
-                HAKKIMIZDA
-              </button>
-              <button
-                className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
-                onClick={() => scrollToSection("story")}
-              >
-                HİKAYE
-              </button>
-              <button
-                className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
-                onClick={() => scrollToSection("location")}
-              >
-                KONUM
-              </button>
-              <button
-                className="text-crumble-600 hover:text-crumble-700 transition-colors duration-300 font-medium tracking-wide border-b-2 border-transparent hover:border-crumble-600 pb-1 text-sm"
-                onClick={() => scrollToSection("faq")}
-              >
-                SSS
-              </button>
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-crumble-600 hover:text-crumble-700 transition-colors"
-            >
-              {isMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          <nav className={`md:hidden -mb-2 border-t border-crumble-600 pt-3 transition-all duration-300 ease-in-out overflow-hidden ${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          }`}>
-            <div className={`flex flex-col mb-4 space-y-2 transition-all duration-300 ease-in-out transform ${
-              isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
-            }`}>
-                <button
-                  onClick={() => scrollToSection("home")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
-                >
-                  ANA SAYFA
-                </button>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
-                >
-                  HAKKIMIZDA
-                </button>
-                <button
-                  onClick={() => scrollToSection("story")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
-                >
-                  HİKAYEMİZ
-                </button>
-                <button
-                  onClick={() => scrollToSection("location")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
-                >
-                  KONUM
-                </button>
-                <button
-                  onClick={() => scrollToSection("faq")}
-                  className="text-crumble-600 hover:text-crumble-700 transition-colors font-medium text-left py-2 text-sm"
-                >
-                  SSS
-                </button>
-            </div>
+            ))}
           </nav>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="md:hidden text-crumble-700 hover:text-crumble-900 transition-colors"
+          >
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
-      </header>
-    </>
+
+        {/* Mobile menu */}
+        <div
+          className={`md:hidden px-3 pb-3 transition-all duration-300 origin-top overflow-hidden ${
+            isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="flex flex-col gap-1.5 pt-2">
+            {navItems.map((item) => (
+              <button
+                key={item.target}
+                onClick={() => scrollToSection(item.target)}
+                className="text-left text-[11px] font-semibold tracking-[0.2em] uppercase text-crumble-700 hover:text-crumble-900 transition-colors border border-white/40 rounded-full px-4 py-2 hover:bg-white/20"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
 
