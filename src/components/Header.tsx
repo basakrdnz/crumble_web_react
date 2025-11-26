@@ -34,8 +34,8 @@ const Header = () => {
       <div
         className={`pointer-events-auto w-full max-w-3xl rounded-2xl transition-all duration-300 border ${
           isScrolled
-            ? "bg-white/90 border-crumble-200 shadow-lg backdrop-blur"
-            : "bg-white/60 border-white/50 shadow-sm backdrop-blur"
+            ? "bg-white/40 border-white/20 shadow-lg backdrop-blur"
+            : "bg-white/30 border-white/10 shadow-sm backdrop-blur"
         }`}
       >
         <div className="flex items-center justify-between px-3 sm:px-5 py-1.5">
