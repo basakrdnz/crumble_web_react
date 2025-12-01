@@ -1,5 +1,4 @@
 import { MapPin, Phone, Mail, Car, Bus } from "lucide-react";
-import OptimizedImage from './OptimizedImage';
 
 const Location = () => {
   const hours = [

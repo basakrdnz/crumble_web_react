@@ -1,5 +1,4 @@
 import { Coffee, Facebook, Instagram, Heart } from "lucide-react";
-import OptimizedImage from './OptimizedImage';
 
 const Footer = () => {
   return (
@@ -10,12 +9,12 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Coffee className="h-8 w-8 text-crumble-600" />
-              <OptimizedImage
+              <img
                 src="/images/crumble_logo_green.png"
                 alt="Crumble Logo"
                 className="w-28 h-auto md:w-32 lg:w-36 mt-1"
                 loading="eager"
-                placeholder="Logo yükleniyor..."
+                decoding="async"
               />
             </div>
             <p className="text-crumble-100 mb-4 leading-relaxed">

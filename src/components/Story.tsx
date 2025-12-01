@@ -1,4 +1,3 @@
-import OptimizedImage from './OptimizedImage';
 
 const Story = () => {
   return (
@@ -18,46 +17,49 @@ const Story = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16">
           {/* Büyük görsel - sol üst */}
           <div className="md:col-span-2 md:row-span-2">
-            <OptimizedImage
+            <img
               src="/images/kruvasan.jpeg"
               alt="Crumble Kruvasan"
               className="w-full h-full min-h-[400px] md:min-h-[500px] object-cover rounded-xl shadow-lg"
-              placeholder="Kruvasan yükleniyor..."
+              loading="lazy"
+              decoding="async"
             />
           </div>
           {/* Küçük görsel 1 - sağ üst */}
           <div className="md:col-span-1">
-            <OptimizedImage
+            <img
               src="/images/C0837T01.JPG"
               alt="Crumble Cafe"
               className="w-full h-full min-h-[240px] md:min-h-[240px] object-cover rounded-xl shadow-lg"
-              placeholder="Cafe yükleniyor..."
+              loading="lazy"
+              decoding="async"
             />
           </div>
           {/* Küçük görsel 2 - sağ alt */}
           <div className="md:col-span-1">
-            <OptimizedImage
+            <img
               src="/images/DSC00211.JPG"
               alt="Crumble Cafe"
               className="w-full h-full min-h-[240px] md:min-h-[240px] object-cover rounded-xl shadow-lg"
-              placeholder="Cafe yükleniyor..."
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
 
         {/* İstatistikler */}
-        <div className="grid grid-cols-3 gap-8 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center px-2">
           <div>
-            <div className="text-5xl font-bold text-crumble-600 mb-2">3+</div>
-            <div className="text-crumble-700">Yıl Hizmet</div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">3+</div>
+            <div className="text-sm sm:text-base text-crumble-700">Yıl Hizmet</div>
           </div>
           <div>
-            <div className="text-5xl font-bold text-crumble-600 mb-2">1K+</div>
-            <div className="text-crumble-700">Mutlu Müşteri</div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">1K+</div>
+            <div className="text-sm sm:text-base text-crumble-700">Mutlu Müşteri</div>
           </div>
           <div>
-            <div className="text-5xl font-bold text-crumble-600 mb-2">%100</div>
-            <div className="text-crumble-700">El Yapımı</div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">%100</div>
+            <div className="text-sm sm:text-base text-crumble-700">El Yapımı</div>
           </div>
         </div>
       </div>

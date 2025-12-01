@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import OptimizedImage from "./OptimizedImage";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -19,13 +18,13 @@ const Hero = () => {
           isLoaded ? 'scale-100' : 'scale-150'
         }`}
       >
-        <OptimizedImage
+        <img
           src="/images/herobgcrumble.jpg"
           alt="Crumble Cafe"
           className="w-full h-full object-cover"
-          placeholder="Cafe yükleniyor..."
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
 

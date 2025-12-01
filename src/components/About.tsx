@@ -1,5 +1,4 @@
 import { Heart, Leaf, ChefHat, Award } from 'lucide-react';
-import OptimizedImage from './OptimizedImage';
 
 const About = () => {
   const features = [
@@ -51,12 +50,13 @@ const About = () => {
         </div>
 
         <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-          <OptimizedImage
+          <img
             src="/images/DSC00263.JPG"
             alt="Crumble Cafe"
             className="w-full h-[400px] md:h-[500px] object-cover"
             style={{ objectPosition: 'center bottom' }}
-            placeholder="Crumble Cafe yükleniyor..."
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
