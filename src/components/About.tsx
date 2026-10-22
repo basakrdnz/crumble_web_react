@@ -1,4 +1,6 @@
 import { Heart, Leaf, ChefHat, Award } from "lucide-react";
+import Reveal from "./ui/Reveal";
+import SectionHeader from "./ui/SectionHeader";
 
 const About = () => {
   const features = [
@@ -25,36 +27,47 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="bg-sand pt-20 md:pt-28">
-      <div className="mx-auto max-w-6xl px-5">
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-olive">Hakkımızda</p>
-          <h2 className="mt-3 font-serif text-5xl font-semibold md:text-6xl">Crumble'a hoş geldiniz</h2>
-          <p className="mt-5 text-lg leading-relaxed text-muted">
-            Crumble'da harika lezzetlerin harika malzemelerle başladığına inanıyoruz. Misyonumuz, kapımızdan geçen her
-            misafire rahatlık ve neşe getiren lezzetli tatlılar, özel sandviçler ve taze içecekler sunmaktır.
-          </p>
-        </div>
+    <section id="about" className="bg-sand">
+      <div className="mx-auto max-w-7xl px-5 pt-20 lg:px-10 lg:pt-32">
+        <SectionHeader eyebrow="Hakkımızda" title={<>Crumble'a <span className="italic text-olive">hoş geldiniz.</span></>}>
+          Harika lezzetlerin harika malzemelerle başladığına inanıyoruz. Kapımızdan geçen her misafire rahatlık ve neşe
+          getiren tatlılar, sandviçler ve taze içecekler sunuyoruz.
+        </SectionHeader>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 pb-20 sm:grid-cols-2 lg:grid-cols-4 md:pb-28">
-          {features.map((feature) => (
-            <div key={feature.title} className="border-t border-line pt-6">
-              <feature.icon className="h-8 w-8 text-olive" strokeWidth={1.75} aria-hidden="true" />
-              <h3 className="mt-4 font-serif text-2xl font-semibold">{feature.title}</h3>
-              <p className="mt-2 leading-relaxed text-muted">{feature.description}</p>
-            </div>
+        <div className="grid grid-cols-1 gap-x-10 gap-y-10 pb-20 sm:grid-cols-2 lg:grid-cols-4 lg:pb-32">
+          {features.map((feature, i) => (
+            <Reveal key={feature.title} delay={i * 90} className="border-t border-ink/15 pt-6">
+              <div className="flex items-center justify-between">
+                <feature.icon className="h-7 w-7 text-olive" strokeWidth={1.5} aria-hidden="true" />
+                <span className="text-xs tabular-nums text-muted">{String(i + 1).padStart(2, "0")}</span>
+              </div>
+              <h3 className="mt-6 font-serif text-[28px] font-semibold leading-tight">{feature.title}</h3>
+              <p className="mt-3 leading-relaxed text-muted">{feature.description}</p>
+            </Reveal>
           ))}
         </div>
       </div>
 
-      <img
-        src="/images/DSC00263.JPG"
-        alt="Crumble Cafe"
-        className="h-[360px] w-full object-cover md:h-[520px]"
-        style={{ objectPosition: "center bottom" }}
-        loading="lazy"
-        decoding="async"
-      />
+      {/* Şömine başı: tam genişlik atmosfer */}
+      <div className="relative h-[115vw] max-h-[920px] min-h-[480px] overflow-hidden lg:h-[92vh]">
+        <img
+          src="/media/atmosfer-somine.jpg"
+          alt="Crumble'ın şömineli iç mekânında kahve içen misafirler"
+          className="absolute inset-0 h-full w-full object-cover object-[50%_60%]"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent lg:bg-gradient-to-b lg:from-black/75 lg:via-black/10" />
+        <Reveal className="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-5 pb-12 lg:bottom-auto lg:top-0 lg:px-10 lg:pb-0 lg:pt-24">
+          <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-cream/80">
+            <span className="h-px w-8 bg-current" aria-hidden="true" />
+            Mekân
+          </p>
+          <p className="mt-5 max-w-3xl font-serif text-[clamp(40px,10vw,56px)] font-semibold leading-[0.95] text-white lg:text-[clamp(64px,6.4vw,96px)]">
+            Şömine yanıyor, kahven hazır. <span className="italic text-cream">Acelesi yok.</span>
+          </p>
+        </Reveal>
+      </div>
     </section>
   );
 };

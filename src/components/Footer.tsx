@@ -4,7 +4,7 @@ import { ADDRESS_LINES, EMAIL, FACEBOOK, HOURS, INSTAGRAM, PHONE, PHONE_HREF } f
 const Footer = () => {
   return (
     <footer className="bg-ink text-cream">
-      <div className="mx-auto max-w-6xl px-5 py-16">
+      <div className="mx-auto max-w-7xl px-5 pt-20 lg:px-10 lg:pt-28">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
             <div className="font-serif text-4xl font-medium tracking-[0.09em] text-cream">CRUMBLE</div>
@@ -49,8 +49,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-center text-sm text-cream/60">
-          © {new Date().getFullYear()} Crumble Kafe. Tüm hakları saklıdır.
+        <div className="mt-16 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-cream/50 sm:flex-row sm:justify-between">
+          <span>© {new Date().getFullYear()} Crumble Kafe. Tüm hakları saklıdır.</span>
+          <span>Güneypark · Çankaya · Ankara</span>
+        </div>
+      </div>
+
+      {/* Sayfayı kapatan dev imza */}
+      <div aria-hidden="true" className="select-none overflow-hidden">
+        <div className="-mb-[0.18em] mt-6 text-center font-serif text-[21.5vw] font-medium leading-none tracking-[0.06em] text-cream/[0.07]">
+          CRUMBLE
         </div>
       </div>
     </footer>

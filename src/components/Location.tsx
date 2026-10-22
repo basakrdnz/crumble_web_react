@@ -1,18 +1,15 @@
 import { MapPin, Phone, Mail, Car, Bus, Clock } from "lucide-react";
+import SectionHeader from "./ui/SectionHeader";
 import { ADDRESS_LINES, EMAIL, HOURS, MAPS_URL, PHONE, PHONE_HREF } from "../data/info";
 
 const Location = () => {
   return (
-    <section id="location" className="bg-paper py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-5">
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-olive">Konum</p>
-          <h2 className="mt-3 font-serif text-5xl font-semibold md:text-6xl">Bizi ziyaret edin</h2>
-          <p className="mt-5 text-lg leading-relaxed text-muted">
-            Crumble'ın sıcaklığını deneyimleyin. Güneypark'taki kafemizde harika lezzetler ve samimi hizmetle sizi
-            karşılamaya hazırız.
-          </p>
-        </div>
+    <section id="location" className="bg-paper py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
+        <SectionHeader eyebrow="Konum" title={<>Bizi <span className="italic text-olive">ziyaret</span> edin.</>}>
+          Güneypark'taki kafemizde, şömine başında ya da pencere kenarında; harika lezzetler ve samimi hizmetle sizi
+          bekliyoruz.
+        </SectionHeader>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
           <div className="space-y-6">
@@ -97,7 +94,7 @@ const Location = () => {
 
           <div className="flex flex-col gap-6">
             <img
-              src="/images/crumble_atmosfer.JPG"
+              src="/media/mekan.jpg"
               alt="Crumble kafe dış görünüm"
               className="h-72 w-full rounded-3xl object-cover lg:h-auto lg:flex-1"
               loading="lazy"

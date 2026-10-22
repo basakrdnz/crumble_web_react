@@ -1,6 +1,7 @@
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
 import { useState } from "react";
 import { HOURS, PHONE } from "../data/info";
+import Reveal from "./ui/Reveal";
 
 const faqs = [
   {
@@ -24,38 +25,49 @@ const faqs = [
 ];
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-sand py-20 md:py-28">
-      <div className="mx-auto max-w-3xl px-5">
-        <div className="mb-12 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-olive">SSS</p>
-          <h2 className="mt-3 font-serif text-5xl font-semibold md:text-6xl">Sık sorulan sorular</h2>
-          <p className="mt-4 text-lg text-muted">Crumble Cafe ile ilgili merak ettiğiniz her şey</p>
-        </div>
+    <section id="faq" className="bg-sand py-20 lg:py-32">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-12 lg:px-10">
+        <Reveal className="lg:col-span-5">
+          <div className="lg:sticky lg:top-28">
+            <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-olive">
+              <span className="h-px w-8 bg-current" aria-hidden="true" />
+              SSS
+            </p>
+            <h2 className="mt-5 font-serif text-[clamp(44px,11vw,64px)] font-semibold leading-[0.95] lg:text-[clamp(64px,6vw,88px)]">
+              Merak <span className="italic text-olive">edilenler.</span>
+            </h2>
+            <p className="mt-6 max-w-sm text-lg leading-relaxed text-muted">Crumble Cafe ile ilgili sık sorulan sorular.</p>
+          </div>
+        </Reveal>
 
-        <div className="border-t border-line">
+        <Reveal className="border-t border-ink/15 lg:col-span-7" delay={100}>
           {faqs.map((faq, index) => {
             const open = openIndex === index;
             return (
-              <div key={faq.question} className="border-b border-line">
+              <div key={faq.question} className="border-b border-ink/15">
                 <button
                   onClick={() => setOpenIndex(open ? null : index)}
                   aria-expanded={open}
-                  className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left lg:py-8"
                 >
-                  <span className="font-serif text-2xl font-semibold leading-snug">{faq.question}</span>
-                  <ChevronDown
-                    className={`h-5 w-5 flex-shrink-0 text-olive transition-transform ${open ? "rotate-180" : ""}`}
+                  <span className="font-serif text-2xl font-semibold leading-snug lg:text-3xl">{faq.question}</span>
+                  <Plus
+                    className={`h-6 w-6 flex-shrink-0 text-olive transition-transform duration-300 ${open ? "rotate-45" : ""}`}
                     aria-hidden="true"
                   />
                 </button>
-                {open && <p className="pb-6 leading-relaxed text-muted">{faq.answer}</p>}
+                <div className={`grid transition-[grid-template-rows] duration-500 ease-out ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                  <p className="overflow-hidden text-lg leading-relaxed text-muted">
+                    <span className="block max-w-2xl pb-7">{faq.answer}</span>
+                  </p>
+                </div>
               </div>
             );
           })}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { MENU, type MenuIcon, type MenuItem } from "../data/menu";
+import SectionHeader from "./ui/SectionHeader";
 
 const ICONS: Record<MenuIcon, JSX.Element> = {
   kahve: (
@@ -73,9 +74,11 @@ const Item = ({ item: [name, price, desc] }: { item: MenuItem }) => (
   </li>
 );
 
+// Bölüm başlığı bu çizginin üstüne çıkınca aktif sayılır (header + mobil çubuk + pay)
+const SPY_LINE = 160;
+
 const Menu = () => {
   const [active, setActive] = useState(MENU[0].id);
-  const navRef = useRef<HTMLElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
   // Kaydırırken görünen kategoriyi işaretle
@@ -83,13 +86,10 @@ const Menu = () => {
     let ticking = false;
     const update = () => {
       ticking = false;
-      const nav = navRef.current;
-      if (!nav) return;
-      const line = nav.getBoundingClientRect().bottom + 24;
       let id = MENU[0].id;
       for (const s of MENU) {
         const el = document.getElementById(s.id);
-        if (el && el.getBoundingClientRect().top <= line) id = s.id;
+        if (el && el.getBoundingClientRect().top <= SPY_LINE) id = s.id;
       }
       setActive(id);
     };
@@ -108,32 +108,36 @@ const Menu = () => {
     };
   }, []);
 
-  // Aktif kategoriyi yatay listede ortala
+  // Mobil çubukta aktif kategoriyi yatayda ortala
   useEffect(() => {
     const ul = listRef.current;
     const a = ul?.querySelector<HTMLAnchorElement>(`a[href="#${active}"]`);
-    if (ul && a) ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.clientWidth / 2 });
+    if (!ul || !a || !ul.offsetParent) return;
+    const ulBox = ul.getBoundingClientRect();
+    const aBox = a.getBoundingClientRect();
+    ul.scrollTo({ left: ul.scrollLeft + aBox.left - ulBox.left - ulBox.width / 2 + aBox.width / 2 });
   }, [active]);
 
   return (
-    <section id="menu" className="bg-paper pt-20 md:pt-28">
-      <header className="px-5 pb-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-olive">Ne yesek, ne içsek?</p>
-        <h2 className="mt-3 font-serif text-5xl font-semibold md:text-6xl">Menü</h2>
-      </header>
+    <section id="menu" className="bg-paper pt-20 lg:pt-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
+        <SectionHeader eyebrow="Menü" title={<>Ne yesek, <span className="italic text-olive">ne içsek?</span></>}>
+          Kahveden detoxa, makarnadan bagete. Vitrindekiler için kırmızı bölüme bakın; her gün değişir.
+        </SectionHeader>
+      </div>
 
-      <nav ref={navRef} aria-label="Menü bölümleri" className="sticky top-16 z-30 border-y border-line bg-paper">
-        <ul ref={listRef} className="no-scrollbar mx-auto flex max-w-2xl gap-1.5 overflow-x-auto px-4 py-2.5">
+      {/* Mobil: yatay kategori çubuğu */}
+      <nav aria-label="Menü bölümleri" className="sticky top-16 z-30 border-y border-line bg-paper lg:hidden">
+        <ul ref={listRef} className="no-scrollbar flex gap-1.5 overflow-x-auto px-4 py-2.5">
           {MENU.map((s) => {
             const on = s.id === active;
-            const kap = "kap" in s;
             return (
               <li key={s.id}>
                 <a
                   href={`#${s.id}`}
                   aria-current={on ? "true" : undefined}
-                  className={`flex items-center gap-1.5 whitespace-nowrap rounded-full py-1.5 pl-2.5 pr-3.5 text-[15px] font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive ${
-                    on ? (kap ? "bg-brick text-on-brick" : "bg-olive text-white") : "text-muted hover:text-ink"
+                  className={`flex items-center gap-1.5 whitespace-nowrap rounded-full py-1.5 pl-2.5 pr-3.5 text-[15px] font-medium transition-colors ${
+                    on ? ("kap" in s ? "bg-brick text-on-brick" : "bg-olive text-white") : "text-muted"
                   }`}
                 >
                   <Icon name={s.icon} className="h-5 w-5" />
@@ -145,47 +149,85 @@ const Menu = () => {
         </ul>
       </nav>
 
-      <div className="mx-auto max-w-2xl px-5 pb-16">
-        {MENU.map((s) =>
-          "kap" in s ? (
-            <section key={s.id} id={s.id} className="-mx-5 mt-12 scroll-mt-14 bg-brick px-5 pb-8 pt-9 text-on-brick sm:mx-0 sm:rounded-3xl sm:px-8">
-              <div className="flex items-center gap-3">
-                <Icon name={s.icon} className="h-12 w-12" />
-                <h3 className="font-serif text-[clamp(48px,15vw,68px)] font-semibold leading-[0.95]">Varsa Kap!</h3>
-              </div>
-              <p className="mt-3.5 max-w-[32ch] text-on-brick-muted">{s.lede}</p>
-              <div className="mt-6 grid grid-cols-1 gap-5 min-[361px]:grid-cols-2">
-                {[["Tatlı", s.tatli], ["Tuzlu", s.tuzlu]].map(([label, list]) => (
-                  <div key={label as string}>
-                    <h4 className="mb-2 text-[15px] font-semibold">{label}</h4>
-                    <ul>
-                      {(list as string[]).map((x) => (
-                        <li key={x} className="border-t border-white/20 py-1.5 text-[15px]">{x}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </section>
-          ) : (
-            <section key={s.id} id={s.id} className="scroll-mt-14 pt-10">
-              <div className="mb-1 flex items-center gap-3">
-                <Icon name={s.icon} className="h-10 w-10 text-olive" />
-                <h3 className="font-serif text-4xl font-semibold leading-tight">{s.title ?? s.nav}</h3>
-              </div>
-              {s.groups.map((g, i) => (
-                <div key={g.title ?? i}>
-                  {g.title && <h4 className={`${i === 0 ? "mt-3.5" : "mt-6"} mb-1.5 text-[15px] font-semibold text-olive`}>{g.title}</h4>}
-                  <ul>
-                    {g.items.map((item) => (
-                      <Item key={item[0] + item[1]} item={item} />
-                    ))}
-                  </ul>
+      <div className="mx-auto max-w-7xl px-5 pb-20 lg:grid lg:grid-cols-12 lg:gap-10 lg:px-10 lg:pb-32">
+        {/* Masaüstü: yapışkan dikey kategori listesi */}
+        <aside className="hidden lg:col-span-3 lg:block">
+          <nav aria-label="Menü bölümleri" className="sticky top-28">
+            <ol className="border-l border-line">
+              {MENU.map((s, i) => {
+                const on = s.id === active;
+                const kap = "kap" in s;
+                return (
+                  <li key={s.id}>
+                    <a
+                      href={`#${s.id}`}
+                      aria-current={on ? "true" : undefined}
+                      className={`-ml-px flex items-baseline gap-4 border-l-2 py-2.5 pl-6 transition-colors ${
+                        on ? (kap ? "border-brick text-brick" : "border-olive text-ink") : "border-transparent text-muted hover:text-ink"
+                      }`}
+                    >
+                      <span className="w-5 text-xs tabular-nums text-muted">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="font-serif text-[26px] font-semibold leading-tight">{s.nav}</span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ol>
+          </nav>
+        </aside>
+
+        <div className="lg:col-span-9">
+          {MENU.map((s) =>
+            "kap" in s ? (
+              <section
+                key={s.id}
+                id={s.id}
+                className="-mx-5 mt-14 scroll-mt-14 bg-brick px-5 pb-9 pt-10 text-on-brick sm:mx-0 sm:rounded-3xl sm:px-8 lg:mt-20 lg:scroll-mt-12 lg:grid lg:grid-cols-9 lg:gap-10 lg:p-12"
+              >
+                <div className="lg:col-span-4">
+                  <Icon name={s.icon} className="h-12 w-12 lg:h-16 lg:w-16" />
+                  <h3 className="mt-3 font-serif text-[clamp(52px,15vw,68px)] font-semibold leading-[0.9] lg:text-[88px]">Varsa Kap!</h3>
+                  <p className="mt-4 max-w-[30ch] text-on-brick-muted lg:text-lg">{s.lede}</p>
                 </div>
-              ))}
-            </section>
-          ),
-        )}
+                <div className="mt-7 grid grid-cols-1 gap-6 min-[361px]:grid-cols-2 lg:col-span-5 lg:mt-0">
+                  {([["Tatlı", s.tatli], ["Tuzlu", s.tuzlu]] as const).map(([label, list]) => (
+                    <div key={label}>
+                      <h4 className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-on-brick-muted">{label}</h4>
+                      <ul>
+                        {list.map((x) => (
+                          <li key={x} className="border-t border-white/20 py-2 text-[15px]">{x}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ) : (
+              <section key={s.id} id={s.id} className="scroll-mt-14 pt-12 first:pt-4 lg:scroll-mt-12 lg:border-t lg:border-line lg:mt-14 lg:pt-14 lg:first:mt-0 lg:first:border-0 lg:first:pt-0">
+                <div className="mb-2 flex items-center gap-3 lg:mb-6">
+                  <Icon name={s.icon} className="h-10 w-10 text-olive lg:h-12 lg:w-12" />
+                  <h3 className="font-serif text-4xl font-semibold leading-tight lg:text-5xl">{s.title ?? s.nav}</h3>
+                </div>
+                <div className="lg:columns-2 lg:gap-14">
+                  {s.groups.map((g, i) => (
+                    <div key={g.title ?? i} className="break-inside-avoid lg:mb-8">
+                      {g.title && (
+                        <h4 className={`${i === 0 ? "mt-3.5" : "mt-6"} mb-1.5 text-[15px] font-semibold text-olive lg:mt-0 lg:text-xs lg:uppercase lg:tracking-[0.25em]`}>
+                          {g.title}
+                        </h4>
+                      )}
+                      <ul>
+                        {g.items.map((item) => (
+                          <Item key={item[0] + item[1]} item={item} />
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ),
+          )}
+        </div>
       </div>
     </section>
   );

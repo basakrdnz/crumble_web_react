@@ -2,8 +2,10 @@ import { lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Marquee from "./components/Marquee";
 
 // Lazy load non-critical components
+const Kitchen = lazy(() => import("./components/Kitchen"));
 const Menu = lazy(() => import("./components/Menu"));
 const Story = lazy(() => import("./components/Story"));
 const Location = lazy(() => import("./components/Location"));
@@ -17,10 +19,12 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <Marquee />
       <About />
 
       {/* Lazy loaded components with Suspense */}
       <Suspense fallback={<Placeholder />}>
+        <Kitchen />
         <Menu />
         <Story />
         <Location />

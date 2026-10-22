@@ -38,7 +38,7 @@ const Header = () => {
           solid ? "border-b border-line bg-paper/95 backdrop-blur" : "border-b border-transparent bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-5">
+        <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-10">
           <button
             onClick={() => scrollToSection("home")}
             className={`font-serif text-[28px] font-medium leading-none tracking-[0.09em] transition-colors ${
