@@ -1,162 +1,120 @@
-import { MapPin, Phone, Mail, Car, Bus } from "lucide-react";
+import { MapPin, Phone, Mail, Car, Bus, Clock } from "lucide-react";
+import SectionHeader from "./ui/SectionHeader";
+import { ADDRESS_LINES, EMAIL, HOURS, MAPS_EMBED_URL, MAPS_URL, PHONE, PHONE_HREF } from "../data/info";
 
 const Location = () => {
-  const hours = [
-    { day: "Pazartesi - Cuma", time: "09:00 - 23:00" },
-    { day: "Cumartesi - Pazar", time: "10:00 - 23:00" },
-    // { day: 'Pazar', time: '08:00 - 20:00' }
-  ];
-
   return (
-    <section id="location" className="py-20 bg-crumble-100/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-6">
-            Bizi Ziyaret Edin
-          </h2>
-          <p className="text-xl text-crumble-700 max-w-3xl mx-auto leading-relaxed">
-            Crumble'ın sıcaklığını deneyimleyin. Şehrin kalbinde uygun
-            konumumuzda, harika yemekler ve samimi hizmetle sizi karşılamaya
-            hazırız.
-          </p>
-        </div>
+    <section id="location" className="bg-paper py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
+        <SectionHeader eyebrow="Konum" title={<>Bizi <span className="italic text-olive">ziyaret</span> edin.</>}>
+          Güneypark'taki kafemizde, şömine başında ya da pencere kenarında; harika lezzetler ve samimi hizmetle sizi
+          bekliyoruz.
+        </SectionHeader>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="bg-crumble-50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-crumble-900 mb-6">
-                İletişim Bilgileri
-              </h3>
-
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-6 w-6 text-crumble-600 mt-1" />
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+          <div className="space-y-6">
+            <div className="rounded-3xl border border-line p-7 md:p-8">
+              <h3 className="font-serif text-3xl font-semibold">İletişim</h3>
+              <ul className="mt-6 space-y-5">
+                <li className="flex gap-3">
+                  <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-olive" aria-hidden="true" />
                   <div>
-                    <h4 className="font-semibold text-crumble-900">Adres</h4>
-                    <p className="text-crumble-700">
-                      İlkbahar Caddesi, Sinpaş Marina Yolu,
-                      <br />
-                      Güneypark Küme Evleri, No:78
-                      <br />
-                      Çankaya / Ankara
+                    <p className="font-semibold">Adres</p>
+                    <p className="text-muted">
+                      {ADDRESS_LINES.map((l) => (
+                        <span key={l} className="block">{l}</span>
+                      ))}
                     </p>
+                    <a
+                      href={MAPS_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-block rounded-full bg-olive px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-olive-dark"
+                    >
+                      Yol tarifi al
+                    </a>
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <Phone className="h-6 w-6 text-crumble-600 mt-1" />
+                </li>
+                <li className="flex gap-3">
+                  <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-olive" aria-hidden="true" />
                   <div>
-                    <h4 className="font-semibold text-crumble-900">Telefon</h4>
-                    <p className="text-crumble-700">0533 326 66 19</p>
+                    <p className="font-semibold">Telefon</p>
+                    <a href={PHONE_HREF} className="text-muted hover:text-olive">{PHONE}</a>
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <Mail className="h-6 w-6 text-crumble-600 mt-1" />
+                </li>
+                <li className="flex gap-3">
+                  <Mail className="mt-0.5 h-5 w-5 flex-shrink-0 text-olive" aria-hidden="true" />
                   <div>
-                    <h4 className="font-semibold text-crumble-900">E-posta</h4>
-                    <p className="text-crumble-700">info@crumbleofficial.com</p>
+                    <p className="font-semibold">E-posta</p>
+                    <a href={`mailto:${EMAIL}`} className="text-muted hover:text-olive">{EMAIL}</a>
                   </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
 
-            <div className="bg-crumble-50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-crumble-900 mb-6">
-                Çalışma Saatleri
+            <div className="rounded-3xl border border-line p-7 md:p-8">
+              <h3 className="flex items-center gap-3 font-serif text-3xl font-semibold">
+                <Clock className="h-6 w-6 text-olive" aria-hidden="true" />
+                Çalışma saatleri
               </h3>
-              <div className="space-y-3">
-                {hours.map((schedule, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-between items-center"
-                  >
-                    <span className="text-crumble-900 font-medium">
-                      {schedule.day}
-                    </span>
-                    <span className="text-crumble-700">{schedule.time}</span>
+              <dl className="mt-5">
+                {HOURS.map((h) => (
+                  <div key={h.days} className="flex items-baseline gap-2.5 py-2">
+                    <dt className="font-medium">{h.days}</dt>
+                    <span aria-hidden="true" className="flex-1 min-w-3 -translate-y-1 border-b-[1.5px] border-dotted border-line" />
+                    <dd className="font-semibold tabular-nums whitespace-nowrap">{h.time}</dd>
                   </div>
                 ))}
-              </div>
+              </dl>
             </div>
 
-            <div className="bg-crumble-50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-crumble-900 mb-6">
-                Nasıl Gelir
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <Car className="h-6 w-6 text-crumble-600 mt-1" />
+            <div className="rounded-3xl border border-line p-7 md:p-8">
+              <h3 className="font-serif text-3xl font-semibold">Nasıl gelinir?</h3>
+              <ul className="mt-6 space-y-5">
+                <li className="flex gap-3">
+                  <Car className="mt-0.5 h-5 w-5 flex-shrink-0 text-olive" aria-hidden="true" />
                   <div>
-                    <h4 className="font-semibold text-crumble-900">Arabayla</h4>
-                    <p className="text-crumble-700">
-                      Kafemizin yer aldığı tesiste misafirlerimiz için otopark
-                      imkânı bulunmaktadır.
+                    <p className="font-semibold">Arabayla</p>
+                    <p className="text-muted">Kafemizin yer aldığı tesiste misafirlerimiz için otopark imkânı bulunmaktadır.</p>
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <Bus className="mt-0.5 h-5 w-5 flex-shrink-0 text-olive" aria-hidden="true" />
+                  <div>
+                    <p className="font-semibold">Toplu taşıma</p>
+                    <p className="text-muted">
+                      Çevredeki otobüs durakları ve minibüslerle kolay ulaşım sağlanabilir. Güneypark ve Çankaya merkez
+                      hattına yakın konumumuzla toplu taşıma ile rahatlıkla ulaşabilirsiniz.
                     </p>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Bus className="h-6 w-6 text-crumble-600 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-crumble-900">
-                      Toplu Taşıma
-                    </h4>
-                    <p className="text-crumble-700">
-                      Çevredeki otobüs durakları ve minibüslerle kolay ulaşım sağlanabilir. Güneypark ve Çankaya merkez hattına yakın konumumuzla toplu taşıma ile rahatlıkla ulaşabilirsiniz.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* Map and Image */}
-          <div className="space-y-6">
-            <div className="bg-crumble-50 rounded-lg p-8 h-64 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-crumble-600 mx-auto mb-4" />
-                <h4 className="text-xl font-semibold text-crumble-900 mb-2">
-                  İnteraktif Harita
-                </h4>
-                <p className="text-crumble-700">
-                  İlkbahar Caddesi, Sinpaş Marina Yolu, Güneypark Küme Evleri,
-                  No:78, Çankaya / Ankara
-                </p>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=İlkbahar+Caddesi+Sinpaş+Marina+Yolu+Güneypark+Küme+Evleri+No:78+Çankaya+Ankara"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block bg-crumble-600 hover:bg-crumble-700 text-white px-6 py-2 rounded-full font-medium transition-colors"
-                >
-                  Yol Tarifi Al
-                </a>
-              </div>
+          <div className="flex flex-col gap-6">
+            <div className="relative h-80 overflow-hidden rounded-3xl border border-line bg-sand lg:h-auto lg:min-h-[420px] lg:flex-1">
+              <iframe
+                title="Crumble Kafe haritada"
+                src={MAPS_EMBED_URL}
+                className="absolute inset-0 h-full w-full [filter:saturate(0.7)_sepia(0.12)]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
 
-            <img
-              src="/images/crumble_atmosfer.JPG"
-              alt="Crumble kafe dış görünüm"
-              className="w-full h-64 rounded-lg shadow-lg"
-            />
-
-            <div className="bg-gradient-to-r from-crumble-600 to-crumble-700 rounded-lg p-8 text-white text-center">
-              <h3 className="text-2xl font-bold mb-4">
-                Ziyaret Etmeye Hazır mısınız?
-              </h3>
-              <p className="mb-6">
-                Lezzetli, sağlıklı yemeklerimizi size sunmak için
-                sabırsızlanıyoruz. Unutulmaz bir yemek deneyimi için bize
-                katılın!
+            <div className="rounded-3xl bg-brick p-8 text-on-brick md:p-10">
+              <h3 className="font-serif text-4xl font-semibold leading-tight md:text-5xl">Ziyarete hazır mısınız?</h3>
+              <p className="mt-3 max-w-[40ch] text-on-brick-muted">
+                Kahveniz ve vitrinde sizi bekleyen günün lezzetleri hazır. Sorularınız için bize her zaman
+                ulaşabilirsiniz.
               </p>
-              <button 
-                onClick={() => {
-                  window.location.href = "tel:+905333266619";
-                }}
-                className="bg-white text-crumble-700 hover:bg-crumble-50 px-6 py-3 rounded-full font-semibold transition-colors"
+              <a
+                href={PHONE_HREF}
+                className="mt-6 inline-block rounded-full bg-on-brick px-6 py-3 font-semibold text-brick transition-colors hover:bg-white"
               >
-                Bize Ulaşın
-              </button>
+                Bizi arayın
+              </a>
             </div>
           </div>
         </div>

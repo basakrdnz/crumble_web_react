@@ -1,74 +1,73 @@
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { Plus } from "lucide-react";
 import { useState } from "react";
+import { HOURS, PHONE } from "../data/info";
+import Reveal from "./ui/Reveal";
+
+const faqs = [
+  {
+    question: "Crumble Kafe nerede bulunuyor?",
+    answer:
+      "Crumble Kafe Ankara Çankaya'da, İlkbahar Caddesi, Sinpaş Marina Yolu, Güneypark Küme Evleri No:78 adresinde hizmet vermektedir. Lezzetli tatlılar, özel sandviçler ve taze içecekler için bizi ziyaret edebilirsiniz.",
+  },
+  {
+    question: "Crumble Cafe'de hangi lezzetler var?",
+    answer:
+      "Kahveler, çaylar, detox ve matcha içecekleri, makarnalar, kaseler, tostlar ve bagetler hazırlıyoruz. Vitrinimizdeki el yapımı tatlı ve tuzlular ise her gün değişiyor; varsa kapın!",
+  },
+  {
+    question: "Crumble Kafe'nin çalışma saatleri nedir?",
+    answer: `Crumble Cafe ${HOURS.map((h) => `${h.days} ${h.time}`).join(", ")} saatleri arasında hizmet vermektedir.`,
+  },
+  {
+    question: "Crumble Cafe'de rezervasyon yapabilir miyim?",
+    answer: `Şu an rezervasyon hizmeti bulunmamaktadır. Geniş alanımız olduğu için genellikle bekleme olmadan direkt yer bulabilirsiniz. Daha fazla bilgi için ${PHONE} numaralı telefondan bize ulaşabilirsiniz.`,
+  },
+];
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const faqs = [
-    {
-      question: "Crumble Kafe nerede bulunuyor?",
-      answer: "Crumble Kafe Ankara Çankaya'da, İlkbahar Caddesi, Sinpaş Marina Yolu, Güneypark Küme Evleri No:78 adresinde hizmet vermektedir. Lezzetli tatlılar, özel sandviçler ve taze içecekler için bizi ziyaret edebilirsiniz."
-    },
-    {
-      question: "Crumble Cafe'de hangi lezzetler var?",
-      answer: "Menümüzde el yapımı tatlılar, özel sandviçler, lezzetli tostlar ve çeşitli içecekler bulunmaktadır. Her damak zevkine uygun seçenekler mevcuttur."
-    },
-    {
-      question: "Crumble Kafe'nin çalışma saatleri nedir?",
-      answer: "Crumble Cafe Pazartesi-Cuma 09:00-23:00, Cumartesi-Pazar 10:00-23:00 saatleri arasında hizmet vermektedir. Kahvaltıdan akşam geç saatlere kadar lezzetli seçenekler bulabilirsiniz."
-    },
-    {
-      question: "Crumble Cafe'de rezervasyon yapabilir miyim?",
-      answer: "Şu an rezervasyon hizmeti bulunmamaktadır. Geniş alanımız olduğu için genellikle bekleme olmadan direkt yer bulabilirsiniz. Daha fazla bilgi için 0533 326 66 19 numaralı telefondan bize ulaşabilirsiniz."
-    },
-  ];
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 bg-crumble-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-crumble-900 mb-4">
-            Crumble Kafe Hakkında Sık Sorulan Sorular
-          </h2>
-          <p className="text-lg text-crumble-700">
-            Crumble Cafe ile ilgili merak ettiğiniz her şey
-          </p>
-        </div>
+    <section id="faq" className="bg-sand py-20 lg:py-32">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-12 lg:px-10">
+        <Reveal className="lg:col-span-5">
+          <div className="lg:sticky lg:top-28">
+            <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-olive">
+              <span className="h-px w-8 bg-current" aria-hidden="true" />
+              SSS
+            </p>
+            <h2 className="mt-5 font-serif text-[clamp(44px,11vw,64px)] font-semibold leading-[0.95] lg:text-[clamp(64px,6vw,88px)]">
+              Merak <span className="italic text-olive">edilenler.</span>
+            </h2>
+            <p className="mt-6 max-w-sm text-lg leading-relaxed text-muted">Crumble Cafe ile ilgili sık sorulan sorular.</p>
+          </div>
+        </Reveal>
 
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-crumble-100/20 transition-colors duration-200"
-              >
-                <span className="text-lg font-medium text-crumble-900">
-                  {faq.question}
-                </span>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-crumble-600 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-crumble-600 flex-shrink-0" />
-                )}
-              </button>
-              
-              {openIndex === index && (
-                <div className="px-6 pb-4 border-t border-crumble-100 pt-4">
-                  <p className="text-crumble-700 leading-relaxed">
-                    {faq.answer}
+        <Reveal className="border-t border-ink/15 lg:col-span-7" delay={100}>
+          {faqs.map((faq, index) => {
+            const open = openIndex === index;
+            return (
+              <div key={faq.question} className="border-b border-ink/15">
+                <button
+                  onClick={() => setOpenIndex(open ? null : index)}
+                  aria-expanded={open}
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left lg:py-8"
+                >
+                  <span className="font-serif text-2xl font-semibold leading-snug lg:text-3xl">{faq.question}</span>
+                  <Plus
+                    className={`h-6 w-6 flex-shrink-0 text-olive transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+                    aria-hidden="true"
+                  />
+                </button>
+                <div className={`grid transition-[grid-template-rows] duration-500 ease-out ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                  <p className="overflow-hidden text-lg leading-relaxed text-muted">
+                    <span className="block max-w-2xl pb-7">{faq.answer}</span>
                   </p>
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
+              </div>
+            );
+          })}
+        </Reveal>
       </div>
     </section>
   );

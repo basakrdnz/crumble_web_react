@@ -1,67 +1,48 @@
+import Reveal from "./ui/Reveal";
+import SectionHeader from "./ui/SectionHeader";
 
 const Story = () => {
+  const stats = [
+    { value: "3+", label: "Yıl Hizmet" },
+    { value: "1K+", label: "Mutlu Müşteri" },
+    { value: "%100", label: "El Yapımı" },
+  ];
+
   return (
-    <section id="story" className="pt-20 pb-20 bg-gradient-to-b from-crumble-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Başlık */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-4">
-            Hikayemiz
-          </h2>
-          <p className="text-xl text-crumble-700 max-w-2xl mx-auto">
-            2022'de tutkuyla başladık. El yapımı tatlılar, özel sandviçler ve taze içeceklerle sevilen bir buluşma noktası olduk.
-          </p>
-        </div>
+    <section id="story" className="bg-sand py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
+        <SectionHeader eyebrow="Hikayemiz" title={<>2022'den <span className="italic text-olive">beri</span> buradayız.</>}>
+          Tutkuyla başladık. El yapımı tatlılar, özel sandviçler ve taze içeceklerle Güneypark'ın sevilen buluşma
+          noktası olduk.
+        </SectionHeader>
 
-        {/* Görsel Galeri - Dengeli Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16">
-          {/* Büyük görsel - sol üst */}
-          <div className="md:col-span-2 md:row-span-2">
+        <Reveal className="mb-16">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-5 md:gap-5">
             <img
-              src="/images/kruvasan.jpeg"
-              alt="Crumble Kruvasan"
-              className="w-full h-full min-h-[400px] md:min-h-[500px] object-cover rounded-xl shadow-lg"
+              src="/media/kase.jpg"
+              alt="Güneşli bir köşede, ahşap masada kase"
+              className="h-[360px] w-full rounded-3xl object-cover object-[center_78%] md:col-span-3 md:h-[560px]"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="/media/kahve-fincan.jpg"
+              alt="Mavi fincanda köpüklü kahve"
+              className="h-[300px] w-full rounded-3xl object-cover md:col-span-2 md:h-[560px]"
               loading="lazy"
               decoding="async"
             />
           </div>
-          {/* Küçük görsel 1 - sağ üst */}
-          <div className="md:col-span-1">
-            <img
-              src="/images/C0837T01.JPG"
-              alt="Crumble Cafe"
-              className="w-full h-full min-h-[240px] md:min-h-[240px] object-cover rounded-xl shadow-lg"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          {/* Küçük görsel 2 - sağ alt */}
-          <div className="md:col-span-1">
-            <img
-              src="/images/DSC00211.JPG"
-              alt="Crumble Cafe"
-              className="w-full h-full min-h-[240px] md:min-h-[240px] object-cover rounded-xl shadow-lg"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
+        </Reveal>
 
-        {/* İstatistikler */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center px-2">
-          <div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">3+</div>
-            <div className="text-sm sm:text-base text-crumble-700">Yıl Hizmet</div>
-          </div>
-          <div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">1K+</div>
-            <div className="text-sm sm:text-base text-crumble-700">Mutlu Müşteri</div>
-          </div>
-          <div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">%100</div>
-            <div className="text-sm sm:text-base text-crumble-700">El Yapımı</div>
-          </div>
-        </div>
+        <dl className="grid grid-cols-3 divide-x divide-line border-y border-line text-center">
+          {stats.map((s) => (
+            <div key={s.label} className="flex flex-col-reverse py-8 lg:py-12">
+              <dt className="mt-1 text-sm text-muted sm:text-base">{s.label}</dt>
+              <dd className="font-serif text-5xl font-semibold text-olive lg:text-7xl">{s.value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

@@ -1,25 +1,29 @@
 {
   "name": "Crumble Cafe",
   "short_name": "Crumble",
-  "description": "Crumble Kafe'de sevgiyle hazırlanan el yapımı tatlıları, özel sandviçler ve taze içeceklerle unutulmaz bir deneyim yaşayın. Kahve ve kruvasanın buluşma noktası.",
+  "description": "Her şey el yapımı: sağlıklı ve sportif kaseler, ev yapımı makarnalar, detoxlar ve güzel kahveler. Güneypark Küme Evleri, Çankaya.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#16a34a",
-  "theme_color": "#16a34a",
+  "background_color": "#FFFFFF",
+  "theme_color": "#F1E6CF",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/images/crumbleweb_logo.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/images/crumbleweb_logo.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "categories": ["food", "restaurant", "lifestyle"],
+  "categories": [
+    "food",
+    "restaurant",
+    "lifestyle"
+  ],
   "lang": "tr",
   "dir": "ltr"
 }

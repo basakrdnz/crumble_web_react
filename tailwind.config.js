@@ -3,28 +3,32 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      // Menü tasarımıyla aynı palet
       colors: {
-        crumble: {
-          50: "#fefae0",    // cornsilk (çok açık)
-          100: "#e9e4c5",   // cornsilk'ten biraz koyu (ara ton)
-          200: "#d6cfa3",   // cornsilk + earth-yellow karışımı (ara ton)
-          300: "#dda15e",   // earth-yellow
-          400: "#bc6c25",   // tigers-eye
-          500: "#a05a1c",   // tigers-eye'dan koyu (ara ton)
-          600: "#606c38",   // dark-moss-green
-          700: "#4e5a2c",   // dark-moss-green'den koyu (ara ton)
-          800: "#283618",   // pakistan-green
-          900: "#1a220e",   // pakistan-green'den koyu (en koyu)
+        paper: "#FFFFFF",
+        sand: "#FAF6EE", // bölüm arka planları için yumuşak krem
+        cream: "#F1E6CF",
+        ink: "#2E2A20",
+        muted: "#716856",
+        line: "#ECE6DA",
+        olive: {
+          DEFAULT: "#55711A",
+          dark: "#445B14",
         },
-      },
-      animation: {
-        'scroll-up': 'scroll-up 15s linear infinite',
-      },
-      keyframes: {
-        'scroll-up': {
-          '0%': { transform: 'translateY(0)' },
-          '100%': { transform: 'translateY(-50%)' },
+        brick: {
+          DEFAULT: "#C8391F",
+          dark: "#A82F18",
         },
+        "on-brick": "#FDEEE4",
+        "on-brick-muted": "#F6CDBF",
+        // Detox görselinden
+        mustard: "#E9B24F",
+        floor: "#899F56",
+        leaf: "#5E7F2A",
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', "Garamond", '"Times New Roman"', "serif"],
+        sans: ["Figtree", "system-ui", "-apple-system", '"Segoe UI"', "Roboto", "sans-serif"],
       },
     },
   },
