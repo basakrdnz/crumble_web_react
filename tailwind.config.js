@@ -21,6 +21,9 @@ export default {
         },
         "on-brick": "#FDEEE4",
         "on-brick-muted": "#F6CDBF",
+        // Detox görselinden
+        mustard: "#E9B85A",
+        leaf: "#5E7F2A",
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', "Garamond", '"Times New Roman"', "serif"],
