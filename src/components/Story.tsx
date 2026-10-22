@@ -19,15 +19,15 @@ const Story = () => {
         <Reveal className="mb-16">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-5 md:gap-5">
             <img
-              src="/media/kahveler.jpg"
-              alt="Masada tokuşturulan kahveler"
-              className="h-[360px] w-full rounded-3xl object-cover md:col-span-3 md:h-[560px]"
+              src="/media/kase.jpg"
+              alt="Güneşli bir köşede, ahşap masada kase"
+              className="h-[360px] w-full rounded-3xl object-cover object-[center_78%] md:col-span-3 md:h-[560px]"
               loading="lazy"
               decoding="async"
             />
             <img
-              src="/media/kurabiyeler.jpg"
-              alt="Fıstıklı kurabiyeler"
+              src="/media/kahve-fincan.jpg"
+              alt="Mavi fincanda köpüklü kahve"
               className="h-[300px] w-full rounded-3xl object-cover md:col-span-2 md:h-[560px]"
               loading="lazy"
               decoding="async"

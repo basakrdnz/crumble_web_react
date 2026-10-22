@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail, Car, Bus, Clock } from "lucide-react";
 import SectionHeader from "./ui/SectionHeader";
-import { ADDRESS_LINES, EMAIL, HOURS, MAPS_URL, PHONE, PHONE_HREF } from "../data/info";
+import { ADDRESS_LINES, EMAIL, HOURS, MAPS_EMBED_URL, MAPS_URL, PHONE, PHONE_HREF } from "../data/info";
 
 const Location = () => {
   return (
@@ -93,13 +93,15 @@ const Location = () => {
           </div>
 
           <div className="flex flex-col gap-6">
-            <img
-              src="/media/mekan.jpg"
-              alt="Crumble kafe dış görünüm"
-              className="h-72 w-full rounded-3xl object-cover lg:h-auto lg:flex-1"
-              loading="lazy"
-              decoding="async"
-            />
+            <div className="relative h-80 overflow-hidden rounded-3xl border border-line bg-sand lg:h-auto lg:min-h-[420px] lg:flex-1">
+              <iframe
+                title="Crumble Kafe haritada"
+                src={MAPS_EMBED_URL}
+                className="absolute inset-0 h-full w-full [filter:saturate(0.7)_sepia(0.12)]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
 
             <div className="rounded-3xl bg-brick p-8 text-on-brick md:p-10">
               <h3 className="font-serif text-4xl font-semibold leading-tight md:text-5xl">Ziyarete hazır mısınız?</h3>

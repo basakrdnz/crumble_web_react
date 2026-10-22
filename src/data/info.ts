@@ -17,10 +17,12 @@ export const ADDRESS_LINES = [
   "Çankaya / Ankara",
 ];
 
-export const PHONE = "0533 326 66 19";
-export const PHONE_HREF = "tel:+905333266619";
+export const PHONE = "0541 460 90 20";
+export const PHONE_HREF = "tel:+905414609020";
 export const EMAIL = "info@crumbleofficial.com";
 export const INSTAGRAM = "https://www.instagram.com/crumble.official/";
 export const FACEBOOK = "https://www.facebook.com/crumble.official";
 export const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=İlkbahar+Caddesi+Sinpaş+Marina+Yolu+Güneypark+Küme+Evleri+No:78+Çankaya+Ankara";
+export const MAPS_EMBED_URL =
+  "https://www.google.com/maps?q=İlkbahar+Caddesi+Sinpaş+Marina+Yolu+Güneypark+Küme+Evleri+No:78+Çankaya+Ankara&output=embed";

@@ -58,7 +58,7 @@ const Detox = () => (
           alt="Üç detox içeceği ve malzemeleri: elma, limon, zencefil; havuç, pancar, portakal; salatalık, limon, taze nane"
           width={1080}
           height={1072}
-          className="mx-auto block h-auto w-full max-w-[560px] lg:max-w-none"
+          className="mx-auto block h-auto w-full max-w-[560px] lg:max-w-[640px]"
           style={FEATHER}
           loading="lazy"
           decoding="async"

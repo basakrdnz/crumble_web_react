@@ -20,7 +20,7 @@ const Kitchen = () => {
           Makarnalar siparişle hazırlanır, tatlılar her sabah fırından çıkar. Vitrinde ne varsa, o gün onun günü.
         </SectionHeader>
 
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:grid-rows-[280px_280px] lg:grid-rows-[320px_320px] md:gap-4">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:grid-rows-[280px_280px] lg:grid-rows-[320px_320px] md:gap-4">
           <Reveal className="col-span-2 md:col-span-1 md:row-span-2">
             <figure className={`${tile} aspect-[9/14] md:aspect-auto md:h-full`}>
               <AutoVideo
@@ -37,13 +37,6 @@ const Kitchen = () => {
             <figure className={`${tile} aspect-[4/3] md:aspect-auto md:h-full`}>
               <img src="/media/baget.jpg" alt="Taze baget sandviç" className={media} loading="lazy" decoding="async" />
               <Caption title="Bagetler" sub="Hindi füme, peynir ya da jambon" />
-            </figure>
-          </Reveal>
-
-          <Reveal className="col-span-2 md:col-span-1 md:row-span-2" delay={160}>
-            <figure className={`${tile} aspect-[4/5] md:aspect-auto md:h-full`}>
-              <img src="/media/kase.jpg" alt="Ahşap masada kase" className={media} loading="lazy" decoding="async" />
-              <Caption title="Sakin öğlenler" sub="Pencere kenarında güneş" />
             </figure>
           </Reveal>
 
