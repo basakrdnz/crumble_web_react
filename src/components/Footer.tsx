@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="font-serif text-4xl font-medium tracking-[0.09em] text-cream">CRUMBLE</div>
             <p className="mt-4 max-w-xs leading-relaxed text-cream/70">
-              Kahve ve kruvasanın buluşma noktası. Her gün taze, her gün el yapımı.
+              Kahve, sohbet ve şömine başı. Her gün taze, her gün el yapımı.
             </p>
             <div className="mt-5 flex gap-4">
               <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-cream/70 transition-colors hover:text-white">

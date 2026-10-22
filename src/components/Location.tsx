@@ -104,7 +104,7 @@ const Location = () => {
             <div className="rounded-3xl bg-brick p-8 text-on-brick md:p-10">
               <h3 className="font-serif text-4xl font-semibold leading-tight md:text-5xl">Ziyarete hazır mısınız?</h3>
               <p className="mt-3 max-w-[40ch] text-on-brick-muted">
-                Kahveniz, kruvasanınız ve vitrinde sizi bekleyen günün lezzetleri hazır. Sorularınız için bize her zaman
+                Kahveniz ve vitrinde sizi bekleyen günün lezzetleri hazır. Sorularınız için bize her zaman
                 ulaşabilirsiniz.
               </p>
               <a

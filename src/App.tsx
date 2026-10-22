@@ -6,7 +6,6 @@ import Marquee from "./components/Marquee";
 
 // Lazy load non-critical components
 const Kitchen = lazy(() => import("./components/Kitchen"));
-const Menu = lazy(() => import("./components/Menu"));
 const Story = lazy(() => import("./components/Story"));
 const Location = lazy(() => import("./components/Location"));
 const FAQ = lazy(() => import("./components/FAQ"));
@@ -25,7 +24,6 @@ function App() {
       {/* Lazy loaded components with Suspense */}
       <Suspense fallback={<Placeholder />}>
         <Kitchen />
-        <Menu />
         <Story />
         <Location />
         <FAQ />

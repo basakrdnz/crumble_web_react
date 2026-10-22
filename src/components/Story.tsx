@@ -17,27 +17,18 @@ const Story = () => {
         </SectionHeader>
 
         <Reveal className="mb-16">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
-            <div className="md:col-span-2 md:row-span-2">
-              <img
-                src="/media/kruvasan.jpg"
-                alt="Crumble Kruvasan"
-                className="h-full min-h-[360px] w-full rounded-3xl object-cover md:min-h-[560px]"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-5 md:gap-5">
             <img
               src="/media/kahveler.jpg"
               alt="Masada tokuşturulan kahveler"
-              className="h-full min-h-[240px] w-full rounded-3xl object-cover"
+              className="h-[360px] w-full rounded-3xl object-cover md:col-span-3 md:h-[560px]"
               loading="lazy"
               decoding="async"
             />
             <img
               src="/media/kurabiyeler.jpg"
               alt="Fıstıklı kurabiyeler"
-              className="h-full min-h-[240px] w-full rounded-3xl object-cover"
+              className="h-[300px] w-full rounded-3xl object-cover md:col-span-2 md:h-[560px]"
               loading="lazy"
               decoding="async"
             />

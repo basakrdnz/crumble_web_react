@@ -1,4 +1,4 @@
-const WORDS = ["Taze kahve", "Kruvasan", "Varsa Kap!", "Matcha", "Ev yapımı makarna", "Kurabiye", "Şömine başı"];
+const WORDS = ["Taze kahve", "Varsa Kap!", "Matcha", "Ev yapımı makarna", "Kurabiye", "Şömine başı"];
 
 const Marquee = () => {
   const row = (hidden: boolean) => (

@@ -34,22 +34,22 @@ const Hero = () => {
               Kahve,
             </span>
             <span className="rise block text-[clamp(56px,15vw,84px)] lg:text-[clamp(84px,8.4vw,132px)]" style={{ animationDelay: "220ms" }}>
-              kruvasan
+              kurabiye
             </span>
             <span className="rise block text-[clamp(56px,15vw,84px)] italic text-cream lg:text-[clamp(84px,8.4vw,132px)]" style={{ animationDelay: "320ms" }}>
               ve biraz sohbet.
             </span>
           </h1>
           <p className="rise mt-7 max-w-md text-base leading-relaxed text-white/80 sm:text-lg" style={{ animationDelay: "440ms" }}>
-            Günlük pişen kruvasanlar, taze kavrulmuş kahveler, ev yapımı makarnalar ve şömine başında sakin bir mola.
+            Taze kavrulmuş kahveler, her sabah fırından çıkan tatlılar, ev yapımı makarnalar ve şömine başında sakin bir mola.
           </p>
 
           <div className="rise mt-9 flex flex-wrap items-center gap-3" style={{ animationDelay: "560ms" }}>
             <a
-              href="#menu"
+              href="#kitchen"
               className="group inline-flex items-center gap-2 rounded-full bg-cream px-7 py-3.5 font-semibold text-ink transition hover:bg-white"
             >
-              Menüye göz at
+              Mutfağa göz at
               <ArrowDownRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" aria-hidden="true" />
             </a>
             <a

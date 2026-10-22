@@ -1,7 +1,7 @@
 {
   "name": "Crumble Cafe",
   "short_name": "Crumble",
-  "description": "Crumble Kafe'de sevgiyle hazırlanan el yapımı tatlıları, özel sandviçler ve taze içeceklerle unutulmaz bir deneyim yaşayın. Kahve ve kruvasanın buluşma noktası.",
+  "description": "Crumble Kafe'de sevgiyle hazırlanan el yapımı tatlıları, özel sandviçler ve taze içeceklerle unutulmaz bir deneyim yaşayın.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",

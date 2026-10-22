@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Crumble Cafe'de hangi lezzetler var?",
     answer:
-      "Menümüzde kahveler, çaylar, detox ve matcha içecekleri, makarnalar, kaseler, tostlar ve bagetler bulunuyor. Vitrinimizdeki el yapımı tatlı ve tuzlular ise her gün değişiyor; varsa kapın!",
+      "Kahveler, çaylar, detox ve matcha içecekleri, makarnalar, kaseler, tostlar ve bagetler hazırlıyoruz. Vitrinimizdeki el yapımı tatlı ve tuzlular ise her gün değişiyor; varsa kapın!",
   },
   {
     question: "Crumble Kafe'nin çalışma saatleri nedir?",

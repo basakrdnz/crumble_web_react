@@ -11,6 +11,11 @@ export default defineConfig({
     // Performance optimizations
     cssCodeSplit: true,
     rollupOptions: {
+      // Ana site + yalnızca QR ile paylaşılan menü sayfası
+      input: {
+        main: 'index.html',
+        menu: 'menu-yczqzhwa/index.html',
+      },
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
@@ -18,7 +23,6 @@ export default defineConfig({
           // Separate chunks for better caching
           components: [
             './src/components/Kitchen',
-            './src/components/Menu',
             './src/components/Story',
             './src/components/Location', 
             './src/components/FAQ',
