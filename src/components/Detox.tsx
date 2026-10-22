@@ -10,10 +10,10 @@ const DETOXES = [
 // Fotoğrafın kenarlarını bölüm zeminine eritir
 const FEATHER = {
   WebkitMaskImage:
-    "linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 3%)",
+    "linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 14%)",
   WebkitMaskComposite: "source-in",
   maskImage:
-    "linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 3%)",
+    "linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 14%)",
   maskComposite: "intersect",
 } as const;
 
@@ -50,15 +50,15 @@ const Detox = () => (
         </ol>
       </Reveal>
 
-      {/* Masa: fotoğraftaki yeşil zemin bölüm boyunca uzar (fotoğraf yüksekliğinin %35,8'si) */}
+      {/* Masa: fotoğraftaki yeşil zemin bölüm boyunca uzar (fotoğraf yüksekliğinin %32,1'si) */}
       <div className="relative mt-10 lg:col-span-7 lg:row-start-1 lg:mt-0 lg:self-end">
-        <div aria-hidden="true" className="absolute bottom-0 left-[-100vw] right-[-100vw] -z-10 h-[35.8%] bg-floor" />
+        <div aria-hidden="true" className="absolute bottom-0 left-[-100vw] right-[-100vw] -z-10 h-[32.1%] bg-floor" />
         <img
           src="/media/detox.jpg"
           alt="Üç detox içeceği ve malzemeleri: elma, limon, zencefil; havuç, pancar, portakal; salatalık, limon, taze nane"
-          width={1080}
-          height={1072}
-          className="mx-auto block h-auto w-full max-w-[560px] lg:max-w-[640px]"
+          width={1200}
+          height={1608}
+          className="mx-auto block h-auto w-full max-w-[460px] lg:max-w-[560px]"
           style={FEATHER}
           loading="lazy"
           decoding="async"

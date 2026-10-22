@@ -22,8 +22,8 @@ export default {
         "on-brick": "#FDEEE4",
         "on-brick-muted": "#F6CDBF",
         // Detox görselinden
-        mustard: "#E5B553",
-        floor: "#93A84A",
+        mustard: "#E9B24F",
+        floor: "#899F56",
         leaf: "#5E7F2A",
       },
       fontFamily: {

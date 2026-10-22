@@ -49,8 +49,8 @@ const Kitchen = () => {
 
           <Reveal delay={200}>
             <figure className={`${tile} aspect-square md:aspect-auto md:h-full`}>
-              <img src="/media/kurabiye.jpg" alt="Pudra şekerli kurabiye" className={media} loading="lazy" decoding="async" />
-              <Caption title="Varsa Kap!" sub="Günün kurabiyesi" />
+              <img src="/media/vitrin-tatlilar.jpg" alt="Tabaklarda kurabiye, çikolatalı kek ve crumble turta" className={media} loading="lazy" decoding="async" />
+              <Caption title="Varsa Kap!" sub="Vitrinde ne varsa" />
             </figure>
           </Reveal>
         </div>
