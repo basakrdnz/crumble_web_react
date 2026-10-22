@@ -23,6 +23,7 @@ export default defineConfig({
           // Separate chunks for better caching
           components: [
             './src/components/Kitchen',
+            './src/components/Detox',
             './src/components/Story',
             './src/components/Location', 
             './src/components/FAQ',
