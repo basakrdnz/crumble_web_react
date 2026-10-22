@@ -1,67 +1,56 @@
-
 const Story = () => {
+  const stats = [
+    { value: "3+", label: "Yıl Hizmet" },
+    { value: "1K+", label: "Mutlu Müşteri" },
+    { value: "%100", label: "El Yapımı" },
+  ];
+
   return (
-    <section id="story" className="pt-20 pb-20 bg-gradient-to-b from-crumble-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Başlık */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-crumble-900 mb-4">
-            Hikayemiz
-          </h2>
-          <p className="text-xl text-crumble-700 max-w-2xl mx-auto">
-            2022'de tutkuyla başladık. El yapımı tatlılar, özel sandviçler ve taze içeceklerle sevilen bir buluşma noktası olduk.
+    <section id="story" className="bg-sand py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-5">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-olive">Hikayemiz</p>
+          <h2 className="mt-3 font-serif text-5xl font-semibold md:text-6xl">2022'den beri</h2>
+          <p className="mt-5 text-lg leading-relaxed text-muted">
+            2022'de tutkuyla başladık. El yapımı tatlılar, özel sandviçler ve taze içeceklerle sevilen bir buluşma noktası
+            olduk.
           </p>
         </div>
 
-        {/* Görsel Galeri - Dengeli Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16">
-          {/* Büyük görsel - sol üst */}
+        <div className="mb-16 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
           <div className="md:col-span-2 md:row-span-2">
             <img
               src="/images/kruvasan.jpeg"
               alt="Crumble Kruvasan"
-              className="w-full h-full min-h-[400px] md:min-h-[500px] object-cover rounded-xl shadow-lg"
+              className="h-full min-h-[360px] w-full rounded-2xl object-cover md:min-h-[500px]"
               loading="lazy"
               decoding="async"
             />
           </div>
-          {/* Küçük görsel 1 - sağ üst */}
-          <div className="md:col-span-1">
-            <img
-              src="/images/C0837T01.JPG"
-              alt="Crumble Cafe"
-              className="w-full h-full min-h-[240px] md:min-h-[240px] object-cover rounded-xl shadow-lg"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          {/* Küçük görsel 2 - sağ alt */}
-          <div className="md:col-span-1">
-            <img
-              src="/images/DSC00211.JPG"
-              alt="Crumble Cafe"
-              className="w-full h-full min-h-[240px] md:min-h-[240px] object-cover rounded-xl shadow-lg"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
+          <img
+            src="/images/C0837T01.JPG"
+            alt="Crumble Cafe"
+            className="h-full min-h-[240px] w-full rounded-2xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/DSC00211.JPG"
+            alt="Crumble Cafe"
+            className="h-full min-h-[240px] w-full rounded-2xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
-        {/* İstatistikler */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center px-2">
-          <div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">3+</div>
-            <div className="text-sm sm:text-base text-crumble-700">Yıl Hizmet</div>
-          </div>
-          <div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">1K+</div>
-            <div className="text-sm sm:text-base text-crumble-700">Mutlu Müşteri</div>
-          </div>
-          <div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-crumble-600 mb-2">%100</div>
-            <div className="text-sm sm:text-base text-crumble-700">El Yapımı</div>
-          </div>
-        </div>
+        <dl className="grid grid-cols-3 divide-x divide-line border-y border-line text-center">
+          {stats.map((s) => (
+            <div key={s.label} className="flex flex-col-reverse py-6">
+              <dt className="mt-1 text-sm text-muted sm:text-base">{s.label}</dt>
+              <dd className="font-serif text-4xl font-semibold text-olive md:text-5xl">{s.value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

@@ -17,6 +17,7 @@ export default defineConfig({
           icons: ['lucide-react'],
           // Separate chunks for better caching
           components: [
+            './src/components/Menu',
             './src/components/Story',
             './src/components/Location', 
             './src/components/FAQ',

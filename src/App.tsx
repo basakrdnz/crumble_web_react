@@ -4,10 +4,13 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 
 // Lazy load non-critical components
+const Menu = lazy(() => import("./components/Menu"));
 const Story = lazy(() => import("./components/Story"));
 const Location = lazy(() => import("./components/Location"));
 const FAQ = lazy(() => import("./components/FAQ"));
 const Footer = lazy(() => import("./components/Footer"));
+
+const Placeholder = () => <div className="h-96 bg-sand" />;
 
 function App() {
   return (
@@ -15,21 +18,13 @@ function App() {
       <Header />
       <Hero />
       <About />
-      
+
       {/* Lazy loaded components with Suspense */}
-      <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg mx-4 my-8"></div>}>
+      <Suspense fallback={<Placeholder />}>
+        <Menu />
         <Story />
-      </Suspense>
-      
-      <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg mx-4 my-8"></div>}>
         <Location />
-      </Suspense>
-      
-      <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg mx-4 my-8"></div>}>
         <FAQ />
-      </Suspense>
-      
-      <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
         <Footer />
       </Suspense>
     </div>

@@ -2,102 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font imports moved to HTML head for better performance */
+/* Fontlar index.html içinde yükleniyor */
 
-/* Temel font ayarları */
-body {
-  @apply font-sans;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-.menu,
-.btn,
-nav {
-  font-family: "Montserrat", "Inter", Arial, sans-serif;
-  font-weight: 600;
-}
-:root {
-  --crumble-400: #283618;
-  --crumble-100: #d6cfa3;
-}
-
-.nav-link {
-  color: var(--crumble-400);
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--crumble-100);
-}
-
-/* Performance optimized animations */
-.animate-scroll-up {
-  animation: scroll-up 15s linear infinite;
-  will-change: transform;
-}
-
-@keyframes scroll-up {
-  0% { 
-    transform: translateY(0);
+@layer base {
+  html {
+    scroll-padding-top: 64px;
   }
-  100% { 
-    transform: translateY(-50%);
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    line-height: 1.5;
   }
 }
 
-/* Optimized hover animations using transform and opacity */
-.group-hover-scale {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
-
-.group:hover .group-hover-scale {
-  transform: scale(1.05);
-}
-
-.group-hover-rotate {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
-
-.group:hover .group-hover-rotate {
-  transform: rotate(2deg);
-}
-
-.group:hover .group-hover-rotate-negative {
-  transform: rotate(-2deg);
-}
-
-/* Optimized image transitions */
-.image-transition {
-  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity, transform;
-}
-
-/* Batch DOM measurements for better performance */
-.performance-optimized {
-  contain: layout style paint;
-  will-change: transform, opacity;
-}
-
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .animate-scroll-up {
-    animation: none;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
-  
-  .group-hover-scale,
-  .group-hover-rotate,
-  .image-transition {
-    transition: none;
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
