@@ -22,6 +22,7 @@ export interface PrivacyText {
 export const PRIVACY_UPDATED = "2026-10-27";
 
 const COMPANY = "Crumble Cafe Gıda Pazarlama Ticaret Limited Şirketi";
+const MERSIS = "0215062003000001";
 const ADDRESS = ADDRESS_LINES.join(", ");
 
 export const PRIVACY: Record<Lang, PrivacyText> = {
@@ -33,7 +34,7 @@ export const PRIVACY: Record<Lang, PrivacyText> = {
     sections: [
       {
         title: "Veri sorumlusu",
-        paragraphs: [`${COMPANY}, ${ADDRESS} ("Crumble Kafe"). E-posta: ${EMAIL}`],
+        paragraphs: [`${COMPANY}, ${ADDRESS} ("Crumble Kafe"). MERSİS: ${MERSIS}. E-posta: ${EMAIL}`],
       },
       {
         title: "Uygulamada hangi verileri işliyoruz?",
@@ -118,7 +119,7 @@ export const PRIVACY: Record<Lang, PrivacyText> = {
     sections: [
       {
         title: "Data controller",
-        paragraphs: [`${COMPANY}, ${ADDRESS}, Turkey ("Crumble Kafe"). Email: ${EMAIL}`],
+        paragraphs: [`${COMPANY}, ${ADDRESS}, Turkey ("Crumble Kafe"). MERSIS: ${MERSIS}. Email: ${EMAIL}`],
       },
       {
         title: "What we process in the app",
