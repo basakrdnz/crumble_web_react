@@ -50,7 +50,12 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-cream/50 sm:flex-row sm:justify-between">
-          <span>© {new Date().getFullYear()} Crumble Kafe. Tüm hakları saklıdır.</span>
+          <span>
+            © {new Date().getFullYear()} Crumble Kafe. Tüm hakları saklıdır.{" "}
+            <a href="/gizlilik" className="underline-offset-4 hover:text-white hover:underline">
+              Gizlilik
+            </a>
+          </span>
           <span>Güneypark · Çankaya · Ankara</span>
         </div>
       </div>

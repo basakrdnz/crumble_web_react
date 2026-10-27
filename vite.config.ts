@@ -11,10 +11,11 @@ export default defineConfig({
     // Performance optimizations
     cssCodeSplit: true,
     rollupOptions: {
-      // Ana site + yalnızca QR ile paylaşılan menü sayfası
+      // Ana site + yalnızca QR ile paylaşılan menü sayfası + gizlilik politikası
       input: {
         main: 'index.html',
         menu: 'menu-yczqzhwa/index.html',
+        privacy: 'gizlilik/index.html',
       },
       output: {
         manualChunks: {

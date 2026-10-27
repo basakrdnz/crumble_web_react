@@ -1,7 +1,9 @@
 {
   "rewrites": [
     { "source": "/menu-yczqzhwa", "destination": "/index.html" },
-    { "source": "/menu-yczqzhwa/", "destination": "/index.html" }
+    { "source": "/menu-yczqzhwa/", "destination": "/index.html" },
+    { "source": "/gizlilik", "destination": "/gizlilik/index.html" },
+    { "source": "/privacy", "destination": "/gizlilik/index.html" }
   ],
   "headers": [
     {
