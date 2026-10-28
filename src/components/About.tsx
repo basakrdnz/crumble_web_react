@@ -47,27 +47,6 @@ const About = () => {
           ))}
         </div>
       </div>
-
-      {/* Şömine başı: tam genişlik atmosfer */}
-      <div className="relative h-[115vw] max-h-[920px] min-h-[480px] overflow-hidden lg:h-[92vh]">
-        <img
-          src="/media/atmosfer-somine.jpg"
-          alt="Crumble'ın şömineli iç mekânında kahve içen misafirler"
-          className="absolute inset-0 h-full w-full object-cover object-[50%_60%]"
-          loading="lazy"
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent lg:bg-gradient-to-b lg:from-black/75 lg:via-black/10" />
-        <Reveal className="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-5 pb-12 lg:bottom-auto lg:top-0 lg:px-10 lg:pb-0 lg:pt-24">
-          <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-cream/80">
-            <span className="h-px w-8 bg-current" aria-hidden="true" />
-            Mekân
-          </p>
-          <p className="mt-5 max-w-3xl font-serif text-[clamp(40px,10vw,56px)] font-semibold leading-[0.95] text-white lg:text-[clamp(64px,6.4vw,96px)]">
-            Şömine yanıyor, kahven hazır. <span className="italic text-cream">Acelesi yok.</span>
-          </p>
-        </Reveal>
-      </div>
     </section>
   );
 };
