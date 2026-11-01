@@ -56,7 +56,7 @@ export const MENU: MenuSection[] = [
       ["Anne Makarnası", 450, "100 g özel kıyma harcımız ve kekikli yoğurt"],
       ["Chicken Alfredo", 480, "100 g jülyen tavuk, krema, sarımsak; üzeri parmesan ve fesleğen"],
       ["Pesto Alfredo", 460, "Krema ve taze pesto sos"]] },
-    { title: "Ana yemek", items: [["Izgara Tavuk Kase", 460, "180 g ızgara tavuk, basmati pirinç pilavı ve salata"], ["Köfte Kase", 460, "160 g el yapımı köfte, basmati pirinç pilavı ve salata"], ["Ekmek Arası Köfte", 430, "120 g köfte"]] },
+    { title: "Ana yemek", items: [["Izgara Tavuk Kase", 460, "180 g ızgara tavuk, basmati pirinç pilavı ve salata"], ["Köfte Kase", 460, "160 g el yapımı köfte, basmati pirinç pilavı ve salata"], ["Ekmek Arası Köfte", 430, "120 g köfte, domates, marul ve domatesli ezme sosu"]] },
     { title: "Kahvaltılık", items: [["Granola Kase", 350, "Chia tohumlu ballı süzme yoğurt, yarım muz, granola, ay çekirdeği, parçalı fıstık ezmesi ve kuru üzüm. Fıstık içerir."]] },
     { title: "Tostlar", items: [["Akdeniz Tost", 255], ["Karışık Tost", 285], ["Kaşarlı Tost", 250]] },
     { title: "Bagetler", items: [["Hindi Füme Baget", 360], ["Peynir Baget", 370], ["Dana Jambon Baget", 390]] },
