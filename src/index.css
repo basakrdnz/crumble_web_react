@@ -79,46 +79,31 @@
   }
 }
 
-/* Yeni gelenler şeridi: kendiliğinden kayar, üstüne gelince/dokununca durur */
-.carousel-track {
-  /* gap'i telafi etmek için yarım gap kadar fazladan kaydır */
-  animation: carousel 60s linear infinite;
-}
-
-@keyframes carousel {
-  to {
-    transform: translateX(calc(-50% - 0.5rem));
+/* Yeni gelenler ayrıntı penceresi */
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
   }
 }
 
-@media (min-width: 1024px) {
-  .carousel-track {
-    animation-name: carousel-lg;
-  }
-
-  @keyframes carousel-lg {
-    to {
-      transform: translateX(calc(-50% - 0.625rem));
-    }
+@keyframes sheet-fade {
+  from {
+    opacity: 0;
   }
 }
 
-.carousel {
-  cursor: pointer;
-  padding-left: 1.25rem;
+.sheet-in {
+  animation: sheet-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.carousel:hover .carousel-track,
-.carousel.is-paused .carousel-track {
-  animation-play-state: paused;
+.sheet-fade {
+  animation: sheet-fade 0.25s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .carousel {
-    overflow-x: auto;
-  }
-
-  .carousel-track {
+  .sheet-in,
+  .sheet-fade {
     animation: none;
   }
 }
