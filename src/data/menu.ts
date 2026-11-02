@@ -56,9 +56,9 @@ export const MENU: MenuSection[] = [
       ["Anne Makarnası", 450, "100 g özel kıyma harcımız ve kekikli yoğurt ile"],
       ["Chicken Alfredo", 480, "100 g jülyen tavuk, krema ve sarımsak; parmesan ve fesleğen ile"],
       ["Pesto Alfredo", 460, "Krema ve taze pesto sos ile"]] },
-    { title: "Ana yemek", items: [["Izgara Tavuk Kase", 460, "180 g ızgara tavuk; basmati pirinç pilavı ve salata ile"], ["Köfte Kase", 460, "160 g el yapımı köfte; basmati pirinç pilavı ve salata ile"], ["Ekmek Arası Köfte", 430, "120 g köfte; domates, marul ve domatesli ezme sosu ile"]] },
+    { title: "Ana yemek", items: [["Izgara Tavuk Kase", 460, "180 g ızgara tavuk; basmati pirinç pilavı ve mevsim salatası ile"], ["Köfte Kase", 460, "160 g el yapımı köfte; basmati pirinç pilavı ve mevsim salatası ile"], ["Ekmek Arası Köfte", 430, "120 g köfte; domates, marul ve domatesli ezme sosu ile"]] },
     { title: "Kahvaltılık", items: [["Granola Kase", 350, "Chia tohumlu ballı süzme yoğurt; muz, granola, ay çekirdeği, parçalı fıstık ezmesi ve kuru üzüm ile"]] },
-    { title: "Tostlar", items: [["Akdeniz Tost", 255], ["Karışık Tost", 285], ["Kaşarlı Tost", 250]] },
+    { title: "Tostlar", items: [["Akdeniz Tost", 255, "Ezine peyniri, domates ve kekik; zeytin ezmesi ve domates ezmesi ile"], ["Karışık Tost", 285], ["Kaşarlı Tost", 250]] },
     { title: "Bagetler", items: [["Hindi Füme Baget", 360], ["Peynir Baget", 370], ["Dana Jambon Baget", 390]] },
   ]},
 ];
