@@ -78,3 +78,47 @@
     animation: none;
   }
 }
+
+/* Yeni gelenler şeridi: kendiliğinden kayar, üstüne gelince/dokununca durur */
+.carousel-track {
+  /* gap'i telafi etmek için yarım gap kadar fazladan kaydır */
+  animation: carousel 32s linear infinite;
+}
+
+@keyframes carousel {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-track {
+    animation-name: carousel-lg;
+  }
+
+  @keyframes carousel-lg {
+    to {
+      transform: translateX(calc(-50% - 0.625rem));
+    }
+  }
+}
+
+.carousel {
+  cursor: pointer;
+  padding-left: 1.25rem;
+}
+
+.carousel:hover .carousel-track,
+.carousel.is-paused .carousel-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel {
+    overflow-x: auto;
+  }
+
+  .carousel-track {
+    animation: none;
+  }
+}
