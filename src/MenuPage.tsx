@@ -1,5 +1,6 @@
 import { Clock } from "lucide-react";
 import Menu from "./components/Menu";
+import NewArrivals from "./components/NewArrivals";
 import Footer from "./components/Footer";
 import { todaysHours } from "./data/info";
 
@@ -17,6 +18,9 @@ const MenuPage = () => (
         </span>
       </div>
     </header>
+    <div className="pt-16">
+      <NewArrivals />
+    </div>
     <Menu />
     <Footer />
   </div>

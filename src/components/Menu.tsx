@@ -119,7 +119,7 @@ const Menu = () => {
   }, [active]);
 
   return (
-    <section id="menu" className="bg-paper pt-20 lg:pt-32">
+    <section id="menu" className="bg-paper pt-8 lg:pt-16">
       <div className="mx-auto max-w-7xl px-5 lg:px-10">
         <SectionHeader eyebrow="Menü" title={<>Ne yesek, <span className="italic text-olive">ne içsek?</span></>}>
           Kahveden detoxa, makarnadan bagete. Vitrindekiler için kırmızı bölüme bakın; her gün değişir.
