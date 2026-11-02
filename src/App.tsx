@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Marquee from "./components/Marquee";
+import NewArrivals from "./components/NewArrivals";
 
 // Lazy load non-critical components
 const Kitchen = lazy(() => import("./components/Kitchen"));
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <Hero />
       <Marquee />
+      <NewArrivals />
       <About />
 
       {/* Lazy loaded components with Suspense */}
