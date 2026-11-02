@@ -23,7 +23,7 @@ const ITEMS: Arrival[] = [
   {
     tag: "Kışa özel",
     name: "Balkabağı Latte",
-    short: "Pumpkin spice, karamel, espresso; üzeri sweet cream köpük.",
+    short: "Pumpkin spice ve karamel ile espresso; sweet cream köpük.",
     img: "/media/yeni-balkabagi-latte.webp",
     alt: "Buzlu balkabağı latte, Crumble logolu bardakta",
     panel: "bg-[#EED6B4]",
@@ -35,7 +35,7 @@ const ITEMS: Arrival[] = [
   {
     tag: "Kahvaltılık",
     name: "Granola Kase",
-    short: "Ballı süzme yoğurt, muz, granola, fıstık ezmesi, kuru üzüm.",
+    short: "Ballı süzme yoğurt; muz, granola ve fıstık ezmesi ile.",
     img: "/media/yeni-granola-kase.webp",
     alt: "Yoğurt, muz, granola, fıstık ezmesi ve kuru üzümlü granola kase",
     panel: "bg-[#E4E6D2]",
