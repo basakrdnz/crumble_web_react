@@ -82,7 +82,7 @@
 /* Yeni gelenler şeridi: kendiliğinden kayar, üstüne gelince/dokununca durur */
 .carousel-track {
   /* gap'i telafi etmek için yarım gap kadar fazladan kaydır */
-  animation: carousel 32s linear infinite;
+  animation: carousel 60s linear infinite;
 }
 
 @keyframes carousel {
