@@ -29,7 +29,7 @@ const Kitchen = () => {
                 src="/media/pesto-720"
                 className={media}
               />
-              <Caption title="Pesto Alfredo" sub="Krema ve taze pesto sos" />
+              <Caption title="Pesto Alfredo" sub="Krema ve taze pesto sos ile" />
             </figure>
           </Reveal>
 
@@ -48,7 +48,7 @@ const Kitchen = () => {
                 src="/media/hero-alfredo-720"
                 className={media}
               />
-              <Caption title="Chicken Alfredo" sub="Jülyen tavuk, krema, parmesan" />
+              <Caption title="Chicken Alfredo" sub="Jülyen tavuk, krema ve parmesan ile" />
             </figure>
           </Reveal>
 
