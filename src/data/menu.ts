@@ -9,7 +9,8 @@ export type MenuSection =
       nav: string;
       icon: MenuIcon;
       title?: string;
-      groups: { title?: string; items: MenuItem[] }[];
+      // highlight: renkli zeminli kutu (ör. "Geri gelenler"); id: sayfa içi bağlantı için
+      groups: { title?: string; items: MenuItem[]; highlight?: boolean; id?: string }[];
     }
   | {
       id: string;
@@ -51,13 +52,13 @@ export const MENU: MenuSection[] = [
     { title: "Matcha detox", items: [["No1", 330, "Matcha, salatalık, taze nane, tonik"], ["No2", 330, "Matcha, limon suyu, taze nane, tonik"], ["No3", 330, "Matcha, elma suyu, maden suyu"], ["No4", 330, "Matcha, portakal suyu, maden suyu"]] },
   ]},
   { id: "yemek", nav: "Yemek", icon: "yemek", groups: [
-    { title: "Geri gelenler", items: [["Marinara Tavuk Kase", 490], ["Kremalı Tavuk Kase", 490]] },
     { title: "Çorba", items: [["Günün Çorbası", 280]] },
     { title: "Makarnalar", items: [
       ["Anne Makarnası", 460, "100 g özel kıyma harcımız ve kekikli yoğurt ile"],
       ["Chicken Alfredo", 490, "100 g jülyen tavuk, krema ve sarımsak; parmesan ve fesleğen ile"],
       ["Pesto Alfredo", 480, "Krema ve taze pesto sos ile"]] },
     { title: "Ana yemek", items: [["Izgara Tavuk Kase", 470, "180 g ızgara tavuk; basmati pirinç pilavı ve mevsim salatası ile"], ["Köfte Kase", 480, "160 g el yapımı köfte; basmati pirinç pilavı ve mevsim salatası ile"], ["Ekmek Arası Köfte", 440, "120 g köfte; domates, marul ve domatesli ezme sosu ile"]] },
+    { title: "Geri gelenler", id: "geri-gelenler", highlight: true, items: [["Marinara Tavuk Kase", 490], ["Kremalı Tavuk Kase", 490]] },
     { title: "Kahvaltılık", items: [["Granola Kase", 350, "Chia tohumlu ballı süzme yoğurt; muz, granola, ay çekirdeği, parçalı fıstık ezmesi ve kuru üzüm ile"]] },
     { title: "Tostlar", items: [["Akdeniz Tost", 270, "Ezine peyniri, domates ve kekik; zeytin ezmesi ve domates ezmesi ile"], ["Karışık Tost", 285], ["Kaşarlı Tost", 265]] },
     { title: "Bagetler", items: [["Hindi Füme Baget", 375], ["Peynir Baget", 385], ["Dana Jambon Baget", 410]] },

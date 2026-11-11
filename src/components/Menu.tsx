@@ -50,7 +50,7 @@ const ICONS: Record<MenuIcon, JSX.Element> = {
   ),
 };
 
-const Icon = ({ name, className }: { name: MenuIcon; className: string }) => (
+export const Icon = ({ name, className }: { name: MenuIcon; className: string }) => (
   <svg
     viewBox="0 0 48 48"
     aria-hidden="true"
@@ -63,11 +63,11 @@ const Icon = ({ name, className }: { name: MenuIcon; className: string }) => (
   </svg>
 );
 
-const Item = ({ item: [name, price, desc] }: { item: MenuItem }) => (
+const Item = ({ item: [name, price, desc], onDark = false }: { item: MenuItem; onDark?: boolean }) => (
   <li className="py-2.5">
     <div className="flex items-baseline gap-2.5">
       <span className="font-medium">{name}</span>
-      <span aria-hidden="true" className="flex-1 min-w-3 -translate-y-1 border-b-[1.5px] border-dotted border-line" />
+      <span aria-hidden="true" className={`flex-1 min-w-3 -translate-y-1 border-b-[1.5px] border-dotted ${onDark ? "border-white/30" : "border-line"}`} />
       <span className="font-semibold tabular-nums whitespace-nowrap">{price} ₺</span>
     </div>
     {desc && <p className="mt-1 max-w-[46ch] text-sm leading-snug text-muted">{desc}</p>}
@@ -210,6 +210,20 @@ const Menu = () => {
                 </div>
                 <div className="lg:columns-2 lg:gap-14">
                   {s.groups.map((g, i) => (
+                    g.highlight ? (
+                      <div
+                        key={g.title ?? i}
+                        id={g.id}
+                        className="mt-6 scroll-mt-32 break-inside-avoid rounded-2xl bg-brick px-5 pb-3 pt-4 text-on-brick lg:mb-8 lg:mt-0 lg:scroll-mt-24"
+                      >
+                        <h4 className="font-serif text-2xl font-semibold leading-tight">{g.title}</h4>
+                        <ul>
+                          {g.items.map((item) => (
+                            <Item key={item[0] + item[1]} item={item} onDark />
+                          ))}
+                        </ul>
+                      </div>
+                    ) : (
                     <div key={g.title ?? i} className="break-inside-avoid lg:mb-8">
                       {g.title && (
                         <h4 className={`${i === 0 ? "mt-3.5" : "mt-6"} mb-1.5 text-[15px] font-semibold text-olive lg:mt-0 lg:text-xs lg:uppercase lg:tracking-[0.25em]`}>
@@ -222,6 +236,7 @@ const Menu = () => {
                         ))}
                       </ul>
                     </div>
+                    )
                   ))}
                 </div>
               </section>

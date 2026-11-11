@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Plus, X } from "lucide-react";
 import { MENU } from "../data/menu";
+import { Icon } from "./Menu";
 
 // Fiyat ve açıklama menü verisinden okunur; menüde değişince burası da güncellenir
 const menuItem = (name: string) => {
@@ -12,7 +13,7 @@ type Arrival = {
   tag: string;
   name: string;
   short: string;
-  img: string;
+  img?: string; // fotoğraf yoksa çizim ikonu gösterilir
   alt: string;
   panel: string;
   variants: { label?: string; menuName: string }[];
@@ -41,6 +42,28 @@ const ITEMS: Arrival[] = [
     panel: "bg-[#E4E6D2]",
     variants: [{ menuName: "Granola Kase" }],
   },
+  {
+    tag: "Kışa özel",
+    name: "Pumpkin Spice Chai",
+    short: "Pumpkin spice şurubu ile chai tea latte.",
+    alt: "Pumpkin spice chai",
+    panel: "bg-[#F1DCC4]",
+    variants: [
+      { label: "Sıcak", menuName: "Pumpkin Spice Chai" },
+      { label: "Buzlu", menuName: "Iced Pumpkin Spice Chai" },
+    ],
+  },
+  {
+    tag: "Kışa özel",
+    name: "White Chocolate Mocha",
+    short: "Sıcak ya da buzlu.",
+    alt: "White chocolate mocha",
+    panel: "bg-[#EFE7DA]",
+    variants: [
+      { label: "Sıcak", menuName: "White Chocolate Mocha" },
+      { label: "Buzlu", menuName: "Iced White Chocolate Mocha" },
+    ],
+  },
 ];
 
 const REPEAT = 4; // şeridin kesintisiz dönmesi için kartlar tekrarlanır (yarısı ekranı doldurmalı)
@@ -54,27 +77,31 @@ const Card = ({ item, hidden, onOpen }: { item: Arrival; hidden: boolean; onOpen
     tabIndex={hidden ? -1 : undefined}
     aria-hidden={hidden || undefined}
     aria-label={hidden ? undefined : `${item.name}: fiyat ve içerik`}
-    className={`relative flex w-[80vw] max-w-[340px] shrink-0 items-center gap-3 rounded-2xl ${item.panel} p-3 pr-10 text-left sm:w-[340px] lg:w-[380px] lg:gap-4 lg:p-4 lg:pr-11`}
+    className={`relative flex w-[80vw] max-w-[340px] shrink-0 items-center gap-3 rounded-2xl ${item.panel} p-3 pr-10 text-left sm:w-[340px] lg:w-[420px] lg:gap-4 lg:p-4 lg:pr-11`}
   >
     <span className="absolute right-3 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full bg-white/70 text-ink/70 shadow-sm">
       <Plus className="h-3.5 w-3.5" aria-hidden="true" />
     </span>
     <span className="flex h-16 w-16 shrink-0 items-center justify-center lg:h-20 lg:w-20">
-      <img
-        src={item.img}
-        alt=""
-        className="max-h-full max-w-full object-contain drop-shadow-[0_8px_8px_rgba(46,42,32,0.25)]"
-        loading="lazy"
-        decoding="async"
-        draggable={false}
-      />
+      {item.img ? (
+        <img
+          src={item.img}
+          alt=""
+          className="max-h-full max-w-full object-contain drop-shadow-[0_8px_8px_rgba(46,42,32,0.25)]"
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+        />
+      ) : (
+        <Icon name="kahve" className="h-11 w-11 text-ink/60 lg:h-12 lg:w-12" />
+      )}
     </span>
     <span className="min-w-0">
       <span className="inline-flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-ink/60 lg:text-[10px]">
         <span className="h-1.5 w-1.5 rounded-full bg-brick" aria-hidden="true" />
         Yeni · {item.tag}
       </span>
-      <span className="block truncate font-serif text-xl font-semibold leading-tight lg:text-2xl">{item.name}</span>
+      <span className="block font-serif text-lg font-semibold leading-tight sm:text-xl">{item.name}</span>
       <span className="mt-0.5 block truncate text-[13px] text-ink/70">{item.short}</span>
     </span>
   </button>
@@ -110,7 +137,11 @@ const Detail = ({ item, onClose }: { item: Arrival; onClose: () => void }) => {
           <X className="h-5 w-5" aria-hidden="true" />
         </button>
         <div className={`flex h-56 items-end justify-center ${item.panel} pt-6`}>
-          <img src={item.img} alt={item.alt} className="max-h-full max-w-[80%] object-contain drop-shadow-[0_16px_16px_rgba(46,42,32,0.25)]" />
+          {item.img ? (
+            <img src={item.img} alt={item.alt} className="max-h-full max-w-[80%] object-contain drop-shadow-[0_16px_16px_rgba(46,42,32,0.25)]" />
+          ) : (
+            <Icon name="kahve" className="mb-10 h-24 w-24 text-ink/50" />
+          )}
         </div>
         <div className="px-6 pb-8 pt-6">
           <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-ink/60">
