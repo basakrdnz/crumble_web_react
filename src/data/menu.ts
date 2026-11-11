@@ -28,12 +28,9 @@ export const MENU: MenuSection[] = [
       ["Macchiato", 215], ["Aromalı Macchiato", 245], ["Mocha", 240]] },
     { title: "Türk kahvesi", items: [["Türk Kahvesi", 160], ["Double Türk Kahvesi", 190]] },
     { title: "Kış içecekleri", items: [
-      ["Balkabağı Latte (sıcak)", 255, "Pumpkin spice ve karamel ile espresso; üzeri sweet cream köpük"],
-      ["Balkabağı Latte (buzlu)", 260, "Pumpkin spice ve karamel ile espresso; üzeri sweet cream köpük"],
-      ["White Chocolate Mocha (sıcak)", 245, "Beyaz çikolata sosu, espresso ve süt; sweet cream köpük ve beyaz çikolata rendesi ile"],
-      ["White Chocolate Mocha (buzlu)", 255, "Beyaz çikolata sosu, espresso ve süt; sweet cream köpük ve beyaz çikolata rendesi ile"],
-      ["Balkabaklı Chai (sıcak)", 240, "Pumpkin spice şurubu ile chai tea latte"],
-      ["Balkabaklı Chai (buzlu)", 250, "Pumpkin spice şurubu ile chai tea latte"]] },
+      ["Balkabağı Latte", 255, "Pumpkin spice ve karamel ile espresso; üzeri sweet cream köpük"],
+      ["White Chocolate Mocha", 245, "Beyaz çikolata sosu, espresso ve süt; sweet cream köpük ve beyaz çikolata rendesi ile"],
+      ["Balkabaklı Chai", 240, "Pumpkin spice şurubu ile chai tea latte"]] },
   ]},
   { id: "cay", nav: "Çay & Sıcaklar", icon: "cay", groups: [
     { title: "Çay", items: [["Bardak Çay", 65], ["Fincan Çay", 85], ["Bitki Çayı (küçük)", 180, "Adaçayı, elma-tarçın, hibiskus, papatya, anason, yeşil çay, lavanta, zencefil, biberiye, tane karabiber"], ["Bitki Çayı (büyük)", 320], ["Termos Çay", 650]] },
@@ -44,7 +41,10 @@ export const MENU: MenuSection[] = [
     tatli: ["Elmalı Kurabiye", "Triple Chocolate Cookie", "Mozaik", "Çikolatalı Kek", "Havuçlu Cevizli Kek", "Haşhaşlı Kek", "Crumble Turta", "Çıtır Kurabiye", "Vişneli Parmak Kurabiye", "Oreo Cookie", "Vatruşka", "Waffle Çeşitleri"],
     tuzlu: ["Dereotlu Poğaça", "Peynirli Poğaça", "Patatesli Börek", "Peynirli Börek", "Tavuklu Sebzeli Börek", "Çiçek Böreği", "Tavuklu Kiş", "Pizza Dilimi"] },
   { id: "soguk", nav: "Soğuk", icon: "soguk", title: "Soğuk içecekler", groups: [
-    { items: [["Cool Lime", 290], ["Berry Hibiskus", 280]] },
+    { items: [["Cool Lime", 290], ["Berry Hibiskus", 280],
+      ["Iced Balkabağı Latte", 260, "Pumpkin spice ve karamel ile espresso; üzeri sweet cream köpük"],
+      ["Iced White Chocolate Mocha", 255, "Beyaz çikolata sosu, espresso ve süt; sweet cream köpük ve beyaz çikolata rendesi ile"],
+      ["Iced Balkabaklı Chai", 250, "Pumpkin spice şurubu ile chai tea latte"]] },
   ]},
   { id: "detox", nav: "Detox & Matcha", icon: "detox", groups: [
     { title: "Meyve detox", items: [["No1", 290, "Elma, limon, zencefil"], ["No2", 290, "Havuç, pancar, portakal"], ["No3", 290, "Salatalık, limon, taze nane"]] },
