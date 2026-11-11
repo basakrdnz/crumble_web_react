@@ -22,14 +22,14 @@ type Arrival = {
 const ITEMS: Arrival[] = [
   {
     tag: "Kışa özel",
-    name: "Balkabağı Latte",
+    name: "Pumpkin Spice Latte",
     short: "Pumpkin spice ve karamel ile espresso; sweet cream köpük.",
     img: "/media/yeni-balkabagi-latte.webp",
-    alt: "Buzlu balkabağı latte, Crumble logolu bardakta",
+    alt: "Buzlu pumpkin spice latte, Crumble logolu bardakta",
     panel: "bg-[#EED6B4]",
     variants: [
-      { label: "Sıcak", menuName: "Balkabağı Latte" },
-      { label: "Buzlu", menuName: "Iced Balkabağı Latte" },
+      { label: "Sıcak", menuName: "Pumpkin Spice Latte" },
+      { label: "Buzlu", menuName: "Iced Pumpkin Spice Latte" },
     ],
   },
   {
