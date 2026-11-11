@@ -28,8 +28,8 @@ const ITEMS: Arrival[] = [
     alt: "Buzlu balkabağı latte, Crumble logolu bardakta",
     panel: "bg-[#EED6B4]",
     variants: [
-      { label: "Sıcak", menuName: "Balkabağı Latte (sıcak)" },
-      { label: "Buzlu", menuName: "Balkabağı Latte (buzlu)" },
+      { label: "Sıcak", menuName: "Balkabağı Latte" },
+      { label: "Buzlu", menuName: "Iced Balkabağı Latte" },
     ],
   },
   {
