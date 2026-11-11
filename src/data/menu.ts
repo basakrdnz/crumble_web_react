@@ -60,6 +60,5 @@ export const MENU: MenuSection[] = [
     { title: "Kahvaltılık", items: [["Granola Kase", 350, "Chia tohumlu ballı süzme yoğurt; muz, granola, ay çekirdeği, parçalı fıstık ezmesi ve kuru üzüm ile"]] },
     { title: "Tostlar", items: [["Akdeniz Tost", 270, "Ezine peyniri, domates ve kekik; zeytin ezmesi ve domates ezmesi ile"], ["Karışık Tost", 285], ["Kaşarlı Tost", 265]] },
     { title: "Bagetler", items: [["Hindi Füme Baget", 375], ["Peynir Baget", 385], ["Dana Jambon Baget", 410]] },
-    { title: "Ekmek", items: [["Rustik Ekmek", 220]] },
   ]},
 ];
