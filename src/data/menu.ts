@@ -29,7 +29,7 @@ export const MENU: MenuSection[] = [
     { title: "Türk kahvesi", items: [["Türk Kahvesi", 160], ["Double Türk Kahvesi", 190]] },
     { title: "Kış içecekleri", items: [
       ["Pumpkin Spice Latte", 255, "Pumpkin spice ve karamel ile espresso; üzeri sweet cream köpük"],
-      ["White Chocolate Mocha", 245, "Beyaz çikolata sosu, espresso ve süt; sweet cream köpük ve beyaz çikolata rendesi ile"],
+      ["White Chocolate Mocha", 245],
       ["Pumpkin Spice Chai", 240, "Pumpkin spice şurubu ile chai tea latte"]] },
   ]},
   { id: "cay", nav: "Çay & Sıcaklar", icon: "cay", groups: [
@@ -43,7 +43,7 @@ export const MENU: MenuSection[] = [
   { id: "soguk", nav: "Soğuk", icon: "soguk", title: "Soğuk içecekler", groups: [
     { items: [["Cool Lime", 290], ["Berry Hibiskus", 280],
       ["Iced Pumpkin Spice Latte", 260, "Pumpkin spice ve karamel ile espresso; üzeri sweet cream köpük"],
-      ["Iced White Chocolate Mocha", 255, "Beyaz çikolata sosu, espresso ve süt; sweet cream köpük ve beyaz çikolata rendesi ile"],
+      ["Iced White Chocolate Mocha", 255],
       ["Iced Pumpkin Spice Chai", 250, "Pumpkin spice şurubu ile chai tea latte"]] },
   ]},
   { id: "detox", nav: "Detox & Matcha", icon: "detox", groups: [
