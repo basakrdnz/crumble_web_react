@@ -1,7 +1,7 @@
-import { RotateCcw } from "lucide-react";
 import { MENU } from "../data/menu";
+import { Icon } from "./Menu";
 
-// Menüdeki "Geri gelenler" kutusunu sayfanın üstünde hareketsiz bir şerit olarak da gösterir
+// Menüdeki kırmızı zeminli kaseleri sayfanın üstünde hareketsiz kartlar olarak da gösterir
 const group = (() => {
   for (const s of MENU) if ("groups" in s) for (const g of s.groups) if (g.highlight) return g;
   return undefined;
@@ -12,7 +12,7 @@ const Returned = () => {
   const go = () => document.getElementById(group.id!)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
-    <section aria-label={group.title} className="bg-paper pb-4 lg:pb-8">
+    <section aria-label="Geri gelenler" className="bg-paper pb-4 lg:pb-8">
       <div className="mx-auto max-w-7xl px-5 lg:px-10">
         <h2 className="mb-3 flex items-center gap-3 font-serif text-2xl font-semibold lg:mb-5 lg:text-3xl">
           <span className="h-px w-6 bg-brick" aria-hidden="true" />
@@ -20,20 +20,20 @@ const Returned = () => {
             Geri <span className="italic text-brick">gelenler</span>
           </span>
         </h2>
-        <div className="grid grid-cols-2 gap-3 lg:max-w-3xl lg:gap-4">
+        <div className="grid grid-cols-2 gap-3 lg:max-w-4xl lg:gap-4">
           {group.items.map(([name, price]) => (
             <button
               key={name}
               type="button"
               onClick={go}
-              className="flex items-center gap-3 rounded-2xl bg-brick/10 p-3 text-left transition-colors hover:bg-brick/15 lg:p-4"
+              className="flex items-center gap-2 rounded-2xl bg-[#F3D6CC] p-3 text-left sm:gap-3 lg:gap-4 lg:p-4"
             >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brick text-on-brick">
-                <RotateCcw className="h-4 w-4" aria-hidden="true" />
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center sm:h-16 sm:w-16 lg:h-20 lg:w-20">
+                <Icon name="yemek" className="h-9 w-9 text-ink/60 sm:h-11 sm:w-11 lg:h-12 lg:w-12" />
               </span>
               <span className="min-w-0">
-                <span className="block font-serif text-lg font-semibold leading-tight lg:text-xl">{name}</span>
-                <span className="text-sm font-semibold tabular-nums text-brick">{price} ₺</span>
+                <span className="block font-serif text-[17px] font-semibold leading-tight sm:text-xl">{name}</span>
+                <span className="mt-0.5 block text-[13px] font-semibold tabular-nums text-ink/70">{price} ₺</span>
               </span>
             </button>
           ))}

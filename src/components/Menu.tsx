@@ -214,9 +214,9 @@ const Menu = () => {
                       <div
                         key={g.title ?? i}
                         id={g.id}
-                        className="mt-6 scroll-mt-32 break-inside-avoid rounded-2xl bg-brick px-5 pb-3 pt-4 text-on-brick lg:mb-8 lg:mt-0 lg:scroll-mt-24"
+                        aria-label={g.title}
+                        className="-mx-3 mt-3 scroll-mt-32 break-inside-avoid rounded-xl bg-brick px-3 py-0.5 text-white lg:-mt-6 lg:mb-8 lg:scroll-mt-24"
                       >
-                        <h4 className="font-serif text-2xl font-semibold leading-tight">{g.title}</h4>
                         <ul>
                           {g.items.map((item) => (
                             <Item key={item[0] + item[1]} item={item} onDark />
