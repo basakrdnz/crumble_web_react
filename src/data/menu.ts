@@ -51,7 +51,7 @@ export const MENU: MenuSection[] = [
     { title: "Matcha detox", items: [["No1", 330, "Matcha, salatalık, taze nane, tonik"], ["No2", 330, "Matcha, limon suyu, taze nane, tonik"], ["No3", 330, "Matcha, elma suyu, maden suyu"], ["No4", 330, "Matcha, portakal suyu, maden suyu"]] },
   ]},
   { id: "yemek", nav: "Yemek", icon: "yemek", groups: [
-    { title: "Geri gelenler", items: [["Marinara Tavuk Kase", 490]] },
+    { title: "Geri gelenler", items: [["Marinara Tavuk Kase", 490], ["Kremalı Tavuk Kase", 490]] },
     { title: "Çorba", items: [["Günün Çorbası", 280]] },
     { title: "Makarnalar", items: [
       ["Anne Makarnası", 460, "100 g özel kıyma harcımız ve kekikli yoğurt ile"],
