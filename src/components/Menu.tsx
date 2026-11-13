@@ -135,6 +135,8 @@ const Menu = () => {
               <li key={s.id}>
                 <a
                   href={`#${s.id}`}
+                  data-track="menu_kategori"
+                  data-track-label={s.nav}
                   aria-current={on ? "true" : undefined}
                   className={`flex items-center gap-1.5 whitespace-nowrap rounded-full py-1.5 pl-2.5 pr-3.5 text-[15px] font-medium transition-colors ${
                     on ? ("kap" in s ? "bg-brick text-on-brick" : "bg-olive text-white") : "text-muted"
@@ -161,6 +163,8 @@ const Menu = () => {
                   <li key={s.id}>
                     <a
                       href={`#${s.id}`}
+                      data-track="menu_kategori"
+                      data-track-label={s.nav}
                       aria-current={on ? "true" : undefined}
                       className={`-ml-px flex items-baseline gap-4 border-l-2 py-2.5 pl-6 transition-colors ${
                         on ? (kap ? "border-brick text-brick" : "border-olive text-ink") : "border-transparent text-muted hover:text-ink"

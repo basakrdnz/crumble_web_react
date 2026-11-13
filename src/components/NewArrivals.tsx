@@ -74,6 +74,8 @@ const Card = ({ item, hidden, onOpen }: { item: Arrival; hidden: boolean; onOpen
   <button
     type="button"
     onClick={onOpen}
+    data-track="yeni_gelen_ac"
+    data-track-label={item.name}
     tabIndex={hidden ? -1 : undefined}
     aria-hidden={hidden || undefined}
     aria-label={hidden ? undefined : `${item.name}: fiyat ve içerik`}

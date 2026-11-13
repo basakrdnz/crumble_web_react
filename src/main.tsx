@@ -2,6 +2,9 @@ import { StrictMode, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import { startClickTracking } from './lib/analytics';
+
+startClickTracking();
 
 // QR menü adresi pakette düz metin olarak durmasın diye özetiyle (FNV-1a) karşılaştırılır
 const MENU_PATH_HASH = 0xea4856e7;
