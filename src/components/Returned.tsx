@@ -21,7 +21,7 @@ const Returned = () => {
           </span>
         </h2>
         <div className="grid grid-cols-2 gap-3 lg:max-w-4xl lg:gap-4">
-          {group.items.map(([name, price]) => (
+          {group.items.map(([name]) => (
             <button
               key={name}
               type="button"
@@ -33,7 +33,6 @@ const Returned = () => {
               </span>
               <span className="min-w-0">
                 <span className="block font-serif text-[17px] font-semibold leading-tight sm:text-xl">{name}</span>
-                <span className="mt-0.5 block text-[13px] font-semibold tabular-nums text-ink/70">{price} ₺</span>
               </span>
             </button>
           ))}
