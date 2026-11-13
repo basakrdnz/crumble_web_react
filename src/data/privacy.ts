@@ -52,7 +52,7 @@ export const PRIVACY: Record<Lang, PrivacyText> = {
       {
         title: "Web sitesinde",
         paragraphs: [
-          "crumbleofficial.com'da form ya da üyelik yoktur. Ziyaret istatistikleri için Google Analytics kullanılır (sayfa görüntüleme, yaklaşık konum, cihaz ve tarayıcı bilgisi; çerezlerle). Konum bölümündeki harita Google Haritalar'dan yüklenir. Bu hizmetlerin verileri Google'ın gizlilik politikasına tabidir.",
+          "crumbleofficial.com'da form ya da üyelik yoktur. Ziyaret istatistikleri için, yalnızca sitedeki çerez bandında onay verirseniz Google Analytics kullanılır (sayfa görüntüleme, hangi bağlantılara tıklandığı, yaklaşık konum, cihaz ve tarayıcı bilgisi; çerezlerle). Onay vermezseniz Google Analytics yüklenmez; tercihinizi sayfanın altındaki \"Çerez tercihleri\" bağlantısından istediğiniz zaman değiştirebilirsiniz. Konum bölümündeki harita Google Haritalar'dan yüklenir. Bu hizmetlerin verileri Google'ın gizlilik politikasına tabidir.",
         ],
       },
       {
@@ -137,7 +137,7 @@ export const PRIVACY: Record<Lang, PrivacyText> = {
       {
         title: "On the website",
         paragraphs: [
-          "crumbleofficial.com has no forms or accounts. Google Analytics is used for visit statistics (page views, approximate location, device and browser, using cookies). The map in the location section is loaded from Google Maps. Data collected by these services is subject to Google's privacy policy.",
+          "crumbleofficial.com has no forms or accounts. Google Analytics is used for visit statistics only if you accept it in the site's cookie banner (page views, which links are clicked, approximate location, device and browser, using cookies). If you decline, Google Analytics is not loaded; you can change your choice at any time via \"Çerez tercihleri\" at the bottom of the page. The map in the location section is loaded from Google Maps. Data collected by these services is subject to Google's privacy policy.",
         ],
       },
       {

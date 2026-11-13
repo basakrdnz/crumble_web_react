@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { startClickTracking } from './lib/analytics';
+import CookieBanner from './components/CookieBanner';
 
 startClickTracking();
 
@@ -33,5 +34,6 @@ createRoot(document.getElementById('root')!).render(
     ) : (
       <App />
     )}
+    <CookieBanner />
   </StrictMode>
 );
