@@ -1,4 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
+import { OPEN_CONSENT_EVENT } from "../lib/analytics";
 import { ADDRESS_LINES, EMAIL, FACEBOOK, HOURS, INSTAGRAM, PHONE, PHONE_HREF } from "../data/info";
 
 const Footer = () => {
@@ -55,6 +56,18 @@ const Footer = () => {
             <a href="/gizlilik" className="underline-offset-4 hover:text-white hover:underline">
               Gizlilik
             </a>
+            {window.loadGA && (
+              <>
+                {" · "}
+                <button
+                  type="button"
+                  onClick={() => dispatchEvent(new Event(OPEN_CONSENT_EVENT))}
+                  className="underline-offset-4 hover:text-white hover:underline"
+                >
+                  Çerez tercihleri
+                </button>
+              </>
+            )}
           </span>
           <span>Güneypark · Çankaya · Ankara</span>
         </div>
