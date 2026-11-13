@@ -70,7 +70,7 @@ const Item = ({ item: [name, price, desc], onDark = false }: { item: MenuItem; o
       <span aria-hidden="true" className={`flex-1 min-w-3 -translate-y-1 border-b-[1.5px] border-dotted ${onDark ? "border-white/30" : "border-line"}`} />
       <span className="font-semibold tabular-nums whitespace-nowrap">{price} ₺</span>
     </div>
-    {desc && <p className="mt-1 max-w-[46ch] text-sm leading-snug text-muted">{desc}</p>}
+    {desc && <p className={`mt-1 max-w-[46ch] text-sm leading-snug ${onDark ? "text-white/80" : "text-muted"}`}>{desc}</p>}
   </li>
 );
 
