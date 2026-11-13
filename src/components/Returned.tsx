@@ -26,6 +26,8 @@ const Returned = () => {
               key={name}
               type="button"
               onClick={go}
+              data-track="geri_gelen_tikla"
+              data-track-label={name}
               className="flex items-center gap-2 rounded-2xl bg-[#F3D6CC] p-3 text-left sm:gap-3 lg:gap-4 lg:p-4"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center sm:h-16 sm:w-16 lg:h-20 lg:w-20">
