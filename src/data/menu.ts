@@ -24,43 +24,45 @@ export type MenuSection =
 
 export const MENU: MenuSection[] = [
   { id: "kahve", nav: "Kahve", icon: "kahve", groups: [
-    { title: "Espresso bazlı", items: [["Espresso", 130], ["Double Espresso", 215], ["Americano", 225], ["Filtre Kahve", 190],
-      ["Cappuccino", 225], ["Cafe Latte", 230], ["Aromalı Latte", 245], ["Flat White", 240],
-      ["Macchiato", 215], ["Aromalı Macchiato", 245], ["Mocha", 240]] },
+    { title: "Espresso bazlı", items: [["Espresso", 150], ["Double Espresso", 220], ["Americano", 245], ["Filtre Kahve", 220],
+      ["Cappuccino", 250], ["Cafe Latte", 250], ["Aromalı Latte", 265], ["Flat White", 265],
+      ["Macchiato", 235], ["Aromalı Macchiato", 260], ["Mocha", 250]] },
     { title: "Türk kahvesi", items: [["Türk Kahvesi", 160], ["Double Türk Kahvesi", 190]] },
     { title: "Kış içecekleri", items: [
-      ["Pumpkin Spice Latte", 255, "Pumpkin spice ve karamel ile espresso; üzeri sweet cream köpük"],
-      ["White Chocolate Mocha", 245],
-      ["Pumpkin Spice Chai", 240, "Pumpkin spice şurubu ile chai tea latte"],
-      ["Chai Tea Latte", 210], ["Sıcak Çikolata", 235], ["Sahlep", 230]] },
+      ["Pumpkin Spice Latte", 265, "Pumpkin spice ve karamelli espresso, üzerinde sweet cream köpüğü. Sıcak ya da buzlu."],
+      ["White Chocolate Mocha", 255, "Sıcak ya da buzlu."],
+      ["Pumpkin Spice Chai", 255, "Pumpkin spice şuruplu chai tea latte. Sıcak ya da buzlu."],
+      ["Chai Tea Latte", 240], ["Sıcak Çikolata", 235], ["Sahlep", 230]] },
   ]},
   { id: "cay", nav: "Çay", icon: "cay", groups: [
-    { items: [["Bardak Çay", 65], ["Fincan Çay", 85], ["Bitki Çayı (küçük)", 180, "Adaçayı, elma-tarçın, hibiskus, papatya, anason, yeşil çay, lavanta, zencefil, biberiye, tane karabiber"], ["Bitki Çayı (büyük)", 320], ["Termos Çay", 650]] },
+    { items: [["Bardak Çay", 65], ["Fincan Çay", 85], ["Bitki Çayı (küçük)", 180, "Adaçayı, elma-tarçın, hibiskus, papatya, anason, yeşil çay, lavanta, zencefil, biberiye ve tane karabiber çeşitleri"], ["Bitki Çayı (büyük)", 320], ["Termos Çay", 650]] },
   ]},
   { id: "varsa-kap", nav: "Varsa Kap!", icon: "kap", kap: true,
     lede: "Her gün aynısı yok. Vitrine bak, gözüne kestirdiğini kap.",
     tatli: ["Elmalı Kurabiye", "Triple Chocolate Cookie", "Mozaik", "Çikolatalı Kek", "Havuçlu Cevizli Kek", "Haşhaşlı Kek", "Crumble Turta", "Çıtır Kurabiye", "Vişneli Parmak Kurabiye", "Oreo Cookie", "Vatruşka", "Waffle Çeşitleri"],
     tuzlu: ["Dereotlu Poğaça", "Peynirli Poğaça", "Patatesli Börek", "Peynirli Börek", "Tavuklu Sebzeli Börek", "Çiçek Böreği", "Tavuklu Kiş", "Pizza Dilimi"] },
   { id: "soguk", nav: "Soğuk", icon: "soguk", title: "Soğuk içecekler", groups: [
-    { items: [["Cool Lime", 290], ["Berry Hibiskus", 280],
-      ["Iced Pumpkin Spice Latte", 260, "Pumpkin spice ve karamel ile espresso; üzeri sweet cream köpük"],
-      ["Iced White Chocolate Mocha", 255],
-      ["Iced Pumpkin Spice Chai", 250, "Pumpkin spice şurubu ile chai tea latte"]] },
+    { items: [["Cool Lime", 290], ["Berry Hibiskus", 280]] },
   ]},
   { id: "detox", nav: "Detox & Matcha", icon: "detox", groups: [
-    { title: "Meyve detox", items: [["No1", 290, "Elma, limon, zencefil"], ["No2", 290, "Havuç, pancar, portakal"], ["No3", 290, "Salatalık, limon, taze nane"]] },
-    { title: "Matcha detox", items: [["No1", 330, "Matcha, salatalık, taze nane, tonik"], ["No2", 330, "Matcha, limon suyu, taze nane, tonik"], ["No3", 330, "Matcha, elma suyu, maden suyu"], ["No4", 330, "Matcha, portakal suyu, maden suyu"]] },
+    { title: "Meyve detox", items: [["No1", 330, "Elma, limon, zencefil"], ["No2", 330, "Havuç, pancar, portakal"], ["No3", 330, "Salatalık, limon, taze nane"]] },
+    { title: "Matcha detox", items: [["No1", 355, "Matcha, salatalık, taze nane, tonik"], ["No2", 355, "Matcha, limon suyu, taze nane, tonik"], ["No3", 355, "Matcha, elma suyu, maden suyu"], ["No4", 355, "Matcha, portakal suyu, maden suyu"]] },
   ]},
   { id: "yemek", nav: "Yemek", icon: "yemek", groups: [
     { title: "Çorba", items: [["Günün Çorbası", 280]] },
     { title: "Makarnalar", items: [
-      ["Anne Makarnası", 460, "100 g özel kıyma harcımız ve kekikli yoğurt ile"],
-      ["Chicken Alfredo", 490, "100 g jülyen tavuk, krema ve sarımsak; parmesan ve fesleğen ile"],
-      ["Pesto Alfredo", 480, "Krema ve taze pesto sos ile"]] },
-    { title: "Ana yemek", items: [["Izgara Tavuk Kase", 470, "180 g ızgara tavuk; basmati pirinç pilavı, patates salatası ve mevsim salatası ile"], ["Köfte Kase", 480, "160 g el yapımı köfte; basmati pirinç pilavı, patates salatası ve mevsim salatası ile"], ["Ekmek Arası Köfte", 440, "120 g köfte; domates, marul ve domatesli ezme sosu ile"]] },
-    { title: "Geri gelenler", id: "geri-gelenler", highlight: true, items: [["Marinara Tavuk Kase", 490, "Marinara soslu tavuk; basmati pirinç pilavı, patates salatası ve mevsim salatası ile"], ["Kremalı Tavuk Kase", 490, "Krema soslu tavuk; basmati pirinç pilavı, patates salatası ve mevsim salatası ile"]] },
-    { title: "Kahvaltılık", items: [["Granola Kase", 350, "Chia tohumlu ballı süzme yoğurt; muz, granola, ay çekirdeği, parçalı fıstık ezmesi ve kuru üzüm ile"]] },
-    { title: "Tostlar", items: [["Akdeniz Tost", 270, "Ezine peyniri, domates ve kekik; zeytin ezmesi ve domates ezmesi ile"], ["Karışık Tost", 285], ["Kaşarlı Tost", 265]] },
+      ["Anne Makarnası", 460, "100 g özel kıyma harcımızla, üzerinde kekikli yoğurtla"],
+      ["Chicken Alfredo", 490, "100 g jülyen tavuk ve sarımsaklı krema sos, üzerinde parmesan ve fesleğen"],
+      ["Pesto Alfredo", 480, "Taze pesto ile hazırlanan kremalı sos"]] },
+    { title: "Ana yemek", items: [
+      ["Izgara Tavuk Kase", 470, "180 g ızgara tavuk; yanında basmati pilav, patates salatası ve mevsim salatası"],
+      ["Köfte Kase", 480, "160 g el yapımı köfte; yanında basmati pilav, patates salatası ve mevsim salatası"],
+      ["Ekmek Arası Köfte", 440, "120 g köfte, domates, marul ve domatesli ezme sosu"]] },
+    { title: "Geri gelenler", id: "geri-gelenler", highlight: true, items: [
+      ["Marinara Tavuk Kase", 490, "180 g marinara soslu tavuk; yanında basmati pilav, patates salatası ve mevsim salatası"],
+      ["Kremalı Tavuk Kase", 490, "180 g krema soslu tavuk; yanında basmati pilav, patates salatası ve mevsim salatası"]] },
+    { title: "Kahvaltılık", items: [["Granola Kase", 350, "Chia tohumlu ballı süzme yoğurt üzerine muz, granola, ay çekirdeği, fıstık ezmesi ve kuru üzüm"]] },
+    { title: "Tostlar", items: [["Akdeniz Tost", 270, "Ezine peyniri, domates ve kekik; zeytin ve domates ezmesiyle"], ["Karışık Tost", 285], ["Kaşarlı Tost", 265]] },
     { title: "Bagetler", items: [["Hindi Füme Baget", 375], ["Peynir Baget", 385], ["Dana Jambon Baget", 410]] },
   ]},
 ];
