@@ -24,19 +24,18 @@ const ITEMS: Arrival[] = [
   {
     tag: "Kışa özel",
     name: "Pumpkin Spice Latte",
-    short: "Pumpkin spice ve karamel ile espresso; sweet cream köpük.",
+    short: "Pumpkin spice ve karamelli espresso, sweet cream köpüğüyle.",
     img: "/media/yeni-balkabagi-latte.webp",
     alt: "Buzlu pumpkin spice latte, Crumble logolu bardakta",
     panel: "bg-[#EED6B4]",
     variants: [
-      { label: "Sıcak", menuName: "Pumpkin Spice Latte" },
-      { label: "Buzlu", menuName: "Iced Pumpkin Spice Latte" },
+      { label: "Sıcak ya da buzlu", menuName: "Pumpkin Spice Latte" },
     ],
   },
   {
     tag: "Kahvaltılık",
     name: "Granola Kase",
-    short: "Ballı süzme yoğurt; muz, granola ve fıstık ezmesi ile.",
+    short: "Ballı süzme yoğurt, muz, granola ve fıstık ezmesi.",
     img: "/media/yeni-granola-kase.webp",
     alt: "Yoğurt, muz, granola, fıstık ezmesi ve kuru üzümlü granola kase",
     panel: "bg-[#E4E6D2]",
@@ -45,12 +44,11 @@ const ITEMS: Arrival[] = [
   {
     tag: "Kışa özel",
     name: "Pumpkin Spice Chai",
-    short: "Pumpkin spice şurubu ile chai tea latte.",
+    short: "Pumpkin spice şuruplu chai tea latte.",
     alt: "Pumpkin spice chai",
     panel: "bg-[#F1DCC4]",
     variants: [
-      { label: "Sıcak", menuName: "Pumpkin Spice Chai" },
-      { label: "Buzlu", menuName: "Iced Pumpkin Spice Chai" },
+      { label: "Sıcak ya da buzlu", menuName: "Pumpkin Spice Chai" },
     ],
   },
   {
@@ -60,8 +58,7 @@ const ITEMS: Arrival[] = [
     alt: "White chocolate mocha",
     panel: "bg-[#EFE7DA]",
     variants: [
-      { label: "Sıcak", menuName: "White Chocolate Mocha" },
-      { label: "Buzlu", menuName: "Iced White Chocolate Mocha" },
+      { label: "Sıcak ya da buzlu", menuName: "White Chocolate Mocha" },
     ],
   },
 ];
